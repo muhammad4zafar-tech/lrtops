@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Board Period Calendar – LRTops.ca</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        /* Calendar Grid */
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .calendar-box {
+            padding: 15px;
+            border-radius: 6px;
+            color: #fff;
+        }
+
+        .calendar-box h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .calendar-box p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Colors for each board period */
+        .winter1 { background: #4a6fa5; }
+        .winter2 { background: #3b5998; }
+        .spring1 { background: #4caf50; }
+        .spring2 { background: #2e7d32; }
+        .summer1 { background: #f9a825; }
+        .summer2 { background: #ef6c00; }
+        .fall1   { background: #8e24aa; }
+        .fall2   { background: #5e35b1; }
+        .holiday { background: #c62828; }
+
+        /* Dark mode compatibility */
+        body.dark-mode .calendar-box {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 900px) {
+            .calendar-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .calendar-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div data-include="header.html"></div>
+
+<main class="content">
+
+    <h1>2026 Board Period Calendar</h1>
+    <p>This calendar shows all board periods for 2026, organized by season and date range.</p>
+
+    <div class="calendar-grid">
+
+        <div class="calendar-box winter1">
+            <h3>Winter 1</h3>
+            <p>January 10 → February 7</p>
+        </div>
+
+        <div class="calendar-box winter2">
+            <h3>Winter 2</h3>
+            <p>February 8 → March 14</p>
+        </div>
+
+        <div class="calendar-box spring1">
+            <h3>Spring 1</h3>
+            <p>March 15 → May 2</p>
+        </div>
+
+        <div class="calendar-box spring2">
+            <h3>Spring 2</h3>
+            <p>May 3 → June 20</p>
+        </div>
+
+        <div class="calendar-box summer1">
+            <h3>Summer 1</h3>
+            <p>June 21 → July 25</p>
+        </div>
+
+        <div class="calendar-box summer2">
+            <h3>Summer 2</h3>
+            <p>July 26 → September 5</p>
+        </div>
+
+        <div class="calendar-box fall1">
+            <h3>Fall 1</h3>
+            <p>September 6 → October 31</p>
+        </div>
+
+        <div class="calendar-box fall2">
+            <h3>Fall 2</h3>
+            <p>November 1 → December 19</p>
+        </div>
+
+        <div class="calendar-box holiday">
+            <h3>Holiday Board</h3>
+            <p>December 20 → January 2/27</p>
+        </div>
+
+    </div>
+
+</main>
+
+<div data-include="footer.html"></div>
+
+<script src="js/include.js"></script>
+
+</body>
+</html>

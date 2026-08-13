@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Run Guides – LRTops.ca</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        .run-btn {
+            background: var(--ttc-red);
+            color: #fff;
+            padding: 12px 18px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .run-btn:hover {
+            background: #a50e26;
+        }
+
+        .run-section {
+            display: none;
+            margin-bottom: 40px;
+        }
+
+        .run-section h2 {
+            margin-top: 0;
+            border-bottom: 2px solid var(--ttc-red);
+            padding-bottom: 5px;
+        }
+
+        /* Updated Line headings */
+        .line5-heading {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #7A0010; /* TTC burgundy */
+        }
+
+        .line6-heading {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #1e4fa8; /* Finch West LRT blue */
+        }
+
+        .run-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .run-list li {
+            margin-bottom: 10px;
+        }
+
+        .run-link {
+            background: #f5f5f5;
+            padding: 12px 15px;
+            border-radius: 6px;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            color: var(--ttc-red);
+        }
+
+        .run-link:hover {
+            background: #e0e0e0;
+        }
+
+        body.dark-mode .run-link {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .run-link:hover {
+            background: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+<div data-include="header.html"></div>
+
+<main class="content">
+
+    <h1>Run Guides</h1>
+    <p>Run Guides for the current board period. TTC week runs Sunday → Saturday.</p>
+
+    <!-- BOARD PERIOD BUTTON -->
+    <button class="run-btn" onclick="toggleRun('summer2')">
+        Summer 2 — July 26 → September 5, 2026
+    </button>
+
+    <!-- RUN GUIDES SECTION -->
+    <div id="summer2" class="run-section">
+
+        <h2>Summer 2 — Run Guides</h2>
+
+        <!-- ============================
+             LINE 5
+        ============================ -->
+        <div class="line5-heading">Line 5</div>
+
+        <ul class="run-list">
+
+            <!-- Sunday -->
+            <li>
+                <a class="run-link" href="run-guides/2026-07-26-Line5-Sunday-runguides.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    Sunday
+                </a>
+            </li>
+
+            <!-- Daily -->
+            <li>
+                <a class="run-link" href="run-guides/2026-07-26-line5-daily-runguides.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    Daily (Mon–Fri)
+                </a>
+            </li>
+
+            <!-- Saturday -->
+            <li>
+                <a class="run-link" href="run-guides/2026-07-26-line5-saturday-runguides.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    Saturday
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- ============================
+             LINE 6
+        ============================ -->
+        <div class="line6-heading">Line 6</div>
+
+        <ul class="run-list">
+
+            <!-- Sunday -->
+            <li>
+                <a class="run-link" href="run-guides/2026-07-26-line6-sunday-runguides.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    Sunday
+                </a>
+            </li>
+
+            <!-- Daily -->
+            <li>
+                <a class="run-link" href="run-guides/2026-07-26-line6-daily-runguides.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    Daily (Mon–Fri)
+                </a>
+            </li>
+
+            <!-- Saturday -->
+            <li>
+                <a class="run-link" href="run-guides/2026-07-26-line6-saturday-runguides.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    Saturday
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</main>
+
+<div data-include="footer.html"></div>
+
+<script src="js/include.js"></script>
+
+<script>
+function toggleRun(id) {
+    const section = document.getElementById(id);
+    section.style.display = section.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
