@@ -186,3 +186,27 @@ footer {
     width: 100%;
     max-width: 100%;
 }
+/* ============================
+   MOBILE FIXES (ADDED)
+   ============================ */
+
+/* Prevent horizontal overflow */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Move menu icon to the left on mobile */
+@media (max-width: 800px) {
+    .header-inner {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+}
+
+/* Universal mobile width fix */
+@media (max-width: 800px) {
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
