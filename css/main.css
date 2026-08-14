@@ -12,8 +12,13 @@
 /* ============================
    GLOBAL PAGE STYLING
    ============================ */
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent right-side overflow */
+}
+
+body {
     font-family: Arial, sans-serif;
     background: var(--ttc-light);
     color: var(--text-dark);
@@ -34,7 +39,7 @@ img {
 /* Main content container */
 .content {
     max-width: 900px;
-    width: 100%; /* Responsive width */
+    width: 100%;
     margin: 30px auto;
     padding: 20px;
     background: var(--ttc-light);
@@ -57,11 +62,11 @@ body.dark-mode .content {
 
 .header-inner {
     max-width: 1100px;
-    width: 100%; /* Responsive */
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Desktop */
     padding: 0 15px;
 }
 
@@ -71,12 +76,12 @@ body.dark-mode .content {
 }
 
 /* ============================
-   NAVIGATION BAR
+   NAVIGATION BAR (DESKTOP)
    ============================ */
 .nav-bar {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap; /* Prevent overflow on small screens */
+    flex-wrap: wrap; /* Prevent overflow */
 }
 
 .nav-bar a {
@@ -109,7 +114,7 @@ body.dark-mode .content {
     font-size: 1.6rem;
     cursor: pointer;
     color: var(--ttc-light);
-    display: none;
+    display: none; /* Hidden on desktop */
 }
 
 /* ============================
@@ -136,14 +141,31 @@ body.dark-mode .content {
    RESPONSIVE BEHAVIOR
    ============================ */
 @media (max-width: 800px) {
+
+    /* Hide desktop nav */
     .nav-bar {
         display: none;
     }
+
+    /* Show hamburger menu */
     .menu-toggle {
         display: block;
     }
+
+    /* Move menu icon to LEFT */
     .header-inner {
-        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .logo-text {
+        margin-left: 10px;
+    }
+
+    /* Universal mobile width fix */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -180,33 +202,8 @@ footer {
     margin-bottom: 25px;
 }
 
-/* Ensure buttons scale on mobile */
 .board-buttons button,
 .board-buttons .board-btn {
     width: 100%;
     max-width: 100%;
-}
-/* ============================
-   MOBILE FIXES (ADDED)
-   ============================ */
-
-/* Prevent horizontal overflow */
-html, body {
-    overflow-x: hidden;
-}
-
-/* Move menu icon to the left on mobile */
-@media (max-width: 800px) {
-    .header-inner {
-        justify-content: flex-start;
-        gap: 15px;
-    }
-}
-
-/* Universal mobile width fix */
-@media (max-width: 800px) {
-    * {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
 }
