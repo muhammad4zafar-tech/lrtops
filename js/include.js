@@ -1,21 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const includes = document.querySelectorAll("[data-include]");
-
-    includes.forEach(el => {
-        let file = el.getAttribute("data-include");
-
-        // Detect local file mode (file://)
-        const isLocal = window.location.protocol === "file:";
-
-        // If local, remove leading slash
-        if (isLocal && file.startsWith("/")) {
-            file = file.substring(1);
-        }
-
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[data-include]").forEach(el => {
+        const file = el.getAttribute("data-include");
         fetch(file)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Include file not found: " + file);
+                    throw new Error("File not found: " + file);
                 }
                 return response.text();
             })
@@ -23,25 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 el.innerHTML = data;
             })
             .catch(err => {
-                el.innerHTML = "<!-- Include failed: " + file + " -->";
+                el.innerHTML = "<p style='color:red;'>Include failed: " + file + "</p>";
+                console.error(err);
             });
     });
-
-    // Last updated timestamp
-    const updated = document.getElementById("lastUpdated");
-    if (updated) {
-        const date = new Date(document.lastModified);
-        updated.textContent = "Last Updated: " + date.toLocaleString();
-    }
 });
-
-// Mobile menu
-function toggleMenu() {
-    const nav = document.getElementById("navMenu");
-    nav.classList.toggle("open");
-}
-
-// Dark mode
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
