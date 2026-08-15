@@ -17,3 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+function toggleMobileMenu() {
+    const nav = document.getElementById("mobileNav");
+    nav.classList.toggle("open");
+}
