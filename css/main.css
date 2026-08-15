@@ -270,3 +270,10 @@ footer {
         font-size: 1.8rem;
     }
 }
+.mobile-nav {
+    display: none;
+}
+
+.mobile-nav.open {
+    display: block;
+}
