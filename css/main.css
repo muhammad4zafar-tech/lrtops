@@ -15,14 +15,14 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent right-side overflow */
+    overflow-x: hidden;
 }
 
 body {
     font-family: Arial, sans-serif;
     background: var(--ttc-light);
     color: var(--text-dark);
-    padding: 10px; /* Mobile-friendly spacing */
+    padding: 10px;
 }
 
 body.dark-mode {
@@ -30,13 +30,11 @@ body.dark-mode {
     color: var(--text-light);
 }
 
-/* Make all images responsive */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Main content container */
 .content {
     max-width: 900px;
     width: 100%;
@@ -51,13 +49,15 @@ body.dark-mode .content {
 }
 
 /* ============================
-   HEADER
+   TTC HEADER (ALL PAGES)
    ============================ */
 .site-header {
     background: var(--ttc-red);
     color: var(--ttc-light);
     padding: 10px 0;
     width: 100%;
+    position: relative;
+    z-index: 20;
 }
 
 .header-inner {
@@ -66,7 +66,7 @@ body.dark-mode .content {
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Desktop */
+    justify-content: space-between;
     padding: 0 15px;
 }
 
@@ -81,7 +81,7 @@ body.dark-mode .content {
 .nav-bar {
     display: flex;
     gap: 15px;
-    flex-wrap: wrap; /* Prevent overflow */
+    flex-wrap: wrap;
 }
 
 .nav-bar a {
@@ -114,7 +114,7 @@ body.dark-mode .content {
     font-size: 1.6rem;
     cursor: pointer;
     color: var(--ttc-light);
-    display: none; /* Hidden on desktop */
+    display: none;
 }
 
 /* ============================
@@ -142,17 +142,14 @@ body.dark-mode .content {
    ============================ */
 @media (max-width: 800px) {
 
-    /* Hide desktop nav */
     .nav-bar {
         display: none;
     }
 
-    /* Show hamburger menu */
     .menu-toggle {
         display: block;
     }
 
-    /* Move menu icon to LEFT */
     .header-inner {
         justify-content: flex-start;
         gap: 15px;
@@ -162,14 +159,12 @@ body.dark-mode .content {
         margin-left: 10px;
     }
 
-    /* Universal mobile width fix */
     * {
         max-width: 100%;
         box-sizing: border-box;
     }
 }
 
-/* Improve readability on very small screens */
 @media (max-width: 600px) {
     body {
         font-size: 16px;
@@ -206,4 +201,72 @@ footer {
 .board-buttons .board-btn {
     width: 100%;
     max-width: 100%;
+}
+
+/* ============================
+   HERO HEADER (HOME PAGE ONLY)
+   ============================ */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Background Image — FINAL FIX */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/lrt6501.jpg'); /* YOUR IMAGE */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+}
+
+
+
+/* Dark Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* Animated Text */
+.hero-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.hero-title {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    animation: fadeSlide 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeSlide {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile hero adjustments */
+@media (max-width: 800px) {
+    .hero-header {
+        height: 220px;
+    }
+    .hero-title {
+        font-size: 1.8rem;
+    }
 }
