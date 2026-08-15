@@ -19,8 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ⭐ Mobile menu toggle (Fix #1 for phone menu)
+// ⭐ Mobile menu toggle (Fix #1)
 function toggleMobileMenu() {
     const nav = document.getElementById("mobileNav");
     nav.classList.toggle("open");
+}
+
+// ⭐ Dark mode toggle (Fix #2 — this was missing)
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
 }
