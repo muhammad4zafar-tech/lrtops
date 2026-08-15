@@ -23,11 +23,23 @@ footer {
 
 
 /* --------------------------------------------------
+   TTC BRAND COLORS
+-------------------------------------------------- */
+:root {
+    --ttc-red: #CC0000;
+    --ttc-red-dark: #A30000;
+    --header-bg: #ffffff;
+    --text-dark: #222;
+    --text-light: #ffffff;
+}
+
+
+/* --------------------------------------------------
    HEADER (DESKTOP)
 -------------------------------------------------- */
 .site-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
+    background-color: var(--header-bg);
+    border-bottom: 4px solid var(--ttc-red);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -44,6 +56,7 @@ footer {
     font-size: 1.4rem;
     font-weight: bold;
     letter-spacing: 0.05em;
+    color: var(--ttc-red);
 }
 
 .nav-bar {
@@ -53,12 +66,12 @@ footer {
 
 .nav-bar a {
     text-decoration: none;
-    color: #222;
-    font-weight: 500;
+    color: var(--text-dark);
+    font-weight: 600;
 }
 
 .nav-bar a:hover {
-    color: #d32f2f;
+    color: var(--ttc-red);
 }
 
 
@@ -71,6 +84,7 @@ footer {
     border: none;
     cursor: pointer;
     display: none; /* hidden on desktop */
+    color: var(--ttc-red);
 }
 
 .dark-toggle {
@@ -82,25 +96,26 @@ footer {
 
 
 /* --------------------------------------------------
-   MOBILE MENU (Fix #2)
+   MOBILE MENU (TTC BRANDING)
 -------------------------------------------------- */
 .mobile-nav {
     display: none;
     flex-direction: column;
     background-color: #ffffff;
-    border-top: 1px solid #ddd;
+    border-top: 3px solid var(--ttc-red);
     padding: 1rem;
 }
 
 .mobile-nav a {
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     text-decoration: none;
-    color: #222;
+    color: var(--text-dark);
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .mobile-nav a:hover {
-    color: #d32f2f;
+    color: var(--ttc-red);
 }
 
 /* When JS adds .open → menu becomes visible */
@@ -174,7 +189,7 @@ footer {
 
 
 /* --------------------------------------------------
-   DARK MODE
+   DARK MODE (TTC SAFE)
 -------------------------------------------------- */
 body.dark {
     background-color: #121212;
@@ -183,7 +198,7 @@ body.dark {
 
 body.dark .site-header {
     background-color: #1e1e1e;
-    border-bottom-color: #333;
+    border-bottom-color: var(--ttc-red);
 }
 
 body.dark .nav-bar a,
@@ -193,7 +208,7 @@ body.dark .mobile-nav a {
 
 body.dark .nav-bar a:hover,
 body.dark .mobile-nav a:hover {
-    color: #ff5252;
+    color: var(--ttc-red);
 }
 
 body.dark .hero-overlay {
