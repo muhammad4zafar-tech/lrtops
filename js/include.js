@@ -1,4 +1,4 @@
-// Load shared HTML files (header, footer, etc.)
+// ⭐ Load shared HTML files (header, footer, etc.)
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("[data-include]").forEach(el => {
         const file = el.getAttribute("data-include");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ⭐ Mobile menu toggle (needed for the 3-line button)
+// ⭐ Mobile menu toggle (Fix #1 for phone menu)
 function toggleMobileMenu() {
     const nav = document.getElementById("mobileNav");
     nav.classList.toggle("open");
