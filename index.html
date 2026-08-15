@@ -2,53 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LRTops.ca – Home</title>
-
-    <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>LRT OPS – Home</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-<!-- Shared Header -->
-<div data-include="header.html"></div>
+    <!-- TTC HEADER (Loaded once by include.js) -->
+    <div data-include="header.html"></div>
 
-<main class="content">
+    <!-- HERO HEADER (Train + Animation) -->
+    <header class="hero-header">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
 
-    <h1>Welcome to the LRT Internal Website – For Ops ONLY</h1>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to LRT OPS</h1>
+        </div>
+    </header>
 
-    <section>
-        <h2>Disclaimer</h2>
-        <p>This is an unofficial, internal website created for informational and reference purposes only. It is not affiliated with Metrolinx, TTC, or any official transit authority.</p>
-    </section>
+    <main class="content">
 
-    <section>
-        <h2>About This Site</h2>
-        <p>This internal website serves as a resource hub for information related to the Finch West Light Rail Transit (LRT) project. It provides details about the route, stations, construction updates, and other relevant materials concerning Lines 5 and 6.</p>
-        <p>This website is intended strictly for internal reference. For official information, please visit Metrolinx or TTC websites.</p>
-    </section>
+        <h1>Welcome to the LRT Internal Website | For Ops ONLY</h1>
 
-    <section>
-        <h2>Quick Access</h2>
-        <ul>
-            <li><a href="crew-guides.html">Crew Guides</a></li>
-            <li><a href="run-guides.html">Run Guides</a></li>
-            <li><a href="holiday-crews.html">Holiday Crews</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="important-contacts.html">Important Contacts</a></li>
-            <li><a href="important-links.html">Important Links</a></li>
-            <li><a href="job-aid.html">Job Aid</a></li>
-        </ul>
-    </section>
+        <section>
+            <h2>Disclaimer</h2>
+            <p>
+                This is an unofficial, internal website created for informational and reference purposes only.
+                It is not affiliated with Metrolinx, TTC, or any official transit authority.
+            </p>
+        </section>
 
-</main>
+        <section>
+            <h2>About This Site</h2>
+            <p>
+                This internal website serves as a resource hub for information related to the Finch West Light Rail Transit (LRT) project.
+                It provides details about the route, stations, construction updates, and other relevant materials concerning Lines 5 and 6.
+            </p>
+            <p>
+                This website is intended strictly for internal reference. For official information, please visit Metrolinx or TTC websites.
+            </p>
+        </section>
 
-<!-- Shared Footer -->
-<div data-include="footer.html"></div>
+    </main>
 
-<!-- Include system at bottom -->
-<script src="js/include.js"></script>
+    <footer>
+        <p>&copy; 2026 LRT OPS – Internal Use Only</p>
+    </footer>
+
+    <script src="js/include.js"></script>
 
 </body>
 </html>
