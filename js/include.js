@@ -37,7 +37,8 @@ function toggleDarkMode() {
 
 // ⭐ TTC LIVE STATUS
 function loadTTCStatus() {
-    fetch("https://www.ttc.ca/api/ServiceStatus/Subway")
+   fetch("https://www.ttc.ca/api/ServiceStatus/Subway", { method: "GET", mode: "cors" })
+
         .then(res => res.json())
         .then(data => {
             const linesDiv = document.getElementById("ttc-lines");
