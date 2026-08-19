@@ -28,18 +28,17 @@ footer {
 :root {
     --ttc-red: #CC0000;
     --ttc-red-dark: #A30000;
-    --header-bg: #ffffff;
     --text-dark: #222;
     --text-light: #ffffff;
 }
 
 
 /* --------------------------------------------------
-   HEADER (DESKTOP)
+   TTC RED HEADER
 -------------------------------------------------- */
 .site-header {
-    background-color: var(--header-bg);
-    border-bottom: 4px solid var(--ttc-red);
+    background-color: var(--ttc-red);
+    border-bottom: 4px solid var(--ttc-red-dark);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -56,7 +55,7 @@ footer {
     font-size: 1.4rem;
     font-weight: bold;
     letter-spacing: 0.05em;
-    color: var(--ttc-red);
+    color: #ffffff;
 }
 
 .nav-bar {
@@ -66,81 +65,59 @@ footer {
 
 .nav-bar a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: #ffffff;
     font-weight: 600;
 }
 
 .nav-bar a:hover {
-    color: var(--ttc-red);
+    color: #ffebee;
 }
 
-
-/* --------------------------------------------------
-   HEADER BUTTONS
--------------------------------------------------- */
-.menu-toggle {
+.menu-toggle,
+.dark-toggle {
     font-size: 1.8rem;
     background: none;
     border: none;
     cursor: pointer;
-    display: none; /* hidden on desktop */
-    color: var(--ttc-red);
-}
-
-.dark-toggle {
-    font-size: 1.4rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+    color: #ffffff;
 }
 
 
 /* --------------------------------------------------
-   MOBILE MENU (TTC BRANDING)
+   MOBILE MENU
 -------------------------------------------------- */
 .mobile-nav {
     display: none;
     flex-direction: column;
-    background-color: #ffffff;
-    border-top: 3px solid var(--ttc-red);
+    background-color: var(--ttc-red);
+    border-top: 3px solid var(--ttc-red-dark);
     padding: 1rem;
 }
 
 .mobile-nav a {
     padding: 0.6rem 0;
     text-decoration: none;
-    color: var(--text-dark);
+    color: #ffffff;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
 .mobile-nav a:hover {
-    color: var(--ttc-red);
+    color: #ffebee;
 }
 
-/* When JS adds .open → menu becomes visible */
 .mobile-nav.open {
     display: flex;
 }
 
-
-/* --------------------------------------------------
-   MOBILE RESPONSIVE
--------------------------------------------------- */
 @media (max-width: 768px) {
-
-    .nav-bar {
-        display: none; /* hide desktop menu */
-    }
-
-    .menu-toggle {
-        display: block; /* show 3-line button */
-    }
+    .nav-bar { display: none; }
+    .menu-toggle { display: block; }
 }
 
 
 /* --------------------------------------------------
-   HERO HEADER (TRAIN)
+   HERO HEADER
 -------------------------------------------------- */
 .hero-header {
     position: relative;
@@ -154,7 +131,6 @@ footer {
     background-image: url('../images/lrt6501.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 .hero-overlay {
@@ -177,19 +153,88 @@ footer {
     align-items: center;
     text-align: center;
     color: #fff;
-    padding: 0 1rem;
 }
 
 .hero-title {
     font-size: 2.4rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin: 0;
 }
 
 
 /* --------------------------------------------------
-   DARK MODE (TTC SAFE)
+   TTC SERVICE STATUS BOX
+-------------------------------------------------- */
+.ttc-status {
+    background: #ffffff;
+    border: 3px solid var(--ttc-red);
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 6px;
+}
+
+.ttc-status h2 {
+    margin-top: 0;
+    color: var(--ttc-red);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Banner */
+.ttc-banner {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Lines */
+.ttc-line {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ttc-line:last-child {
+    border-bottom: none;
+}
+
+.ttc-line-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ttc-status-normal {
+    color: green;
+    font-weight: 600;
+}
+
+.ttc-status-delay {
+    color: var(--ttc-red);
+    font-weight: 600;
+}
+
+/* Timestamp */
+.ttc-timestamp {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+
+/* --------------------------------------------------
+   DARK MODE
 -------------------------------------------------- */
 body.dark {
     background-color: #121212;
@@ -197,18 +242,22 @@ body.dark {
 }
 
 body.dark .site-header {
-    background-color: #1e1e1e;
-    border-bottom-color: var(--ttc-red);
+    background-color: var(--ttc-red);
 }
 
+body.dark .logo-text,
 body.dark .nav-bar a,
-body.dark .mobile-nav a {
-    color: #e0e0e0;
+body.dark .menu-toggle,
+body.dark .dark-toggle {
+    color: #ffffff;
 }
 
-body.dark .nav-bar a:hover,
-body.dark .mobile-nav a:hover {
-    color: var(--ttc-red);
+body.dark .mobile-nav {
+    background-color: var(--ttc-red);
+}
+
+body.dark .mobile-nav a {
+    color: #ffffff;
 }
 
 body.dark .hero-overlay {
