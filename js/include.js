@@ -90,3 +90,10 @@ function loadTTCStatus() {
         })
         .catch(err => console.error("TTC status load failed:", err));
 }
+function toggleHoliday(id) {
+    const box = document.getElementById(id);
+    box.style.display = (box.style.display === "none" || box.style.display === "") 
+        ? "block" 
+        : "none";
+}
+
