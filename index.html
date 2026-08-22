@@ -2,50 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Mobile scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>LRT Ops – Internal Crew Resource</title>
-
-    <!-- ⭐ SOCIAL SHARE PREVIEW -->
-    <meta property="og:title" content="LRT Ops – Internal Crew Resource">
-    <meta property="og:description" content="Unofficial internal reference site for TTC LRT Line 5 & Line 6 crew guides, run guides, holiday crews, calendars, and important contacts.">
-    <meta property="og:image" content="https://www.lrtops.ca/images/lrt6501.jpg">
-    <meta property="og:url" content="https://www.lrtops.ca">
-    <meta property="og:type" content="website">
-
-    <!-- ⭐ TWITTER PREVIEW -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LRT Ops – Internal Crew Resource">
-    <meta name="twitter:description" content="Unofficial internal reference site for TTC LRT Line 5 & Line 6 crew guides, run guides, holiday crews, calendars, and important contacts.">
-    <meta name="twitter:image" content="https://www.lrtops.ca/images/lrt6501.jpg">
-
-    <!-- CSS MUST LOAD BEFORE JS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <title>LRT OPS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/include.js" defer></script>
 </head>
 
 <body>
 
-<!-- ⭐ HEADER INCLUDE -->
+<!-- HEADER INCLUDE -->
 <div data-include="header.html"></div>
+
+<!-- HERO IMAGE -->
+<div class="hero-header">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">WELCOME TO LRT OPS</h1>
+    </div>
+</div>
 
 <main class="content">
 
-    <h1>Welcome to LRT Ops</h1>
+    <h2>Welcome to the LRT Internal Website | For Ops ONLY</h2>
 
+    <h3>Disclaimer</h3>
     <p>
-        This internal reference site provides TTC LRT operators with quick access to crew guides,
-        run guides, holiday crews, calendars, job aids, and important contacts.
+        This site is an unofficial internal resource created for Finch West LRT operations staff.
+        It is not an official Metrolinx or TTC website and should not be used as a primary source
+        for customer‑facing information, service changes, or safety‑critical instructions.
     </p>
+    <p>
+        All information provided here is for internal reference only and may be incomplete or out of date.
+        For verified, up‑to‑date information, always refer to official Metrolinx and TTC channels,
+        including ttc.ca, metrolinx.com, and internal bulletins.
+    </p>
+
+    <h3>About This Site</h3>
+    <p>
+        This site is intended to support Light Rail Transit operations on Lines 5 and 6 by organizing
+        crew guides, run guides, job aids, and important contacts in one place. It is designed for
+        operators, supervisors, and support staff working on Finch West LRT and related projects.
+    </p>
+    <p>
+        Content may include route information, station details, construction updates, and training materials.
+        Always cross‑check critical information with official documentation before acting on it.
+    </p>
+
+    <!-- TTC SERVICE STATUS BOX -->
+    <div id="ttc-status-box" class="ttc-status">
+    <h2>TTC Subway & LRT Status</h2>
+
+    <a class="ttc-status-link" href="https://www.ttc.ca/service-alerts" target="_blank">
+        View Live TTC Service Status →
+    </a>
+</div>
+ </div>
 
 </main>
 
-<!-- ⭐ FOOTER INCLUDE -->
+<!-- FOOTER INCLUDE -->
 <div data-include="footer.html"></div>
-
-<!-- ⭐ JS MUST LOAD AT THE END -->
-<script src="/js/include.js"></script>
 
 </body>
 </html>
