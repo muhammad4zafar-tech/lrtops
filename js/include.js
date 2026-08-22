@@ -2,7 +2,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("[data-include]").forEach(el => {
         const file = el.getAttribute("data-include");
-        fetch(file)
+
+        // ⭐ FIXED: Force root path so GitHub Pages + custom domain works
+        fetch("/" + file)
             .then(response => response.text())
             .then(data => {
                 el.innerHTML = data;
@@ -37,8 +39,7 @@ function toggleDarkMode() {
 
 // ⭐ TTC LIVE STATUS
 function loadTTCStatus() {
-   fetch("https://www.ttc.ca/api/ServiceStatus/Subway", { method: "GET", mode: "cors" })
-
+    fetch("https://www.ttc.ca/api/ServiceStatus/Subway", { method: "GET", mode: "cors" })
         .then(res => res.json())
         .then(data => {
             const linesDiv = document.getElementById("ttc-lines");
@@ -90,10 +91,12 @@ function loadTTCStatus() {
         })
         .catch(err => console.error("TTC status load failed:", err));
 }
+
+
+// ⭐ Holiday Expandable Toggle
 function toggleHoliday(id) {
     const box = document.getElementById(id);
-    box.style.display = (box.style.display === "none" || box.style.display === "") 
-        ? "block" 
+    box.style.display = (box.style.display === "none" || box.style.display === "")
+        ? "block"
         : "none";
 }
-
