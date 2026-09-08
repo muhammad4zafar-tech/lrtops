@@ -1,88 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Run Guides – LRTops.ca</title>
 
     <link rel="stylesheet" href="css/main.css">
 
     <style>
-        .run-btn {
-            background: var(--ttc-red);
-            color: #fff;
-            padding: 12px 18px;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 4px;
-            text-align: left;
-            margin-bottom: 20px;
+        /* Shared box styling */
+        .run-box {
+            padding: 18px 20px;
+            border-radius: 6px;
+            margin-top: 25px;
         }
 
-        .run-btn:hover {
-            background: #a50e26;
-        }
-
-        .run-section {
-            display: none;
-            margin-bottom: 40px;
-        }
-
-        .run-section h2 {
-            margin-top: 0;
-            border-bottom: 2px solid var(--ttc-red);
-            padding-bottom: 5px;
-        }
-
-        /* Updated Line headings */
-        .line5-heading {
+        .run-title {
             font-size: 1.3rem;
             font-weight: bold;
-            margin-top: 25px;
             margin-bottom: 10px;
-            color: #7A0010; /* TTC burgundy */
-        }
-
-        .line6-heading {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            color: #1e4fa8; /* Finch West LRT blue */
         }
 
         .run-list {
             list-style: none;
             padding: 0;
+            margin-top: 10px;
         }
 
         .run-list li {
-            margin-bottom: 10px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            font-weight: bold;
         }
 
         .run-link {
-            background: #f5f5f5;
-            padding: 12px 15px;
-            border-radius: 6px;
-            display: block;
             text-decoration: none;
             font-weight: bold;
-            color: var(--ttc-red);
         }
 
         .run-link:hover {
-            background: #e0e0e0;
+            text-decoration: underline;
         }
 
-        body.dark-mode .run-link {
-            background: #333;
-            color: #fff;
+        /* ⭐ LINE 5 COLORS */
+        .line5-box {
+            background: #ffe5e5;
+            border-left: 5px solid #cc0000;
         }
 
-        body.dark-mode .run-link:hover {
-            background: #444;
+        .line5-title {
+            color: #cc0000;
+        }
+
+        .line5-list li {
+            background: #f7d4d4;
+            color: #cc0000;
+        }
+
+        .line5-link {
+            color: #cc0000;
+        }
+
+        /* ⭐ LINE 6 COLORS */
+        .line6-box {
+            background: #e5f0ff;
+            border-left: 5px solid #0055cc;
+        }
+
+        .line6-title {
+            color: #0055cc;
+        }
+
+        .line6-list li {
+            background: #d6e6ff;
+            color: #0055cc;
+        }
+
+        .line6-link {
+            color: #0055cc;
+        }
+
+        /* ⭐ DARK MODE FIXES */
+        body.dark-mode .line5-box {
+            background: #442222;
+            border-left-color: #ff6666;
+        }
+
+        body.dark-mode .line5-list li {
+            background: #663333;
+            color: #ff9999;
+        }
+
+        body.dark-mode .line5-link {
+            color: #ff9999;
+        }
+
+        body.dark-mode .line6-box {
+            background: #1f2f44;
+            border-left-color: #66a3ff;
+        }
+
+        body.dark-mode .line6-list li {
+            background: #2b3f5c;
+            color: #99c2ff;
+        }
+
+        body.dark-mode .line6-link {
+            color: #99c2ff;
         }
     </style>
 </head>
@@ -94,84 +119,60 @@
 <main class="content">
 
     <h1>Run Guides</h1>
-    <p>Run Guides for the current board period. TTC week runs Sunday → Saturday.</p>
 
-    <!-- BOARD PERIOD BUTTON -->
-    <button class="run-btn" onclick="toggleRun('summer2')">
-        Summer 2 — July 26 → September 5, 2026
-    </button>
+    <p>
+        Run Guides for the current board period:
+        <strong>September 6, 2026 → October 31, 2026</strong>
+    </p>
 
-    <!-- RUN GUIDES SECTION -->
-    <div id="summer2" class="run-section">
+    <!-- ⭐ LINE 5 BOX -->
+    <div class="run-box line5-box">
+        <div class="run-title line5-title">Line 5 – Run Guides</div>
 
-        <h2>Summer 2 — Run Guides</h2>
-
-        <!-- ============================
-             LINE 5
-        ============================ -->
-        <div class="line5-heading">Line 5</div>
-
-        <ul class="run-list">
-
-            <!-- Sunday -->
+        <ul class="run-list line5-list">
             <li>
-                <a class="run-link" href="run-guides/2026-07-26-Line5-Sunday-runguides.pdf"
-                   target="_blank" rel="noopener noreferrer">
-                    Sunday
+                <a class="run-link line5-link" href="run-guides/2026-09-06-Line5_Sunday_Runguide.pdf" target="_blank">
+                    Line 5 — Sunday
                 </a>
             </li>
 
-            <!-- Daily -->
             <li>
-                <a class="run-link" href="run-guides/2026-07-26-line5-daily-runguides.pdf"
-                   target="_blank" rel="noopener noreferrer">
-                    Daily (Mon–Fri)
+                <a class="run-link line5-link" href="run-guides/2026-09-06-Line5_Daily_Runguide.pdf" target="_blank">
+                    Line 5 — Daily (Mon–Fri)
                 </a>
             </li>
 
-            <!-- Saturday -->
             <li>
-                <a class="run-link" href="run-guides/2026-07-26-line5-saturday-runguides.pdf"
-                   target="_blank" rel="noopener noreferrer">
-                    Saturday
+                <a class="run-link line5-link" href="run-guides/2026-09-06-Line5_Saturday_Runguide.pdf" target="_blank">
+                    Line 5 — Saturday
                 </a>
             </li>
-
         </ul>
+    </div>
 
-        <!-- ============================
-             LINE 6
-        ============================ -->
-        <div class="line6-heading">Line 6</div>
+    <!-- ⭐ LINE 6 BOX -->
+    <div class="run-box line6-box">
+        <div class="run-title line6-title">Line 6 – Run Guides</div>
 
-        <ul class="run-list">
-
-            <!-- Sunday -->
+        <ul class="run-list line6-list">
             <li>
-                <a class="run-link" href="run-guides/2026-07-26-line6-sunday-runguides.pdf"
-                   target="_blank" rel="noopener noreferrer">
-                    Sunday
+                <a class="run-link line6-link" href="run-guides/2026-09-06-Line6_Sunday_Runguide.pdf" target="_blank">
+                    Line 6 — Sunday
                 </a>
             </li>
 
-            <!-- Daily -->
             <li>
-                <a class="run-link" href="run-guides/2026-07-26-line6-daily-runguides.pdf"
-                   target="_blank" rel="noopener noreferrer">
-                    Daily (Mon–Fri)
+                <a class="run-link line6-link" href="run-guides/2026-09-06-Line6_Daily_Runguide.pdf" target="_blank">
+                    Line 6 — Daily (Mon–Fri)
                 </a>
             </li>
 
-            <!-- Saturday -->
             <li>
-                <a class="run-link" href="run-guides/2026-07-26-line6-saturday-runguides.pdf"
-                   target="_blank" rel="noopener noreferrer">
-                    Saturday
+                <a class="run-link line6-link" href="run-guides/2026-09-06-Line6_Saturday_Runguide.pdf" target="_blank">
+                    Line 6 — Saturday
                 </a>
             </li>
-
         </ul>
-
     </div>
 
 </main>
@@ -179,13 +180,6 @@
 <div data-include="footer.html"></div>
 
 <script src="js/include.js"></script>
-
-<script>
-function toggleRun(id) {
-    const section = document.getElementById(id);
-    section.style.display = section.style.display === "block" ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
