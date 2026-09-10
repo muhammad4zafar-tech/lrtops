@@ -1,77 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Crew Guides – LRTops.ca</title>
-
     <link rel="stylesheet" href="css/main.css">
 
     <style>
-        .board-section {
-            margin-bottom: 40px;
+        .crew-box {
+            padding: 18px 20px;
+            border-radius: 6px;
+            margin-top: 25px;
         }
 
-        .board-section h2 {
-            margin-top: 0;
-            border-bottom: 2px solid var(--ttc-red);
-            padding-bottom: 5px;
-        }
-
-        .line-heading {
+        .crew-title {
             font-size: 1.3rem;
             font-weight: bold;
-            margin-top: 25px;
             margin-bottom: 10px;
-        }
-
-        .line5-heading {
-            color: #7A0010; /* TTC burgundy */
-        }
-
-        .line6-heading {
-            color: #1e4fa8; /* Finch West LRT blue */
-        }
-
-        .special-heading {
-            color: #008000; /* Green */
-        }
-
-        .sac-heading {
-            color: #8A2BE2; /* Purple */
         }
 
         .crew-list {
             list-style: none;
             padding: 0;
+            margin-top: 10px;
         }
 
         .crew-list li {
-            margin-bottom: 10px;
+            padding: 10px 14px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            font-weight: bold;
         }
 
         .crew-link {
-            background: #f5f5f5;
-            padding: 12px 15px;
-            border-radius: 6px;
-            display: block;
             text-decoration: none;
             font-weight: bold;
-            color: var(--ttc-red);
         }
 
         .crew-link:hover {
-            background: #e0e0e0;
+            text-decoration: underline;
         }
 
-        body.dark-mode .crew-link {
-            background: #333;
-            color: #fff;
+        .line5-box {
+            background: #ffe5e5;
+            border-left: 5px solid #cc0000;
         }
 
-        body.dark-mode .crew-link:hover {
-            background: #444;
+        .line5-title,
+        .line5-link {
+            color: #cc0000;
+        }
+
+        .line5-list li {
+            background: #f7d4d4;
+        }
+
+        .line6-box {
+            background: #e5f0ff;
+            border-left: 5px solid #0055cc;
+        }
+
+        .line6-title,
+        .line6-link {
+            color: #0055cc;
+        }
+
+        .line6-list li {
+            background: #d6e6ff;
+        }
+
+        .special-box {
+            background: #e8f5e9;
+            border-left: 5px solid #16803a;
+        }
+
+        .special-title,
+        .special-link {
+            color: #16803a;
+        }
+
+        .special-list li {
+            background: #d5ebd8;
+        }
+
+        .sac-box {
+            background: #f1e7fb;
+            border-left: 5px solid #7020a0;
+        }
+
+        .sac-title,
+        .sac-link {
+            color: #7020a0;
+        }
+
+        .sac-list li {
+            background: #e4d2f4;
+        }
+
+        body.dark-mode .line5-box {
+            background: #442222;
+            border-left-color: #ff6666;
+        }
+
+        body.dark-mode .line5-list li {
+            background: #663333;
+        }
+
+        body.dark-mode .line5-title,
+        body.dark-mode .line5-link {
+            color: #ff9999;
+        }
+
+        body.dark-mode .line6-box {
+            background: #1f2f44;
+            border-left-color: #66a3ff;
+        }
+
+        body.dark-mode .line6-list li {
+            background: #2b3f5c;
+        }
+
+        body.dark-mode .line6-title,
+        body.dark-mode .line6-link {
+            color: #99c2ff;
+        }
+
+        body.dark-mode .special-box {
+            background: #203b29;
+            border-left-color: #70d48a;
+        }
+
+        body.dark-mode .special-list li {
+            background: #2d5138;
+        }
+
+        body.dark-mode .special-title,
+        body.dark-mode .special-link {
+            color: #8be0a1;
+        }
+
+        body.dark-mode .sac-box {
+            background: #382545;
+            border-left-color: #c186e5;
+        }
+
+        body.dark-mode .sac-list li {
+            background: #4d3260;
+        }
+
+        body.dark-mode .sac-title,
+        body.dark-mode .sac-link {
+            color: #d7a9f2;
         }
     </style>
 </head>
@@ -83,43 +162,42 @@
 <main class="content">
 
     <h1>Crew Guides</h1>
-    <p>TTC week runs Sunday → Saturday.</p>
 
-    <!-- ============================
-         FALL 1 — SEPT 6 → OCT 31
-    ============================ -->
-    <div id="fall1" class="board-section">
+    <p>
+        Crew Guides for the current board period:
+        <strong>September 6, 2026 → October 31, 2026</strong>
+    </p>
 
-        <h2>Fall 1 — September 6, 2026 → October 31, 2026</h2>
-
-        <!-- Line 5 -->
-        <div class="line-heading line5-heading">Line 5</div>
-        <ul class="crew-list">
-            <li><a class="crew-link" href="crew-guides/2026-09-08-line5sunday-crewguides.pdf" target="_blank" rel="noopener noreferrer">Sunday</a></li>
-            <li><a class="crew-link" href="crew-guides/2026-09-08-line5daily-crewguides.pdf" target="_blank" rel="noopener noreferrer">Daily (Mon–Fri)</a></li>
-            <li><a class="crew-link" href="crew-guides/2026-09-08-line5-saturday-crewguides.pdf" target="_blank" rel="noopener noreferrer">Saturday</a></li>
+    <div class="crew-box line5-box">
+        <div class="crew-title line5-title">Line 5 – Crew Guides</div>
+        <ul class="crew-list line5-list">
+            <li><a class="crew-link line5-link" href="crew-guides/2026-09-08-line5sunday-crewguides.pdf" target="_blank" rel="noopener noreferrer">Line 5 — Sunday</a></li>
+            <li><a class="crew-link line5-link" href="crew-guides/2026-09-08-line5daily-crewguides.pdf" target="_blank" rel="noopener noreferrer">Line 5 — Daily (Mon–Fri)</a></li>
+            <li><a class="crew-link line5-link" href="crew-guides/2026-09-08-line5-saturday-crewguides.pdf" target="_blank" rel="noopener noreferrer">Line 5 — Saturday</a></li>
         </ul>
+    </div>
 
-        <!-- Line 6 -->
-        <div class="line-heading line6-heading">Line 6</div>
-        <ul class="crew-list">
-            <li><a class="crew-link" href="crew-guides/2026-09-08-line6sunday-crewguides.pdf" target="_blank" rel="noopener noreferrer">Sunday</a></li>
-            <li><a class="crew-link" href="crew-guides/2026-09-08-line6daily-crewguides.pdf" target="_blank" rel="noopener noreferrer">Daily (Mon–Fri)</a></li>
-            <li><a class="crew-link" href="crew-guides/2026-09-08-line6saturday-crewguides.pdf" target="_blank" rel="noopener noreferrer">Saturday</a></li>
+    <div class="crew-box line6-box">
+        <div class="crew-title line6-title">Line 6 – Crew Guides</div>
+        <ul class="crew-list line6-list">
+            <li><a class="crew-link line6-link" href="crew-guides/2026-09-08-line6sunday-crewguides.pdf" target="_blank" rel="noopener noreferrer">Line 6 — Sunday</a></li>
+            <li><a class="crew-link line6-link" href="crew-guides/2026-09-08-line6daily-crewguides.pdf" target="_blank" rel="noopener noreferrer">Line 6 — Daily (Mon–Fri)</a></li>
+            <li><a class="crew-link line6-link" href="crew-guides/2026-09-08-line6saturday-crewguides.pdf" target="_blank" rel="noopener noreferrer">Line 6 — Saturday</a></li>
         </ul>
+    </div>
 
-        <!-- Special -->
-        <div class="line-heading special-heading">Special Crews</div>
-        <ul class="crew-list">
-            <li><a class="crew-link" href="crew-guides/2026-09-08-special-crewguides.pdf" target="_blank" rel="noopener noreferrer">Daily</a></li>
+    <div class="crew-box special-box">
+        <div class="crew-title special-title">Special Crew Guides</div>
+        <ul class="crew-list special-list">
+            <li><a class="crew-link special-link" href="crew-guides/2026-09-08-special-crewguides.pdf" target="_blank" rel="noopener noreferrer">Special Crews — Daily</a></li>
         </ul>
+    </div>
 
-        <!-- SAC -->
-        <div class="line-heading sac-heading">SAC Crews</div>
-        <ul class="crew-list">
-            <li><a class="crew-link" href="crew-guides/2026-09-08-sac-crewguides.pdf" target="_blank" rel="noopener noreferrer">Daily</a></li>
+    <div class="crew-box sac-box">
+        <div class="crew-title sac-title">SAC Crew Guides</div>
+        <ul class="crew-list sac-list">
+            <li><a class="crew-link sac-link" href="crew-guides/2026-09-08-sac-crewguides.pdf" target="_blank" rel="noopener noreferrer">SAC Crews — Daily</a></li>
         </ul>
-
     </div>
 
 </main>
