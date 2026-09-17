@@ -82,6 +82,10 @@ footer {
     color: #ffffff;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 
 /* --------------------------------------------------
    MOBILE MENU
@@ -110,7 +114,7 @@ footer {
     display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
     .nav-bar { display: none; }
     .menu-toggle { display: block; }
 }
