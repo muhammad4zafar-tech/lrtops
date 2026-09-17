@@ -59,7 +59,8 @@
         }
 
         .find-button,
-        .pdf-button {
+        .pdf-button,
+        .copy-button {
             display: inline-block;
             margin-top: 20px;
             padding: 11px 18px;
@@ -74,8 +75,14 @@
         }
 
         .find-button:hover,
-        .pdf-button:hover {
+        .pdf-button:hover,
+        .copy-button:hover {
             filter: brightness(0.9);
+        }
+
+        .copy-button {
+            margin: 0 0 18px;
+            background: #0055cc;
         }
 
         .crew-result {
@@ -190,7 +197,8 @@
             }
 
             .find-button,
-            .pdf-button {
+            .pdf-button,
+            .copy-button {
                 width: 100%;
                 box-sizing: border-box;
                 text-align: center;
@@ -285,6 +293,71 @@
         `).join("");
     }
 
+    function buildCrewText(guide, crew) {
+        const lines = [
+            crew.title,
+            guide.label,
+            `${crewFinderData.boardPeriod.name}: ${crewFinderData.boardPeriod.start} - ${crewFinderData.boardPeriod.end}`,
+            "",
+            `Report: ${crew.report}`,
+            `Pay: ${crew.pay}`
+        ];
+
+        crew.pieces.forEach(piece => {
+            lines.push("");
+
+            if (piece.breakStart) {
+                lines.push(`Break: ${piece.breakStart} - ${piece.breakEnd}`);
+                lines.push("");
+            }
+
+            lines.push(piece.label);
+            piece.trips.forEach(trip => {
+                lines.push(
+                    `${trip.run} - ${trip.from} ${trip.depart} → ${trip.to} ${trip.arrive}`
+                );
+            });
+        });
+
+        lines.push("");
+        lines.push(`Last trip finishes: ${crew.finish.time} at ${crew.finish.location}`);
+        lines.push("");
+        lines.push("Please verify this information against the PDF crew guide.");
+
+        return lines.join("\n");
+    }
+
+    async function copyCrew(guide, crew) {
+        const button = document.getElementById("copyCrewButton");
+        const crewText = buildCrewText(guide, crew);
+
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(crewText);
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = crewText;
+                textArea.style.position = "fixed";
+                textArea.style.opacity = "0";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand("copy");
+                textArea.remove();
+            }
+
+            button.textContent = "Copied!";
+            setTimeout(() => {
+                button.textContent = "Copy My Crew";
+            }, 2000);
+        } catch (error) {
+            button.textContent = "Copy Failed - Try Again";
+            setTimeout(() => {
+                button.textContent = "Copy My Crew";
+            }, 2500);
+        }
+    }
+
     function showCrew() {
         const guide = crewFinderData.guides[guideSelect.value];
         const crew = guide && guide.crews[crewSelect.value];
@@ -308,6 +381,8 @@
         }).join("");
 
         crewResult.innerHTML = `
+            <button id="copyCrewButton" class="copy-button" type="button">Copy My Crew</button>
+
             <h2 class="result-heading">${crew.title}</h2>
             <p class="board-period">
                 ${guide.label}<br>
@@ -329,6 +404,10 @@
                 Please verify this information against the PDF crew guide before reporting for work.
             </div>
         `;
+
+        document.getElementById("copyCrewButton").addEventListener("click", () => {
+            copyCrew(guide, crew);
+        });
 
         crewResult.style.display = "block";
         crewResult.scrollIntoView({ behavior: "smooth", block: "start" });
