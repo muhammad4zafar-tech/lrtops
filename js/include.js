@@ -13,9 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(err => console.error("Include failed:", file, err));
     });
 
+    loadCloudflareAnalytics();
     loadTTCStatus();
     setInterval(loadTTCStatus, 60000); // Auto refresh every 60 sec
 });
+
+
+// ⭐ Cloudflare Web Analytics (shared by every page that loads this file)
+function loadCloudflareAnalytics() {
+    if (document.querySelector('script[data-cf-beacon]')) return;
+
+    const analyticsScript = document.createElement("script");
+    analyticsScript.type = "module";
+    analyticsScript.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    analyticsScript.setAttribute("data-cf-beacon", JSON.stringify({
+        token: "40dc6e11bd19480cb078f96355b2d5a5"
+    }));
+    document.body.appendChild(analyticsScript);
+}
 
 
 // ⭐ Attach header buttons
