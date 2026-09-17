@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find My Crew - LRTOps.ca</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        .finder-wrap {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .alpha-notice {
+            margin: 18px 0 24px;
+            padding: 16px 18px;
+            background: #fff3cd;
+            color: #332701;
+            border: 1px solid #e4c75d;
+            border-left: 6px solid #b38400;
+            border-radius: 7px;
+            line-height: 1.55;
+        }
+
+        .alpha-notice strong {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.08rem;
+        }
+
+        .finder-form,
+        .crew-result {
+            padding: 20px;
+            background: #f5f5f5;
+            border-left: 5px solid var(--ttc-red);
+            border-radius: 7px;
+        }
+
+        .form-row + .form-row {
+            margin-top: 18px;
+        }
+
+        .form-row label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .form-row select {
+            width: 100%;
+            min-height: 46px;
+            padding: 9px 12px;
+            border: 1px solid #888;
+            border-radius: 6px;
+            background: #fff;
+            color: #111;
+            font: inherit;
+        }
+
+        .find-button,
+        .pdf-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 11px 18px;
+            border: 0;
+            border-radius: 6px;
+            background: var(--ttc-red);
+            color: #fff;
+            font: inherit;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .find-button:hover,
+        .pdf-button:hover {
+            filter: brightness(0.9);
+        }
+
+        .crew-result {
+            display: none;
+            margin-top: 25px;
+        }
+
+        .result-heading {
+            margin: 0 0 4px;
+            color: var(--ttc-red);
+        }
+
+        .board-period {
+            margin: 0 0 18px;
+            color: #555;
+        }
+
+        .report-line,
+        .finish-line {
+            padding: 12px 14px;
+            background: #fff;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .piece-title {
+            margin: 22px 0 10px;
+            font-size: 1.08rem;
+        }
+
+        .trip-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .trip-list li {
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            gap: 10px;
+            padding: 11px 12px;
+            margin-bottom: 7px;
+            background: #fff;
+            border-radius: 6px;
+            line-height: 1.45;
+        }
+
+        .run-number {
+            color: var(--ttc-red);
+            font-weight: bold;
+        }
+
+        .break-line {
+            margin: 18px 0;
+            padding: 12px 14px;
+            background: #e5f0ff;
+            border-left: 5px solid #0055cc;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .finish-line {
+            margin-top: 18px;
+            border-left: 5px solid #16803a;
+        }
+
+        .verification-reminder {
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1px solid #bbb;
+            font-weight: bold;
+        }
+
+        body.dark .alpha-notice {
+            background: #4a3d12;
+            color: #fff3bd;
+            border-color: #8f7625;
+        }
+
+        body.dark .finder-form,
+        body.dark .crew-result {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark .form-row select,
+        body.dark .report-line,
+        body.dark .trip-list li,
+        body.dark .finish-line {
+            background: #444;
+            color: #fff;
+        }
+
+        body.dark .board-period {
+            color: #ccc;
+        }
+
+        body.dark .break-line {
+            background: #1f2f44;
+            border-left-color: #66a3ff;
+        }
+
+        @media (max-width: 560px) {
+            .finder-form,
+            .crew-result {
+                padding: 16px;
+            }
+
+            .trip-list li {
+                grid-template-columns: 48px 1fr;
+                gap: 7px;
+            }
+
+            .find-button,
+            .pdf-button {
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div data-include="header.html"></div>
+
+<main class="content">
+    <div class="finder-wrap">
+        <h1>Find My Crew</h1>
+
+        <div class="alpha-notice">
+            <strong>Alpha Version - Important Notice</strong>
+            This new crew-display tool is being tested and may contain errors or missing information.
+            Always confirm your report time, trips, breaks, pay and finishing time using the TTC PDF Crew Guide.
+            The PDF crew guide remains the authoritative source.
+        </div>
+
+        <div class="finder-form">
+            <div class="form-row">
+                <label for="guideSelect">Select Your Crew Guide</label>
+                <select id="guideSelect">
+                    <option value="">Choose a crew guide</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="crewSelect">Select Your Crew Number</label>
+                <select id="crewSelect">
+                    <option value="">Choose a crew</option>
+                </select>
+            </div>
+
+            <button id="findCrewButton" class="find-button" type="button">View My Crew</button>
+        </div>
+
+        <section id="crewResult" class="crew-result" aria-live="polite"></section>
+    </div>
+</main>
+
+<div data-include="footer.html"></div>
+
+<script src="js/crew-data.js"></script>
+<script>
+    const guideSelect = document.getElementById("guideSelect");
+    const crewSelect = document.getElementById("crewSelect");
+    const findCrewButton = document.getElementById("findCrewButton");
+    const crewResult = document.getElementById("crewResult");
+
+    function loadCrewGuides() {
+        Object.entries(crewFinderData.guides).forEach(([guideKey, guide]) => {
+            const option = document.createElement("option");
+            option.value = guideKey;
+            option.textContent = guide.label;
+            guideSelect.appendChild(option);
+        });
+    }
+
+    function loadCrewNumbers() {
+        const guide = crewFinderData.guides[guideSelect.value];
+        crewSelect.innerHTML = '<option value="">Choose a crew</option>';
+        crewResult.style.display = "none";
+
+        if (!guide) {
+            crewSelect.disabled = true;
+            return;
+        }
+
+        crewSelect.disabled = false;
+
+        Object.keys(guide.crews)
+            .sort((a, b) => Number(a) - Number(b))
+            .forEach(crewNumber => {
+                const option = document.createElement("option");
+                option.value = crewNumber;
+                option.textContent = "Crew " + crewNumber;
+                crewSelect.appendChild(option);
+            });
+    }
+
+    function renderTrips(trips) {
+        return trips.map(trip => `
+            <li>
+                <span class="run-number">${trip.run}</span>
+                <span>${trip.from} ${trip.depart} &rarr; ${trip.to} ${trip.arrive}</span>
+            </li>
+        `).join("");
+    }
+
+    function showCrew() {
+        const guide = crewFinderData.guides[guideSelect.value];
+        const crew = guide && guide.crews[crewSelect.value];
+
+        if (!crew) {
+            crewResult.style.display = "block";
+            crewResult.innerHTML = "<strong>Please select a crew number.</strong>";
+            return;
+        }
+
+        const pieces = crew.pieces.map((piece, index) => {
+            const breakNotice = piece.breakStart
+                ? `<div class="break-line">Break: ${piece.breakStart} - ${piece.breakEnd}</div>`
+                : "";
+
+            return `
+                ${breakNotice}
+                <h3 class="piece-title">${piece.label}</h3>
+                <ul class="trip-list">${renderTrips(piece.trips)}</ul>
+            `;
+        }).join("");
+
+        crewResult.innerHTML = `
+            <h2 class="result-heading">${crew.title}</h2>
+            <p class="board-period">
+                ${guide.label}<br>
+                ${crewFinderData.boardPeriod.name}: ${crewFinderData.boardPeriod.start} - ${crewFinderData.boardPeriod.end}
+            </p>
+
+            <div class="report-line">Report: ${crew.report} &nbsp; | &nbsp; Pay: ${crew.pay}</div>
+            ${pieces}
+
+            <div class="finish-line">
+                Last trip finishes: ${crew.finish.time} at ${crew.finish.location}
+            </div>
+
+            <a class="pdf-button" href="${guide.pdf}" target="_blank" rel="noopener noreferrer">
+                View PDF Crew Guide
+            </a>
+
+            <div class="verification-reminder">
+                Please verify this information against the PDF crew guide before reporting for work.
+            </div>
+        `;
+
+        crewResult.style.display = "block";
+        crewResult.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    guideSelect.addEventListener("change", loadCrewNumbers);
+    findCrewButton.addEventListener("click", showCrew);
+    loadCrewGuides();
+    loadCrewNumbers();
+</script>
+<script src="js/include.js"></script>
+
+</body>
+</html>
