@@ -224,9 +224,22 @@
 
         <div class="finder-form">
             <div class="form-row">
-                <label for="guideSelect">Select Your Crew Guide</label>
-                <select id="guideSelect">
-                    <option value="">Choose a crew guide</option>
+                <label for="categorySelect">Select Your Day or Crew Category</label>
+                <select id="categorySelect">
+                    <option value="">Choose a day or crew category</option>
+                    <option value="sunday">Sundays</option>
+                    <option value="daily">Daily (Monday-Friday)</option>
+                    <option value="saturday">Saturdays</option>
+                    <option value="special">Special Crews</option>
+                    <option value="sac">SAC Crews</option>
+                    <option value="thanksgiving">Thanksgiving - Monday, October 12, 2026</option>
+                </select>
+            </div>
+
+            <div id="lineRow" class="form-row">
+                <label for="lineSelect">Select Your Line</label>
+                <select id="lineSelect" disabled>
+                    <option value="">Choose a line</option>
                 </select>
             </div>
 
@@ -248,22 +261,71 @@
 
 <script src="js/crew-data.js"></script>
 <script>
-    const guideSelect = document.getElementById("guideSelect");
+    const categorySelect = document.getElementById("categorySelect");
+    const lineRow = document.getElementById("lineRow");
+    const lineSelect = document.getElementById("lineSelect");
     const crewSelect = document.getElementById("crewSelect");
     const findCrewButton = document.getElementById("findCrewButton");
     const crewResult = document.getElementById("crewResult");
 
-    function loadCrewGuides() {
-        Object.entries(crewFinderData.guides).forEach(([guideKey, guide]) => {
+    const guideChoices = {
+        sunday: [
+            { value: "line5-sunday", label: "Line 5" },
+            { value: "line6-sunday", label: "Line 6" }
+        ],
+        daily: [
+            { value: "line5-daily", label: "Line 5" },
+            { value: "line6-daily", label: "Line 6" }
+        ],
+        saturday: [
+            { value: "line5-saturday", label: "Line 5" },
+            { value: "line6-saturday", label: "Line 6" }
+        ],
+        special: [
+            { value: "special", label: "Special Crews" }
+        ],
+        sac: [
+            { value: "sac", label: "SAC Crews" }
+        ],
+        thanksgiving: [
+            { value: "thanksgiving-line5", label: "Line 5" },
+            { value: "thanksgiving-line6", label: "Line 6" },
+            { value: "thanksgiving-special", label: "Special Crews" }
+        ]
+    };
+
+    function loadLineChoices() {
+        const choices = guideChoices[categorySelect.value] || [];
+        lineSelect.innerHTML = '<option value="">Choose a line</option>';
+        crewSelect.innerHTML = '<option value="">Choose a crew</option>';
+        crewSelect.disabled = true;
+        crewResult.style.display = "none";
+
+        if (choices.length === 1) {
+            lineRow.style.display = "none";
+            lineSelect.innerHTML = "";
             const option = document.createElement("option");
-            option.value = guideKey;
-            option.textContent = guide.label;
-            guideSelect.appendChild(option);
+            option.value = choices[0].value;
+            option.textContent = choices[0].label;
+            lineSelect.appendChild(option);
+            lineSelect.value = choices[0].value;
+            loadCrewNumbers();
+            return;
+        }
+
+        lineRow.style.display = "block";
+        lineSelect.disabled = choices.length === 0;
+
+        choices.forEach(choice => {
+            const option = document.createElement("option");
+            option.value = choice.value;
+            option.textContent = choice.label;
+            lineSelect.appendChild(option);
         });
     }
 
     function loadCrewNumbers() {
-        const guide = crewFinderData.guides[guideSelect.value];
+        const guide = crewFinderData.guides[lineSelect.value];
         crewSelect.innerHTML = '<option value="">Choose a crew</option>';
         crewResult.style.display = "none";
 
@@ -284,6 +346,14 @@
             });
     }
 
+    function getBoardPeriodText(guide) {
+        const period = guide.boardPeriod || crewFinderData.boardPeriod;
+        if (period.start === period.end) {
+            return `${period.name}: ${period.start}`;
+        }
+        return `${period.name}: ${period.start} - ${period.end}`;
+    }
+
     function renderTrips(trips) {
         return trips.map(trip => `
             <li>
@@ -297,7 +367,7 @@
         const lines = [
             crew.title,
             guide.label,
-            `${crewFinderData.boardPeriod.name}: ${crewFinderData.boardPeriod.start} - ${crewFinderData.boardPeriod.end}`,
+            getBoardPeriodText(guide),
             "",
             `Report: ${crew.report}`,
             `Pay: ${crew.pay}`
@@ -359,7 +429,7 @@
     }
 
     function showCrew() {
-        const guide = crewFinderData.guides[guideSelect.value];
+        const guide = crewFinderData.guides[lineSelect.value];
         const crew = guide && guide.crews[crewSelect.value];
 
         if (!crew) {
@@ -386,7 +456,7 @@
             <h2 class="result-heading">${crew.title}</h2>
             <p class="board-period">
                 ${guide.label}<br>
-                ${crewFinderData.boardPeriod.name}: ${crewFinderData.boardPeriod.start} - ${crewFinderData.boardPeriod.end}
+                ${getBoardPeriodText(guide)}
             </p>
 
             <div class="report-line">Report: ${crew.report} &nbsp; | &nbsp; Pay: ${crew.pay}</div>
@@ -413,10 +483,10 @@
         crewResult.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    guideSelect.addEventListener("change", loadCrewNumbers);
+    categorySelect.addEventListener("change", loadLineChoices);
+    lineSelect.addEventListener("change", loadCrewNumbers);
     findCrewButton.addEventListener("click", showCrew);
-    loadCrewGuides();
-    loadCrewNumbers();
+    loadLineChoices();
 </script>
 <script src="js/include.js"></script>
 
