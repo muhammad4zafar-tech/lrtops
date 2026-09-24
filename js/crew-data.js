@@ -8,6 +8,7 @@ const crewFinderData = {
     "line5-sunday": {
       "label": "Line 5 - Sunday",
       "pdf": "crew-guides/2026-09-08-line5sunday-crewguides.pdf",
+      "boardPeriod": null,
       "crews": {
         "1": {
           "title": "1 Crew",
@@ -3135,6 +3136,7 @@ const crewFinderData = {
     "line5-daily": {
       "label": "Line 5 - Daily (Monday-Friday)",
       "pdf": "crew-guides/2026-09-08-line5daily-crewguides.pdf",
+      "boardPeriod": null,
       "crews": {
         "1": {
           "title": "1 Crew",
@@ -7575,6 +7577,7 @@ const crewFinderData = {
     "line5-saturday": {
       "label": "Line 5 - Saturday",
       "pdf": "crew-guides/2026-09-08-line5-saturday-crewguides.pdf",
+      "boardPeriod": null,
       "crews": {
         "1": {
           "title": "1 Crew",
@@ -11099,6 +11102,7 @@ const crewFinderData = {
     "line6-sunday": {
       "label": "Line 6 - Sunday",
       "pdf": "crew-guides/2026-09-08-line6sunday-crewguides.pdf",
+      "boardPeriod": null,
       "crews": {
         "1": {
           "title": "1 Crew",
@@ -13486,6 +13490,7 @@ const crewFinderData = {
     "line6-daily": {
       "label": "Line 6 - Daily (Monday-Friday)",
       "pdf": "crew-guides/2026-09-08-line6daily-crewguides.pdf",
+      "boardPeriod": null,
       "crews": {
         "1": {
           "title": "1 Crew",
@@ -16789,6 +16794,7 @@ const crewFinderData = {
     "line6-saturday": {
       "label": "Line 6 - Saturday",
       "pdf": "crew-guides/2026-09-08-line6saturday-crewguides.pdf",
+      "boardPeriod": null,
       "crews": {
         "1": {
           "title": "1 Crew",
@@ -19485,6 +19491,7 @@ const crewFinderData = {
     "special": {
       "label": "Special Crews",
       "pdf": "crew-guides/2026-09-08-special-crewguides.pdf",
+      "boardPeriod": null,
       "crews": {
         "1": {
           "title": "1 Crew",
@@ -19772,6 +19779,7 @@ const crewFinderData = {
     "sac": {
       "label": "SAC Crews",
       "pdf": "crew-guides/2026-09-08-sac-crewguides.pdf",
+      "boardPeriod": null,
       "crews": {
         "1": {
           "title": "1 Crew",
@@ -20001,6 +20009,5375 @@ const crewFinderData = {
           "finish": {
             "location": "EMSF",
             "time": "2:55 AM (next day)"
+          }
+        }
+      }
+    },
+    "thanksgiving-line5": {
+      "label": "Line 5 - Thanksgiving",
+      "pdf": "holiday-crews/2026-10-12-Line5-Crewguides.pdf",
+      "boardPeriod": {
+        "name": "Thanksgiving Day",
+        "start": "October 12, 2026",
+        "end": "October 12, 2026"
+      },
+      "crews": {
+        "1": {
+          "title": "1 Crew",
+          "report": "4:10 AM",
+          "pay": "10:19",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "501",
+                  "from": "XP",
+                  "depart": "5:37 AM",
+                  "to": "MDCT",
+                  "arrive": "6:28 AM"
+                },
+                {
+                  "run": "504",
+                  "from": "MDCT",
+                  "depart": "6:28 AM",
+                  "to": "KECT",
+                  "arrive": "7:42 AM"
+                },
+                {
+                  "run": "505",
+                  "from": "KECT",
+                  "depart": "7:42 AM",
+                  "to": "MDCT",
+                  "arrive": "8:43 AM"
+                },
+                {
+                  "run": "507",
+                  "from": "MDCT",
+                  "depart": "8:43 AM",
+                  "to": "MDCT",
+                  "arrive": "8:57 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "509",
+                  "from": "MDCT",
+                  "depart": "9:14 AM",
+                  "to": "KECT",
+                  "arrive": "10:03 AM"
+                },
+                {
+                  "run": "510",
+                  "from": "KECT",
+                  "depart": "10:03 AM",
+                  "to": "MDCT",
+                  "arrive": "11:04 AM"
+                },
+                {
+                  "run": "512",
+                  "from": "MDCT",
+                  "depart": "11:04 AM",
+                  "to": "KECT",
+                  "arrive": "12:11 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "KECT",
+                  "depart": "12:11 PM",
+                  "to": "MDCT",
+                  "arrive": "1:11 PM"
+                },
+                {
+                  "run": "514",
+                  "from": "MDCT",
+                  "depart": "1:11 PM",
+                  "to": "MDCT",
+                  "arrive": "1:22 PM"
+                }
+              ],
+              "breakStart": "8:57 AM",
+              "breakEnd": "9:14 AM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "1:22 PM"
+          }
+        },
+        "2": {
+          "title": "2 Crew",
+          "report": "5:15 AM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "509",
+                  "from": "EMSF",
+                  "depart": "5:25 AM",
+                  "to": "KECT",
+                  "arrive": "6:24 AM"
+                },
+                {
+                  "run": "510",
+                  "from": "KECT",
+                  "depart": "6:24 AM",
+                  "to": "MDCT",
+                  "arrive": "7:32 AM"
+                },
+                {
+                  "run": "512",
+                  "from": "MDCT",
+                  "depart": "7:32 AM",
+                  "to": "KECT",
+                  "arrive": "8:35 AM"
+                },
+                {
+                  "run": "513",
+                  "from": "KECT",
+                  "depart": "8:35 AM",
+                  "to": "MDCT",
+                  "arrive": "9:36 AM"
+                },
+                {
+                  "run": "514",
+                  "from": "MDCT",
+                  "depart": "9:36 AM",
+                  "to": "MDCT",
+                  "arrive": "9:50 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "504",
+                  "from": "MDCT",
+                  "depart": "10:11 AM",
+                  "to": "KECT",
+                  "arrive": "11:14 AM"
+                },
+                {
+                  "run": "505",
+                  "from": "KECT",
+                  "depart": "11:14 AM",
+                  "to": "MDCT",
+                  "arrive": "12:15 PM"
+                },
+                {
+                  "run": "506",
+                  "from": "MDCT",
+                  "depart": "12:15 PM",
+                  "to": "MDCT",
+                  "arrive": "12:26 PM"
+                }
+              ],
+              "breakStart": "9:50 AM",
+              "breakEnd": "10:11 AM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "12:26 PM"
+          }
+        },
+        "3": {
+          "title": "3 Crew",
+          "report": "5:23 AM",
+          "pay": "9:34",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "509",
+                  "from": "KECT",
+                  "depart": "6:35 AM",
+                  "to": "MDCT",
+                  "arrive": "7:23 AM"
+                },
+                {
+                  "run": "510",
+                  "from": "MDCT",
+                  "depart": "7:23 AM",
+                  "to": "KECT",
+                  "arrive": "8:26 AM"
+                },
+                {
+                  "run": "512",
+                  "from": "KECT",
+                  "depart": "8:26 AM",
+                  "to": "MDCT",
+                  "arrive": "9:27 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "514",
+                  "from": "MDCT",
+                  "depart": "9:50 AM",
+                  "to": "KECT",
+                  "arrive": "10:39 AM"
+                },
+                {
+                  "run": "515",
+                  "from": "KECT",
+                  "depart": "10:39 AM",
+                  "to": "MDCT",
+                  "arrive": "11:40 AM"
+                },
+                {
+                  "run": "501",
+                  "from": "MDCT",
+                  "depart": "11:40 AM",
+                  "to": "KECT",
+                  "arrive": "12:39 PM"
+                },
+                {
+                  "run": "502",
+                  "from": "KECT",
+                  "depart": "12:39 PM",
+                  "to": "MDCT",
+                  "arrive": "1:39 PM"
+                },
+                {
+                  "run": "503",
+                  "from": "MDCT",
+                  "depart": "1:39 PM",
+                  "to": "MDCT",
+                  "arrive": "1:50 PM"
+                }
+              ],
+              "breakStart": "9:27 AM",
+              "breakEnd": "9:50 AM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "1:50 PM"
+          }
+        },
+        "4": {
+          "title": "4 Crew",
+          "report": "5:30 AM",
+          "pay": "9:01",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "510",
+                  "from": "EMSF",
+                  "depart": "5:40 AM",
+                  "to": "KECT",
+                  "arrive": "6:39 AM"
+                },
+                {
+                  "run": "512",
+                  "from": "KECT",
+                  "depart": "6:39 AM",
+                  "to": "MDCT",
+                  "arrive": "7:41 AM"
+                },
+                {
+                  "run": "513",
+                  "from": "MDCT",
+                  "depart": "7:41 AM",
+                  "to": "KECT",
+                  "arrive": "8:44 AM"
+                },
+                {
+                  "run": "514",
+                  "from": "KECT",
+                  "depart": "8:44 AM",
+                  "to": "MDCT",
+                  "arrive": "9:45 AM"
+                },
+                {
+                  "run": "515",
+                  "from": "MDCT",
+                  "depart": "9:45 AM",
+                  "to": "KECT",
+                  "arrive": "10:48 AM"
+                },
+                {
+                  "run": "501",
+                  "from": "KECT",
+                  "depart": "10:48 AM",
+                  "to": "MDCT",
+                  "arrive": "11:47 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "507",
+                  "from": "MDCT",
+                  "depart": "12:22 PM",
+                  "to": "KECT",
+                  "arrive": "1:22 PM"
+                },
+                {
+                  "run": "508",
+                  "from": "KECT",
+                  "depart": "1:22 PM",
+                  "to": "MDCT",
+                  "arrive": "2:22 PM"
+                }
+              ],
+              "breakStart": "11:47 AM",
+              "breakEnd": "12:22 PM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "2:22 PM"
+          }
+        },
+        "5": {
+          "title": "5 Crew",
+          "report": "5:54 AM",
+          "pay": "9:29",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "514",
+                  "from": "EMSF",
+                  "depart": "6:04 AM",
+                  "to": "KECT",
+                  "arrive": "7:07 AM"
+                },
+                {
+                  "run": "515",
+                  "from": "KECT",
+                  "depart": "7:07 AM",
+                  "to": "MDCT",
+                  "arrive": "8:08 AM"
+                },
+                {
+                  "run": "501",
+                  "from": "MDCT",
+                  "depart": "8:08 AM",
+                  "to": "KECT",
+                  "arrive": "9:10 AM"
+                },
+                {
+                  "run": "503",
+                  "from": "KECT",
+                  "depart": "9:10 AM",
+                  "to": "MDCT",
+                  "arrive": "10:11 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "510",
+                  "from": "MDCT",
+                  "depart": "10:55 AM",
+                  "to": "KECT",
+                  "arrive": "11:57 AM"
+                },
+                {
+                  "run": "511",
+                  "from": "KECT",
+                  "depart": "11:57 AM",
+                  "to": "MDCT",
+                  "arrive": "12:57 PM"
+                },
+                {
+                  "run": "512",
+                  "from": "MDCT",
+                  "depart": "12:57 PM",
+                  "to": "KECT",
+                  "arrive": "1:57 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "KECT",
+                  "depart": "1:57 PM",
+                  "to": "MDCT",
+                  "arrive": "2:57 PM"
+                },
+                {
+                  "run": "514",
+                  "from": "MDCT",
+                  "depart": "2:57 PM",
+                  "to": "MDCT",
+                  "arrive": "3:08 PM"
+                }
+              ],
+              "breakStart": "10:11 AM",
+              "breakEnd": "10:55 AM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "3:08 PM"
+          }
+        },
+        "6": {
+          "title": "6 Crew",
+          "report": "6:21 AM",
+          "pay": "9:14",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "503",
+                  "from": "EMSF",
+                  "depart": "6:31 AM",
+                  "to": "KECT",
+                  "arrive": "7:33 AM"
+                },
+                {
+                  "run": "504",
+                  "from": "KECT",
+                  "depart": "7:33 AM",
+                  "to": "MDCT",
+                  "arrive": "8:34 AM"
+                },
+                {
+                  "run": "505",
+                  "from": "MDCT",
+                  "depart": "8:34 AM",
+                  "to": "KECT",
+                  "arrive": "9:37 AM"
+                },
+                {
+                  "run": "507",
+                  "from": "KECT",
+                  "depart": "9:37 AM",
+                  "to": "MDCT",
+                  "arrive": "10:38 AM"
+                },
+                {
+                  "run": "508",
+                  "from": "MDCT",
+                  "depart": "10:38 AM",
+                  "to": "MDCT",
+                  "arrive": "10:52 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "514",
+                  "from": "MDCT",
+                  "depart": "11:36 AM",
+                  "to": "KECT",
+                  "arrive": "12:25 PM"
+                },
+                {
+                  "run": "515",
+                  "from": "KECT",
+                  "depart": "12:25 PM",
+                  "to": "MDCT",
+                  "arrive": "1:25 PM"
+                },
+                {
+                  "run": "501",
+                  "from": "MDCT",
+                  "depart": "1:25 PM",
+                  "to": "KECT",
+                  "arrive": "2:25 PM"
+                },
+                {
+                  "run": "502",
+                  "from": "KECT",
+                  "depart": "2:25 PM",
+                  "to": "MDCT",
+                  "arrive": "3:25 PM"
+                }
+              ],
+              "breakStart": "10:52 AM",
+              "breakEnd": "11:36 AM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "3:25 PM"
+          }
+        },
+        "7": {
+          "title": "7 Crew",
+          "report": "6:47 AM",
+          "pay": "9:38",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "507",
+                  "from": "EMSF",
+                  "depart": "6:57 AM",
+                  "to": "KECT",
+                  "arrive": "8:00 AM"
+                },
+                {
+                  "run": "508",
+                  "from": "KECT",
+                  "depart": "8:00 AM",
+                  "to": "MDCT",
+                  "arrive": "9:01 AM"
+                },
+                {
+                  "run": "509",
+                  "from": "MDCT",
+                  "depart": "9:01 AM",
+                  "to": "MDCT",
+                  "arrive": "9:14 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "503",
+                  "from": "MDCT",
+                  "depart": "10:02 AM",
+                  "to": "KECT",
+                  "arrive": "11:05 AM"
+                },
+                {
+                  "run": "504",
+                  "from": "KECT",
+                  "depart": "11:05 AM",
+                  "to": "MDCT",
+                  "arrive": "12:06 PM"
+                },
+                {
+                  "run": "505",
+                  "from": "MDCT",
+                  "depart": "12:06 PM",
+                  "to": "KECT",
+                  "arrive": "1:08 PM"
+                },
+                {
+                  "run": "506",
+                  "from": "KECT",
+                  "depart": "1:08 PM",
+                  "to": "MDCT",
+                  "arrive": "2:08 PM"
+                },
+                {
+                  "run": "507",
+                  "from": "MDCT",
+                  "depart": "2:08 PM",
+                  "to": "KECT",
+                  "arrive": "3:08 PM"
+                },
+                {
+                  "run": "508",
+                  "from": "KECT",
+                  "depart": "3:08 PM",
+                  "to": "MDCT",
+                  "arrive": "4:08 PM"
+                }
+              ],
+              "breakStart": "9:14 AM",
+              "breakEnd": "10:02 AM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "4:08 PM"
+          }
+        },
+        "8": {
+          "title": "8 Crew",
+          "report": "8:47 AM",
+          "pay": "8:51",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "507",
+                  "from": "MDCT",
+                  "depart": "8:57 AM",
+                  "to": "KECT",
+                  "arrive": "9:46 AM"
+                },
+                {
+                  "run": "508",
+                  "from": "KECT",
+                  "depart": "9:46 AM",
+                  "to": "MDCT",
+                  "arrive": "10:47 AM"
+                },
+                {
+                  "run": "509",
+                  "from": "MDCT",
+                  "depart": "10:47 AM",
+                  "to": "KECT",
+                  "arrive": "11:49 AM"
+                },
+                {
+                  "run": "510",
+                  "from": "KECT",
+                  "depart": "11:49 AM",
+                  "to": "MDCT",
+                  "arrive": "12:50 PM"
+                },
+                {
+                  "run": "511",
+                  "from": "MDCT",
+                  "depart": "12:50 PM",
+                  "to": "MDCT",
+                  "arrive": "1:01 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "515",
+                  "from": "MDCT",
+                  "depart": "1:29 PM",
+                  "to": "KECT",
+                  "arrive": "2:18 PM"
+                },
+                {
+                  "run": "501",
+                  "from": "KECT",
+                  "depart": "2:18 PM",
+                  "to": "MDCT",
+                  "arrive": "3:18 PM"
+                },
+                {
+                  "run": "502",
+                  "from": "MDCT",
+                  "depart": "3:18 PM",
+                  "to": "KECT",
+                  "arrive": "4:18 PM"
+                },
+                {
+                  "run": "503",
+                  "from": "KECT",
+                  "depart": "4:18 PM",
+                  "to": "MDCT",
+                  "arrive": "5:18 PM"
+                },
+                {
+                  "run": "504",
+                  "from": "MDCT",
+                  "depart": "5:18 PM",
+                  "to": "MDCT",
+                  "arrive": "5:30 PM"
+                }
+              ],
+              "breakStart": "1:01 PM",
+              "breakEnd": "1:29 PM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "5:30 PM"
+          }
+        },
+        "9": {
+          "title": "9 Crew",
+          "report": "9:17 AM",
+          "pay": "9:17",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "513",
+                  "from": "MDCT",
+                  "depart": "9:27 AM",
+                  "to": "KECT",
+                  "arrive": "10:30 AM"
+                },
+                {
+                  "run": "514",
+                  "from": "KECT",
+                  "depart": "10:30 AM",
+                  "to": "MDCT",
+                  "arrive": "11:31 AM"
+                },
+                {
+                  "run": "515",
+                  "from": "MDCT",
+                  "depart": "11:31 AM",
+                  "to": "KECT",
+                  "arrive": "12:32 PM"
+                },
+                {
+                  "run": "501",
+                  "from": "KECT",
+                  "depart": "12:32 PM",
+                  "to": "MDCT",
+                  "arrive": "1:32 PM"
+                },
+                {
+                  "run": "502",
+                  "from": "MDCT",
+                  "depart": "1:32 PM",
+                  "to": "MDCT",
+                  "arrive": "1:43 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "506",
+                  "from": "MDCT",
+                  "depart": "2:01 PM",
+                  "to": "KECT",
+                  "arrive": "3:01 PM"
+                },
+                {
+                  "run": "507",
+                  "from": "KECT",
+                  "depart": "3:01 PM",
+                  "to": "MDCT",
+                  "arrive": "4:01 PM"
+                },
+                {
+                  "run": "508",
+                  "from": "MDCT",
+                  "depart": "4:01 PM",
+                  "to": "KECT",
+                  "arrive": "5:01 PM"
+                },
+                {
+                  "run": "509",
+                  "from": "KECT",
+                  "depart": "5:01 PM",
+                  "to": "EMSF",
+                  "arrive": "6:14 PM"
+                }
+              ],
+              "breakStart": "1:43 PM",
+              "breakEnd": "2:01 PM"
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "6:14 PM"
+          }
+        },
+        "10": {
+          "title": "10 Crew",
+          "report": "10:52 AM",
+          "pay": "9:22",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "511",
+                  "from": "EMSF",
+                  "depart": "11:02 AM",
+                  "to": "KECT",
+                  "arrive": "12:04 PM"
+                },
+                {
+                  "run": "512",
+                  "from": "KECT",
+                  "depart": "12:04 PM",
+                  "to": "MDCT",
+                  "arrive": "1:04 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "MDCT",
+                  "depart": "1:04 PM",
+                  "to": "MDCT",
+                  "arrive": "1:15 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "503",
+                  "from": "MDCT",
+                  "depart": "1:50 PM",
+                  "to": "KECT",
+                  "arrive": "2:39 PM"
+                },
+                {
+                  "run": "504",
+                  "from": "KECT",
+                  "depart": "2:39 PM",
+                  "to": "MDCT",
+                  "arrive": "3:40 PM"
+                },
+                {
+                  "run": "505",
+                  "from": "MDCT",
+                  "depart": "3:40 PM",
+                  "to": "KECT",
+                  "arrive": "4:40 PM"
+                },
+                {
+                  "run": "506",
+                  "from": "KECT",
+                  "depart": "4:40 PM",
+                  "to": "MDCT",
+                  "arrive": "5:40 PM"
+                },
+                {
+                  "run": "507",
+                  "from": "MDCT",
+                  "depart": "5:40 PM",
+                  "to": "KECT",
+                  "arrive": "6:40 PM"
+                },
+                {
+                  "run": "508",
+                  "from": "KECT",
+                  "depart": "6:40 PM",
+                  "to": "MDCT",
+                  "arrive": "7:40 PM"
+                },
+                {
+                  "run": "510",
+                  "from": "MDCT",
+                  "depart": "7:40 PM",
+                  "to": "MDCT",
+                  "arrive": "7:58 PM"
+                }
+              ],
+              "breakStart": "1:15 PM",
+              "breakEnd": "1:50 PM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "7:58 PM"
+          }
+        },
+        "11": {
+          "title": "11 Crew",
+          "report": "11:37 AM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "503",
+                  "from": "MDCT",
+                  "depart": "11:47 AM",
+                  "to": "KECT",
+                  "arrive": "12:53 PM"
+                },
+                {
+                  "run": "504",
+                  "from": "KECT",
+                  "depart": "12:53 PM",
+                  "to": "MDCT",
+                  "arrive": "1:54 PM"
+                },
+                {
+                  "run": "505",
+                  "from": "MDCT",
+                  "depart": "1:54 PM",
+                  "to": "MDCT",
+                  "arrive": "2:05 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "509",
+                  "from": "MDCT",
+                  "depart": "2:22 PM",
+                  "to": "KECT",
+                  "arrive": "3:22 PM"
+                },
+                {
+                  "run": "510",
+                  "from": "KECT",
+                  "depart": "3:22 PM",
+                  "to": "MDCT",
+                  "arrive": "4:22 PM"
+                },
+                {
+                  "run": "511",
+                  "from": "MDCT",
+                  "depart": "4:22 PM",
+                  "to": "KECT",
+                  "arrive": "5:22 PM"
+                },
+                {
+                  "run": "512",
+                  "from": "KECT",
+                  "depart": "5:22 PM",
+                  "to": "EMSF",
+                  "arrive": "6:36 PM"
+                }
+              ],
+              "breakStart": "2:05 PM",
+              "breakEnd": "2:22 PM"
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "6:36 PM"
+          }
+        },
+        "12": {
+          "title": "12 Crew",
+          "report": "11:47 AM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "504",
+                  "from": "MDCT",
+                  "depart": "11:57 AM",
+                  "to": "KECT",
+                  "arrive": "1:01 PM"
+                },
+                {
+                  "run": "505",
+                  "from": "KECT",
+                  "depart": "1:01 PM",
+                  "to": "MDCT",
+                  "arrive": "2:01 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "511",
+                  "from": "MDCT",
+                  "depart": "2:47 PM",
+                  "to": "KECT",
+                  "arrive": "3:36 PM"
+                },
+                {
+                  "run": "512",
+                  "from": "KECT",
+                  "depart": "3:36 PM",
+                  "to": "MDCT",
+                  "arrive": "4:36 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "MDCT",
+                  "depart": "4:36 PM",
+                  "to": "KECT",
+                  "arrive": "5:36 PM"
+                },
+                {
+                  "run": "514",
+                  "from": "KECT",
+                  "depart": "5:36 PM",
+                  "to": "EMSF",
+                  "arrive": "6:50 PM"
+                }
+              ],
+              "breakStart": "2:01 PM",
+              "breakEnd": "2:47 PM"
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "6:50 PM"
+          }
+        },
+        "13": {
+          "title": "13 Crew",
+          "report": "12:26 PM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "509",
+                  "from": "MDCT",
+                  "depart": "12:36 PM",
+                  "to": "KECT",
+                  "arrive": "1:36 PM"
+                },
+                {
+                  "run": "510",
+                  "from": "KECT",
+                  "depart": "1:36 PM",
+                  "to": "MDCT",
+                  "arrive": "2:36 PM"
+                },
+                {
+                  "run": "511",
+                  "from": "MDCT",
+                  "depart": "2:36 PM",
+                  "to": "MDCT",
+                  "arrive": "2:47 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "514",
+                  "from": "MDCT",
+                  "depart": "3:08 PM",
+                  "to": "KECT",
+                  "arrive": "3:57 PM"
+                },
+                {
+                  "run": "515",
+                  "from": "KECT",
+                  "depart": "3:57 PM",
+                  "to": "MDCT",
+                  "arrive": "4:57 PM"
+                },
+                {
+                  "run": "501",
+                  "from": "MDCT",
+                  "depart": "4:57 PM",
+                  "to": "KECT",
+                  "arrive": "5:57 PM"
+                },
+                {
+                  "run": "502",
+                  "from": "KECT",
+                  "depart": "5:57 PM",
+                  "to": "EMSF",
+                  "arrive": "7:12 PM"
+                }
+              ],
+              "breakStart": "2:47 PM",
+              "breakEnd": "3:08 PM"
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "7:12 PM"
+          }
+        },
+        "14": {
+          "title": "14 Crew",
+          "report": "1:05 PM",
+          "pay": "8:26",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "513",
+                  "from": "MDCT",
+                  "depart": "1:15 PM",
+                  "to": "KECT",
+                  "arrive": "2:04 PM"
+                },
+                {
+                  "run": "514",
+                  "from": "KECT",
+                  "depart": "2:04 PM",
+                  "to": "MDCT",
+                  "arrive": "3:04 PM"
+                },
+                {
+                  "run": "515",
+                  "from": "MDCT",
+                  "depart": "3:04 PM",
+                  "to": "KECT",
+                  "arrive": "4:04 PM"
+                },
+                {
+                  "run": "501",
+                  "from": "KECT",
+                  "depart": "4:04 PM",
+                  "to": "MDCT",
+                  "arrive": "5:04 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "504",
+                  "from": "MDCT",
+                  "depart": "5:30 PM",
+                  "to": "KECT",
+                  "arrive": "6:19 PM"
+                },
+                {
+                  "run": "505",
+                  "from": "KECT",
+                  "depart": "6:19 PM",
+                  "to": "MDCT",
+                  "arrive": "7:17 PM"
+                },
+                {
+                  "run": "506",
+                  "from": "MDCT",
+                  "depart": "7:17 PM",
+                  "to": "KECT",
+                  "arrive": "8:21 PM"
+                },
+                {
+                  "run": "508",
+                  "from": "KECT",
+                  "depart": "8:21 PM",
+                  "to": "MDCT",
+                  "arrive": "9:26 PM"
+                }
+              ],
+              "breakStart": "5:04 PM",
+              "breakEnd": "5:30 PM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "9:26 PM"
+          }
+        },
+        "15": {
+          "title": "15 Crew",
+          "report": "6:05 PM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "513",
+                  "from": "MDCT",
+                  "depart": "6:15 PM",
+                  "to": "KECT",
+                  "arrive": "7:23 PM"
+                },
+                {
+                  "run": "515",
+                  "from": "KECT",
+                  "depart": "7:23 PM",
+                  "to": "MDCT",
+                  "arrive": "8:27 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "505",
+                  "from": "MDCT",
+                  "depart": "8:51 PM",
+                  "to": "KECT",
+                  "arrive": "9:56 PM"
+                },
+                {
+                  "run": "506",
+                  "from": "KECT",
+                  "depart": "9:56 PM",
+                  "to": "MDCT",
+                  "arrive": "11:01 PM"
+                },
+                {
+                  "run": "508",
+                  "from": "MDCT",
+                  "depart": "11:01 PM",
+                  "to": "KECT",
+                  "arrive": "12:05 AM (next day)"
+                },
+                {
+                  "run": "510",
+                  "from": "KECT",
+                  "depart": "12:05 AM (next day)",
+                  "to": "MDCT",
+                  "arrive": "1:10 AM (next day)"
+                }
+              ],
+              "breakStart": "8:27 PM",
+              "breakEnd": "8:51 PM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "1:10 AM (next day)"
+          }
+        },
+        "16": {
+          "title": "16 Crew",
+          "report": "3:58 PM",
+          "pay": "9:31",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "509",
+                  "from": "MDCT",
+                  "depart": "4:08 PM",
+                  "to": "KECT",
+                  "arrive": "5:08 PM"
+                },
+                {
+                  "run": "510",
+                  "from": "KECT",
+                  "depart": "5:08 PM",
+                  "to": "MDCT",
+                  "arrive": "6:08 PM"
+                },
+                {
+                  "run": "511",
+                  "from": "MDCT",
+                  "depart": "6:08 PM",
+                  "to": "KECT",
+                  "arrive": "7:11 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "KECT",
+                  "depart": "7:11 PM",
+                  "to": "MDCT",
+                  "arrive": "8:16 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "503",
+                  "from": "MDCT",
+                  "depart": "8:57 PM",
+                  "to": "KECT",
+                  "arrive": "9:44 PM"
+                },
+                {
+                  "run": "505",
+                  "from": "KECT",
+                  "depart": "9:44 PM",
+                  "to": "MDCT",
+                  "arrive": "10:49 PM"
+                },
+                {
+                  "run": "506",
+                  "from": "MDCT",
+                  "depart": "10:49 PM",
+                  "to": "KECT",
+                  "arrive": "11:54 PM"
+                },
+                {
+                  "run": "508",
+                  "from": "KECT",
+                  "depart": "11:54 PM",
+                  "to": "EMSF",
+                  "arrive": "1:12 AM (next day)"
+                }
+              ],
+              "breakStart": "8:16 PM",
+              "breakEnd": "8:57 PM"
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "1:12 AM (next day)"
+          }
+        },
+        "17": {
+          "title": "17 Crew",
+          "report": "4:54 PM",
+          "pay": "9:29",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "502",
+                  "from": "MDCT",
+                  "depart": "5:04 PM",
+                  "to": "KECT",
+                  "arrive": "6:04 PM"
+                },
+                {
+                  "run": "503",
+                  "from": "KECT",
+                  "depart": "6:04 PM",
+                  "to": "MDCT",
+                  "arrive": "7:05 PM"
+                },
+                {
+                  "run": "505",
+                  "from": "MDCT",
+                  "depart": "7:05 PM",
+                  "to": "MDCT",
+                  "arrive": "7:23 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "511",
+                  "from": "MDCT",
+                  "depart": "7:52 PM",
+                  "to": "KECT",
+                  "arrive": "8:57 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "KECT",
+                  "depart": "8:57 PM",
+                  "to": "MDCT",
+                  "arrive": "10:02 PM"
+                },
+                {
+                  "run": "515",
+                  "from": "MDCT",
+                  "depart": "10:02 PM",
+                  "to": "KECT",
+                  "arrive": "11:06 PM"
+                },
+                {
+                  "run": "501",
+                  "from": "KECT",
+                  "depart": "11:06 PM",
+                  "to": "MDCT",
+                  "arrive": "12:11 AM (next day)"
+                },
+                {
+                  "run": "503",
+                  "from": "MDCT",
+                  "depart": "12:11 AM (next day)",
+                  "to": "KECT",
+                  "arrive": "1:16 AM (next day)"
+                }
+              ],
+              "breakStart": "7:23 PM",
+              "breakEnd": "7:52 PM"
+            }
+          ],
+          "finish": {
+            "location": "KECT",
+            "time": "1:16 AM (next day)"
+          }
+        },
+        "18": {
+          "title": "18 Crew",
+          "report": "5:37 PM",
+          "pay": "9:04",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "508",
+                  "from": "MDCT",
+                  "depart": "5:47 PM",
+                  "to": "KECT",
+                  "arrive": "6:48 PM"
+                },
+                {
+                  "run": "510",
+                  "from": "KECT",
+                  "depart": "6:48 PM",
+                  "to": "MDCT",
+                  "arrive": "7:52 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "513",
+                  "from": "MDCT",
+                  "depart": "8:22 PM",
+                  "to": "KECT",
+                  "arrive": "9:09 PM"
+                },
+                {
+                  "run": "515",
+                  "from": "KECT",
+                  "depart": "9:09 PM",
+                  "to": "MDCT",
+                  "arrive": "10:13 PM"
+                },
+                {
+                  "run": "501",
+                  "from": "MDCT",
+                  "depart": "10:13 PM",
+                  "to": "KECT",
+                  "arrive": "11:18 PM"
+                },
+                {
+                  "run": "503",
+                  "from": "KECT",
+                  "depart": "11:18 PM",
+                  "to": "MDCT",
+                  "arrive": "12:23 AM (next day)"
+                },
+                {
+                  "run": "505",
+                  "from": "MDCT",
+                  "depart": "12:23 AM (next day)",
+                  "to": "XP",
+                  "arrive": "1:34 AM (next day)"
+                }
+              ],
+              "breakStart": "7:52 PM",
+              "breakEnd": "8:22 PM"
+            }
+          ],
+          "finish": {
+            "location": "XP",
+            "time": "1:34 AM (next day)"
+          }
+        },
+        "19": {
+          "title": "19 Crew",
+          "report": "6:34 PM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "501",
+                  "from": "MDCT",
+                  "depart": "6:44 PM",
+                  "to": "KECT",
+                  "arrive": "7:46 PM"
+                },
+                {
+                  "run": "503",
+                  "from": "KECT",
+                  "depart": "7:46 PM",
+                  "to": "MDCT",
+                  "arrive": "8:51 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "506",
+                  "from": "MDCT",
+                  "depart": "9:21 PM",
+                  "to": "KECT",
+                  "arrive": "10:08 PM"
+                },
+                {
+                  "run": "508",
+                  "from": "KECT",
+                  "depart": "10:08 PM",
+                  "to": "MDCT",
+                  "arrive": "11:12 PM"
+                },
+                {
+                  "run": "510",
+                  "from": "MDCT",
+                  "depart": "11:12 PM",
+                  "to": "KECT",
+                  "arrive": "12:17 AM (next day)"
+                },
+                {
+                  "run": "511",
+                  "from": "KECT",
+                  "depart": "12:17 AM (next day)",
+                  "to": "EMSF",
+                  "arrive": "1:35 AM (next day)"
+                }
+              ],
+              "breakStart": "8:51 PM",
+              "breakEnd": "9:21 PM"
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "1:35 AM (next day)"
+          }
+        },
+        "20": {
+          "title": "20 Crew",
+          "report": "4:30 PM",
+          "pay": "9:59",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "512",
+                  "from": "MDCT",
+                  "depart": "4:40 PM",
+                  "to": "KECT",
+                  "arrive": "5:29 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "KECT",
+                  "depart": "5:29 PM",
+                  "to": "MDCT",
+                  "arrive": "6:29 PM"
+                },
+                {
+                  "run": "515",
+                  "from": "MDCT",
+                  "depart": "6:29 PM",
+                  "to": "KECT",
+                  "arrive": "7:34 PM"
+                },
+                {
+                  "run": "501",
+                  "from": "KECT",
+                  "depart": "7:34 PM",
+                  "to": "MDCT",
+                  "arrive": "8:39 PM"
+                },
+                {
+                  "run": "503",
+                  "from": "MDCT",
+                  "depart": "8:39 PM",
+                  "to": "MDCT",
+                  "arrive": "8:57 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "510",
+                  "from": "MDCT",
+                  "depart": "9:26 PM",
+                  "to": "KECT",
+                  "arrive": "10:31 PM"
+                },
+                {
+                  "run": "511",
+                  "from": "KECT",
+                  "depart": "10:31 PM",
+                  "to": "MDCT",
+                  "arrive": "11:36 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "MDCT",
+                  "depart": "11:36 PM",
+                  "to": "KECT",
+                  "arrive": "12:41 AM (next day)"
+                },
+                {
+                  "run": "515",
+                  "from": "KECT",
+                  "depart": "12:41 AM (next day)",
+                  "to": "EMSF",
+                  "arrive": "1:59 AM (next day)"
+                }
+              ],
+              "breakStart": "8:57 PM",
+              "breakEnd": "9:26 PM"
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "1:59 AM (next day)"
+          }
+        },
+        "21": {
+          "title": "21 Crew",
+          "report": "6:43 PM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "503",
+                  "from": "MDCT",
+                  "depart": "6:53 PM",
+                  "to": "KECT",
+                  "arrive": "7:58 PM"
+                },
+                {
+                  "run": "505",
+                  "from": "KECT",
+                  "depart": "7:58 PM",
+                  "to": "MDCT",
+                  "arrive": "9:03 PM"
+                },
+                {
+                  "run": "506",
+                  "from": "MDCT",
+                  "depart": "9:03 PM",
+                  "to": "MDCT",
+                  "arrive": "9:21 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "511",
+                  "from": "MDCT",
+                  "depart": "9:38 PM",
+                  "to": "KECT",
+                  "arrive": "10:43 PM"
+                },
+                {
+                  "run": "513",
+                  "from": "KECT",
+                  "depart": "10:43 PM",
+                  "to": "MDCT",
+                  "arrive": "11:48 PM"
+                },
+                {
+                  "run": "515",
+                  "from": "MDCT",
+                  "depart": "11:48 PM",
+                  "to": "KECT",
+                  "arrive": "12:52 AM (next day)"
+                },
+                {
+                  "run": "501",
+                  "from": "KECT",
+                  "depart": "12:52 AM (next day)",
+                  "to": "EMSF",
+                  "arrive": "2:10 AM (next day)"
+                }
+              ],
+              "breakStart": "9:21 PM",
+              "breakEnd": "9:38 PM"
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "2:10 AM (next day)"
+          }
+        }
+      }
+    },
+    "thanksgiving-line6": {
+      "label": "Line 6 - Thanksgiving",
+      "pdf": "holiday-crews/2026-10-12-Line6-Crewguides.pdf",
+      "boardPeriod": {
+        "name": "Thanksgiving Day",
+        "start": "October 12, 2026",
+        "end": "October 12, 2026"
+      },
+      "crews": {
+        "1": {
+          "title": "1 Crew",
+          "report": "5:54 AM",
+          "pay": "12:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "7:06 AM",
+                  "to": "FWSN",
+                  "arrive": "7:42 AM"
+                },
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "7:42 AM",
+                  "to": "HUMB",
+                  "arrive": "8:34 AM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "8:34 AM",
+                  "to": "FWSN",
+                  "arrive": "9:29 AM"
+                },
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "9:29 AM",
+                  "to": "HUMB",
+                  "arrive": "10:20 AM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "10:20 AM",
+                  "to": "FWSN",
+                  "arrive": "11:09 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "605",
+                  "from": "FWSN",
+                  "depart": "11:26 AM",
+                  "to": "HUMB",
+                  "arrive": "12:18 PM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "12:18 PM",
+                  "to": "FWSN",
+                  "arrive": "1:07 PM"
+                },
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "1:07 PM",
+                  "to": "HUMB",
+                  "arrive": "1:58 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "1:58 PM",
+                  "to": "FWSN",
+                  "arrive": "2:48 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "2:48 PM",
+                  "to": "HUMB",
+                  "arrive": "3:39 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "3:39 PM",
+                  "to": "FWSN",
+                  "arrive": "4:29 PM"
+                }
+              ],
+              "breakStart": "11:09 AM",
+              "breakEnd": "11:26 AM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "4:29 PM"
+          }
+        },
+        "2": {
+          "title": "2 Crew",
+          "report": "6:13 AM",
+          "pay": "9:29",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "6:51 AM",
+                  "to": "HUMB",
+                  "arrive": "7:29 AM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "7:29 AM",
+                  "to": "FWSN",
+                  "arrive": "8:19 AM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "8:19 AM",
+                  "to": "HUMB",
+                  "arrive": "9:12 AM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "9:12 AM",
+                  "to": "FWSN",
+                  "arrive": "10:02 AM"
+                },
+                {
+                  "run": "605",
+                  "from": "FWSN",
+                  "depart": "10:02 AM",
+                  "to": "HUMB",
+                  "arrive": "10:54 AM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "10:54 AM",
+                  "to": "FWSN",
+                  "arrive": "11:43 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "12:08 PM",
+                  "to": "HUMB",
+                  "arrive": "1:00 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "1:00 PM",
+                  "to": "FWSN",
+                  "arrive": "1:49 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "FWSN",
+                  "depart": "1:49 PM",
+                  "to": "HUMB",
+                  "arrive": "2:40 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "HUMB",
+                  "depart": "2:40 PM",
+                  "to": "FWSN",
+                  "arrive": "3:30 PM"
+                }
+              ],
+              "breakStart": "11:43 AM",
+              "breakEnd": "12:08 PM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "3:30 PM"
+          }
+        },
+        "3": {
+          "title": "3 Crew",
+          "report": "6:28 AM",
+          "pay": "9:23",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "609",
+                  "from": "FMSF",
+                  "depart": "6:38 AM",
+                  "to": "HUMB",
+                  "arrive": "7:11 AM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "7:11 AM",
+                  "to": "FWSN",
+                  "arrive": "8:01 AM"
+                },
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "8:01 AM",
+                  "to": "HUMB",
+                  "arrive": "8:53 AM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "8:53 AM",
+                  "to": "FWSN",
+                  "arrive": "9:45 AM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "9:45 AM",
+                  "to": "HUMB",
+                  "arrive": "10:37 AM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "10:37 AM",
+                  "to": "FWSN",
+                  "arrive": "11:26 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "11:51 AM",
+                  "to": "HUMB",
+                  "arrive": "12:43 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "12:43 PM",
+                  "to": "FWSN",
+                  "arrive": "1:32 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "1:32 PM",
+                  "to": "HUMB",
+                  "arrive": "2:24 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "2:24 PM",
+                  "to": "FWSN",
+                  "arrive": "3:13 PM"
+                }
+              ],
+              "breakStart": "11:26 AM",
+              "breakEnd": "11:51 AM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "3:13 PM"
+          }
+        },
+        "4": {
+          "title": "4 Crew",
+          "report": "6:33 AM",
+          "pay": "9:57",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "602",
+                  "from": "FMSF",
+                  "depart": "6:43 AM",
+                  "to": "FWSN",
+                  "arrive": "6:56 AM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "6:56 AM",
+                  "to": "HUMB",
+                  "arrive": "7:48 AM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "7:48 AM",
+                  "to": "FWSN",
+                  "arrive": "8:38 AM"
+                },
+                {
+                  "run": "605",
+                  "from": "FWSN",
+                  "depart": "8:38 AM",
+                  "to": "HUMB",
+                  "arrive": "9:30 AM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "9:30 AM",
+                  "to": "FWSN",
+                  "arrive": "10:19 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "10:36 AM",
+                  "to": "HUMB",
+                  "arrive": "11:27 AM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "11:27 AM",
+                  "to": "FWSN",
+                  "arrive": "12:17 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "12:17 PM",
+                  "to": "HUMB",
+                  "arrive": "1:08 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "1:08 PM",
+                  "to": "FWSN",
+                  "arrive": "1:57 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "1:57 PM",
+                  "to": "HUMB",
+                  "arrive": "2:49 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "2:49 PM",
+                  "to": "FWSN",
+                  "arrive": "3:38 PM"
+                }
+              ],
+              "breakStart": "10:19 AM",
+              "breakEnd": "10:36 AM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "3:38 PM"
+          }
+        },
+        "5": {
+          "title": "5 Crew",
+          "report": "6:37 AM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "610",
+                  "from": "FMSF",
+                  "depart": "6:47 AM",
+                  "to": "HUMB",
+                  "arrive": "7:21 AM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "7:21 AM",
+                  "to": "FWSN",
+                  "arrive": "8:10 AM"
+                },
+                {
+                  "run": "602",
+                  "from": "FWSN",
+                  "depart": "8:10 AM",
+                  "to": "HUMB",
+                  "arrive": "9:02 AM"
+                },
+                {
+                  "run": "603",
+                  "from": "HUMB",
+                  "depart": "9:02 AM",
+                  "to": "FWSN",
+                  "arrive": "9:54 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "10:19 AM",
+                  "to": "HUMB",
+                  "arrive": "11:10 AM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "11:10 AM",
+                  "to": "FWSN",
+                  "arrive": "12:00 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "12:00 PM",
+                  "to": "HUMB",
+                  "arrive": "12:51 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "12:51 PM",
+                  "to": "FWSN",
+                  "arrive": "1:41 PM"
+                }
+              ],
+              "breakStart": "9:54 AM",
+              "breakEnd": "10:19 AM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "1:41 PM"
+          }
+        },
+        "6": {
+          "title": "6 Crew",
+          "report": "6:51 AM",
+          "pay": "9:56",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "604",
+                  "from": "FMSF",
+                  "depart": "7:01 AM",
+                  "to": "FWSN",
+                  "arrive": "7:15 AM"
+                },
+                {
+                  "run": "605",
+                  "from": "FWSN",
+                  "depart": "7:15 AM",
+                  "to": "HUMB",
+                  "arrive": "8:06 AM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "8:06 AM",
+                  "to": "FWSN",
+                  "arrive": "8:56 AM"
+                },
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "8:56 AM",
+                  "to": "HUMB",
+                  "arrive": "9:46 AM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "9:46 AM",
+                  "to": "FWSN",
+                  "arrive": "10:36 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "10:53 AM",
+                  "to": "HUMB",
+                  "arrive": "11:44 AM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "11:44 AM",
+                  "to": "FWSN",
+                  "arrive": "12:33 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "12:33 PM",
+                  "to": "HUMB",
+                  "arrive": "1:25 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "1:25 PM",
+                  "to": "FWSN",
+                  "arrive": "2:14 PM"
+                },
+                {
+                  "run": "605",
+                  "from": "FWSN",
+                  "depart": "2:14 PM",
+                  "to": "HUMB",
+                  "arrive": "3:06 PM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "3:06 PM",
+                  "to": "FWSN",
+                  "arrive": "3:55 PM"
+                }
+              ],
+              "breakStart": "10:36 AM",
+              "breakEnd": "10:53 AM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "3:55 PM"
+          }
+        },
+        "7": {
+          "title": "7 Crew",
+          "report": "7:01 AM",
+          "pay": "9:53",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "605",
+                  "from": "FMSF",
+                  "depart": "7:11 AM",
+                  "to": "FWSN",
+                  "arrive": "7:24 AM"
+                },
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "7:24 AM",
+                  "to": "HUMB",
+                  "arrive": "8:16 AM"
+                },
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "8:16 AM",
+                  "to": "FWSN",
+                  "arrive": "9:05 AM"
+                },
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "9:05 AM",
+                  "to": "HUMB",
+                  "arrive": "9:55 AM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "9:55 AM",
+                  "to": "FWSN",
+                  "arrive": "10:44 AM"
+                },
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "10:44 AM",
+                  "to": "HUMB",
+                  "arrive": "11:36 AM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "11:36 AM",
+                  "to": "FWSN",
+                  "arrive": "12:25 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "604",
+                  "from": "FWSN",
+                  "depart": "12:42 PM",
+                  "to": "HUMB",
+                  "arrive": "1:33 PM"
+                },
+                {
+                  "run": "605",
+                  "from": "HUMB",
+                  "depart": "1:33 PM",
+                  "to": "FWSN",
+                  "arrive": "2:23 PM"
+                },
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "2:23 PM",
+                  "to": "HUMB",
+                  "arrive": "3:14 PM"
+                },
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "3:14 PM",
+                  "to": "FWSN",
+                  "arrive": "4:03 PM"
+                }
+              ],
+              "breakStart": "12:25 PM",
+              "breakEnd": "12:42 PM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "4:03 PM"
+          }
+        },
+        "8": {
+          "title": "8 Crew",
+          "report": "7:10 AM",
+          "pay": "9:53",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "606",
+                  "from": "FMSF",
+                  "depart": "7:20 AM",
+                  "to": "FWSN",
+                  "arrive": "7:34 AM"
+                },
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "7:34 AM",
+                  "to": "HUMB",
+                  "arrive": "8:25 AM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "8:25 AM",
+                  "to": "FWSN",
+                  "arrive": "9:13 AM"
+                },
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "9:13 AM",
+                  "to": "HUMB",
+                  "arrive": "10:03 AM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "10:03 AM",
+                  "to": "FWSN",
+                  "arrive": "10:53 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "11:09 AM",
+                  "to": "HUMB",
+                  "arrive": "12:01 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "12:01 PM",
+                  "to": "FWSN",
+                  "arrive": "12:50 PM"
+                },
+                {
+                  "run": "605",
+                  "from": "FWSN",
+                  "depart": "12:50 PM",
+                  "to": "HUMB",
+                  "arrive": "1:42 PM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "1:42 PM",
+                  "to": "FWSN",
+                  "arrive": "2:31 PM"
+                },
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "2:31 PM",
+                  "to": "HUMB",
+                  "arrive": "3:22 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "3:22 PM",
+                  "to": "FWSN",
+                  "arrive": "4:12 PM"
+                }
+              ],
+              "breakStart": "10:53 AM",
+              "breakEnd": "11:09 AM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "4:12 PM"
+          }
+        },
+        "9": {
+          "title": "9 Crew",
+          "report": "7:49 AM",
+          "pay": "9:06",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "608",
+                  "from": "FMSF",
+                  "depart": "7:59 AM",
+                  "to": "HUMB",
+                  "arrive": "8:33 AM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "8:33 AM",
+                  "to": "FWSN",
+                  "arrive": "9:21 AM"
+                },
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "9:21 AM",
+                  "to": "HUMB",
+                  "arrive": "10:12 AM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "10:12 AM",
+                  "to": "FWSN",
+                  "arrive": "11:01 AM"
+                },
+                {
+                  "run": "602",
+                  "from": "FWSN",
+                  "depart": "11:01 AM",
+                  "to": "HUMB",
+                  "arrive": "11:52 AM"
+                },
+                {
+                  "run": "603",
+                  "from": "HUMB",
+                  "depart": "11:52 AM",
+                  "to": "FWSN",
+                  "arrive": "12:42 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "12:59 PM",
+                  "to": "HUMB",
+                  "arrive": "1:50 PM"
+                },
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "1:50 PM",
+                  "to": "FWSN",
+                  "arrive": "2:39 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "2:39 PM",
+                  "to": "HUMB",
+                  "arrive": "3:31 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "3:31 PM",
+                  "to": "FWSN",
+                  "arrive": "4:20 PM"
+                }
+              ],
+              "breakStart": "12:42 PM",
+              "breakEnd": "12:59 PM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "4:20 PM"
+          }
+        },
+        "10": {
+          "title": "10 Crew",
+          "report": "9:16 AM",
+          "pay": "9:42",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "604",
+                  "from": "FWSN",
+                  "depart": "9:54 AM",
+                  "to": "HUMB",
+                  "arrive": "10:45 AM"
+                },
+                {
+                  "run": "605",
+                  "from": "HUMB",
+                  "depart": "10:45 AM",
+                  "to": "FWSN",
+                  "arrive": "11:35 AM"
+                },
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "11:35 AM",
+                  "to": "HUMB",
+                  "arrive": "12:26 PM"
+                },
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "12:26 PM",
+                  "to": "FWSN",
+                  "arrive": "1:15 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "1:41 PM",
+                  "to": "HUMB",
+                  "arrive": "2:32 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "2:32 PM",
+                  "to": "FWSN",
+                  "arrive": "3:21 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "3:21 PM",
+                  "to": "HUMB",
+                  "arrive": "4:13 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "4:13 PM",
+                  "to": "FWSN",
+                  "arrive": "5:02 PM"
+                },
+                {
+                  "run": "605",
+                  "from": "FWSN",
+                  "depart": "5:02 PM",
+                  "to": "HUMB",
+                  "arrive": "5:54 PM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "5:54 PM",
+                  "to": "FWSN",
+                  "arrive": "6:42 PM"
+                }
+              ],
+              "breakStart": "1:15 PM",
+              "breakEnd": "1:41 PM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "6:42 PM"
+          }
+        },
+        "11": {
+          "title": "11 Crew",
+          "report": "11:05 AM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "11:43 AM",
+                  "to": "HUMB",
+                  "arrive": "12:34 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "12:34 PM",
+                  "to": "FWSN",
+                  "arrive": "1:24 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "1:24 PM",
+                  "to": "HUMB",
+                  "arrive": "2:15 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "2:15 PM",
+                  "to": "FWSN",
+                  "arrive": "3:05 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "604",
+                  "from": "FWSN",
+                  "depart": "3:30 PM",
+                  "to": "HUMB",
+                  "arrive": "4:21 PM"
+                },
+                {
+                  "run": "605",
+                  "from": "HUMB",
+                  "depart": "4:21 PM",
+                  "to": "FWSN",
+                  "arrive": "5:11 PM"
+                },
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "5:11 PM",
+                  "to": "HUMB",
+                  "arrive": "6:02 PM"
+                },
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "6:02 PM",
+                  "to": "FWSN",
+                  "arrive": "6:51 PM"
+                }
+              ],
+              "breakStart": "3:05 PM",
+              "breakEnd": "3:30 PM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "6:51 PM"
+          }
+        },
+        "12": {
+          "title": "12 Crew",
+          "report": "3:17 PM",
+          "pay": "10:40",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "3:55 PM",
+                  "to": "HUMB",
+                  "arrive": "4:46 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "4:46 PM",
+                  "to": "FWSN",
+                  "arrive": "5:36 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "5:36 PM",
+                  "to": "HUMB",
+                  "arrive": "6:29 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "6:29 PM",
+                  "to": "FWSN",
+                  "arrive": "7:19 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "7:19 PM",
+                  "to": "HUMB",
+                  "arrive": "8:12 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "8:12 PM",
+                  "to": "FWSN",
+                  "arrive": "9:02 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "9:30 PM",
+                  "to": "HUMB",
+                  "arrive": "10:22 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "10:22 PM",
+                  "to": "FWSN",
+                  "arrive": "11:13 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "11:13 PM",
+                  "to": "HUMB",
+                  "arrive": "12:05 AM (next day)"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "12:05 AM (next day)",
+                  "to": "FWSN",
+                  "arrive": "12:55 AM (next day)"
+                },
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "12:55 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "1:22 AM (next day)"
+                }
+              ],
+              "breakStart": "9:02 PM",
+              "breakEnd": "9:30 PM"
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "1:22 AM (next day)"
+          }
+        },
+        "13": {
+          "title": "13 Crew",
+          "report": "3:25 PM",
+          "pay": "10:43",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "4:03 PM",
+                  "to": "HUMB",
+                  "arrive": "4:55 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "4:55 PM",
+                  "to": "FWSN",
+                  "arrive": "5:44 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "5:44 PM",
+                  "to": "HUMB",
+                  "arrive": "6:38 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "6:38 PM",
+                  "to": "FWSN",
+                  "arrive": "7:29 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "7:57 PM",
+                  "to": "HUMB",
+                  "arrive": "8:49 PM"
+                },
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "8:49 PM",
+                  "to": "FWSN",
+                  "arrive": "9:39 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "9:39 PM",
+                  "to": "HUMB",
+                  "arrive": "10:32 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "10:32 PM",
+                  "to": "FWSN",
+                  "arrive": "11:22 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "11:22 PM",
+                  "to": "HUMB",
+                  "arrive": "12:14 AM (next day)"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "12:14 AM (next day)",
+                  "to": "FWSN",
+                  "arrive": "1:05 AM (next day)"
+                },
+                {
+                  "run": "602",
+                  "from": "FWSN",
+                  "depart": "1:05 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "1:32 AM (next day)"
+                }
+              ],
+              "breakStart": "7:29 PM",
+              "breakEnd": "7:57 PM"
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "1:32 AM (next day)"
+          }
+        },
+        "14": {
+          "title": "14 Crew",
+          "report": "3:34 PM",
+          "pay": "10:43",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "4:12 PM",
+                  "to": "HUMB",
+                  "arrive": "5:03 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "5:03 PM",
+                  "to": "FWSN",
+                  "arrive": "5:53 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "5:53 PM",
+                  "to": "HUMB",
+                  "arrive": "6:48 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "6:48 PM",
+                  "to": "FWSN",
+                  "arrive": "7:38 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "7:38 PM",
+                  "to": "HUMB",
+                  "arrive": "8:30 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "8:30 PM",
+                  "to": "FWSN",
+                  "arrive": "9:21 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "9:49 PM",
+                  "to": "HUMB",
+                  "arrive": "10:41 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "10:41 PM",
+                  "to": "FWSN",
+                  "arrive": "11:31 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "11:31 PM",
+                  "to": "HUMB",
+                  "arrive": "12:24 AM (next day)"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "12:24 AM (next day)",
+                  "to": "FWSN",
+                  "arrive": "1:14 AM (next day)"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "1:14 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "1:41 AM (next day)"
+                }
+              ],
+              "breakStart": "9:21 PM",
+              "breakEnd": "9:49 PM"
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "1:41 AM (next day)"
+          }
+        },
+        "15": {
+          "title": "15 Crew",
+          "report": "4:49 PM",
+          "pay": "10:01",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "5:27 PM",
+                  "to": "HUMB",
+                  "arrive": "6:20 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "6:20 PM",
+                  "to": "FWSN",
+                  "arrive": "7:10 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "7:10 PM",
+                  "to": "HUMB",
+                  "arrive": "8:02 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "8:02 PM",
+                  "to": "FWSN",
+                  "arrive": "8:53 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "9:21 PM",
+                  "to": "HUMB",
+                  "arrive": "10:13 PM"
+                },
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "10:13 PM",
+                  "to": "FWSN",
+                  "arrive": "11:03 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "11:03 PM",
+                  "to": "HUMB",
+                  "arrive": "11:56 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "11:56 PM",
+                  "to": "FWSN",
+                  "arrive": "12:46 AM (next day)"
+                },
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "12:46 AM (next day)",
+                  "to": "HUMB",
+                  "arrive": "1:43 AM (next day)"
+                }
+              ],
+              "breakStart": "8:53 PM",
+              "breakEnd": "9:21 PM"
+            }
+          ],
+          "finish": {
+            "location": "HUMB",
+            "time": "1:43 AM (next day)"
+          }
+        },
+        "16": {
+          "title": "16 Crew",
+          "report": "3:51 PM",
+          "pay": "10:36",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "4:29 PM",
+                  "to": "HUMB",
+                  "arrive": "5:20 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "5:20 PM",
+                  "to": "FWSN",
+                  "arrive": "6:09 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "6:09 PM",
+                  "to": "HUMB",
+                  "arrive": "7:06 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "7:06 PM",
+                  "to": "FWSN",
+                  "arrive": "7:57 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "8:15 PM",
+                  "to": "HUMB",
+                  "arrive": "9:08 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "9:08 PM",
+                  "to": "FWSN",
+                  "arrive": "9:58 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "9:58 PM",
+                  "to": "HUMB",
+                  "arrive": "10:50 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "10:50 PM",
+                  "to": "FWSN",
+                  "arrive": "11:41 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "FWSN",
+                  "depart": "11:41 PM",
+                  "to": "HUMB",
+                  "arrive": "12:33 AM (next day)"
+                },
+                {
+                  "run": "603",
+                  "from": "HUMB",
+                  "depart": "12:33 AM (next day)",
+                  "to": "FWSN",
+                  "arrive": "1:23 AM (next day)"
+                },
+                {
+                  "run": "604",
+                  "from": "FWSN",
+                  "depart": "1:23 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "1:50 AM (next day)"
+                }
+              ],
+              "breakStart": "7:57 PM",
+              "breakEnd": "8:15 PM"
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "1:50 AM (next day)"
+          }
+        },
+        "17": {
+          "title": "17 Crew",
+          "report": "3:42 PM",
+          "pay": "10:55",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "610",
+                  "from": "FWSN",
+                  "depart": "4:20 PM",
+                  "to": "HUMB",
+                  "arrive": "5:12 PM"
+                },
+                {
+                  "run": "601",
+                  "from": "HUMB",
+                  "depart": "5:12 PM",
+                  "to": "FWSN",
+                  "arrive": "6:01 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "FWSN",
+                  "depart": "6:01 PM",
+                  "to": "HUMB",
+                  "arrive": "6:57 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "HUMB",
+                  "depart": "6:57 PM",
+                  "to": "FWSN",
+                  "arrive": "7:47 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "FWSN",
+                  "depart": "7:47 PM",
+                  "to": "HUMB",
+                  "arrive": "8:40 PM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "8:40 PM",
+                  "to": "FWSN",
+                  "arrive": "9:30 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "601",
+                  "from": "FWSN",
+                  "depart": "10:07 PM",
+                  "to": "HUMB",
+                  "arrive": "11:00 PM"
+                },
+                {
+                  "run": "602",
+                  "from": "HUMB",
+                  "depart": "11:00 PM",
+                  "to": "FWSN",
+                  "arrive": "11:50 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "11:50 PM",
+                  "to": "HUMB",
+                  "arrive": "12:42 AM (next day)"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "12:42 AM (next day)",
+                  "to": "FWSN",
+                  "arrive": "1:33 AM (next day)"
+                },
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "1:33 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "2:00 AM (next day)"
+                }
+              ],
+              "breakStart": "9:30 PM",
+              "breakEnd": "10:07 PM"
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "2:00 AM (next day)"
+          }
+        },
+        "18": {
+          "title": "18 Crew",
+          "report": "6:13 PM",
+          "pay": "8:15",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "6:51 PM",
+                  "to": "HUMB",
+                  "arrive": "7:44 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "HUMB",
+                  "depart": "7:44 PM",
+                  "to": "FWSN",
+                  "arrive": "8:34 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "602",
+                  "from": "FWSN",
+                  "depart": "8:53 PM",
+                  "to": "HUMB",
+                  "arrive": "9:45 PM"
+                },
+                {
+                  "run": "603",
+                  "from": "HUMB",
+                  "depart": "9:45 PM",
+                  "to": "FWSN",
+                  "arrive": "10:35 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "FWSN",
+                  "depart": "10:35 PM",
+                  "to": "HUMB",
+                  "arrive": "11:28 PM"
+                },
+                {
+                  "run": "606",
+                  "from": "HUMB",
+                  "depart": "11:28 PM",
+                  "to": "FWSN",
+                  "arrive": "12:18 AM (next day)"
+                },
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "12:18 AM (next day)",
+                  "to": "HUMB",
+                  "arrive": "1:10 AM (next day)"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "1:10 AM (next day)",
+                  "to": "FWSN",
+                  "arrive": "2:06 AM (next day)"
+                }
+              ],
+              "breakStart": "8:34 PM",
+              "breakEnd": "8:53 PM"
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "2:06 AM (next day)"
+          }
+        },
+        "19": {
+          "title": "19 Crew",
+          "report": "6:04 PM",
+          "pay": "8:25",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "607",
+                  "from": "FWSN",
+                  "depart": "6:42 PM",
+                  "to": "HUMB",
+                  "arrive": "7:34 PM"
+                },
+                {
+                  "run": "608",
+                  "from": "HUMB",
+                  "depart": "7:34 PM",
+                  "to": "FWSN",
+                  "arrive": "8:25 PM"
+                },
+                {
+                  "run": "609",
+                  "from": "FWSN",
+                  "depart": "8:25 PM",
+                  "to": "HUMB",
+                  "arrive": "9:17 PM"
+                },
+                {
+                  "run": "610",
+                  "from": "HUMB",
+                  "depart": "9:17 PM",
+                  "to": "FWSN",
+                  "arrive": "10:07 PM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "603",
+                  "from": "FWSN",
+                  "depart": "10:26 PM",
+                  "to": "HUMB",
+                  "arrive": "11:18 PM"
+                },
+                {
+                  "run": "604",
+                  "from": "HUMB",
+                  "depart": "11:18 PM",
+                  "to": "FWSN",
+                  "arrive": "12:09 AM (next day)"
+                },
+                {
+                  "run": "606",
+                  "from": "FWSN",
+                  "depart": "12:09 AM (next day)",
+                  "to": "HUMB",
+                  "arrive": "1:01 AM (next day)"
+                },
+                {
+                  "run": "607",
+                  "from": "HUMB",
+                  "depart": "1:01 AM (next day)",
+                  "to": "FWSN",
+                  "arrive": "1:53 AM (next day)"
+                },
+                {
+                  "run": "608",
+                  "from": "FWSN",
+                  "depart": "1:53 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "2:24 AM (next day)"
+                }
+              ],
+              "breakStart": "10:07 PM",
+              "breakEnd": "10:26 PM"
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "2:24 AM (next day)"
+          }
+        }
+      }
+    },
+    "thanksgiving-special": {
+      "label": "Special Crews - Thanksgiving",
+      "pdf": "holiday-crews/2026-10-12-SpecialCrews-Crewguides.pdf",
+      "boardPeriod": {
+        "name": "Thanksgiving Day",
+        "start": "October 12, 2026",
+        "end": "October 12, 2026"
+      },
+      "crews": {
+        "1": {
+          "title": "1 Crew",
+          "report": "4:31 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "504*",
+                  "from": "XP",
+                  "depart": "5:58 AM",
+                  "to": "MDCT",
+                  "arrive": "6:50 AM"
+                },
+                {
+                  "run": "508*",
+                  "from": "MDCT",
+                  "depart": "6:50 AM",
+                  "to": "KECT",
+                  "arrive": "8:09 AM"
+                },
+                {
+                  "run": "509*",
+                  "from": "KECT",
+                  "depart": "8:09 AM",
+                  "to": "MDCT",
+                  "arrive": "9:09 AM"
+                },
+                {
+                  "run": "510*",
+                  "from": "MDCT",
+                  "depart": "9:09 AM",
+                  "to": "KECT",
+                  "arrive": "10:12 AM"
+                },
+                {
+                  "run": "512*",
+                  "from": "KECT",
+                  "depart": "10:12 AM",
+                  "to": "MDCT",
+                  "arrive": "11:13 AM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "11:13 AM"
+          }
+        },
+        "2": {
+          "title": "2 Crew",
+          "report": "4:53 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "508*",
+                  "from": "XP",
+                  "depart": "6:20 AM",
+                  "to": "MDCT",
+                  "arrive": "7:11 AM"
+                },
+                {
+                  "run": "509*",
+                  "from": "MDCT",
+                  "depart": "7:11 AM",
+                  "to": "KECT",
+                  "arrive": "8:17 AM"
+                },
+                {
+                  "run": "510*",
+                  "from": "KECT",
+                  "depart": "8:17 AM",
+                  "to": "MDCT",
+                  "arrive": "9:18 AM"
+                },
+                {
+                  "run": "512*",
+                  "from": "MDCT",
+                  "depart": "9:18 AM",
+                  "to": "KECT",
+                  "arrive": "10:21 AM"
+                },
+                {
+                  "run": "513*",
+                  "from": "KECT",
+                  "depart": "10:21 AM",
+                  "to": "MDCT",
+                  "arrive": "11:22 AM"
+                },
+                {
+                  "run": "514*",
+                  "from": "MDCT",
+                  "depart": "11:22 AM",
+                  "to": "MDCT",
+                  "arrive": "11:36 AM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "11:36 AM"
+          }
+        },
+        "3": {
+          "title": "3 Crew",
+          "report": "6:23 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "601*",
+                  "from": "FMSF",
+                  "depart": "6:33 AM",
+                  "to": "FWSN",
+                  "arrive": "6:47 AM"
+                },
+                {
+                  "run": "602*",
+                  "from": "FWSN",
+                  "depart": "6:47 AM",
+                  "to": "HUMB",
+                  "arrive": "7:38 AM"
+                },
+                {
+                  "run": "603*",
+                  "from": "HUMB",
+                  "depart": "7:38 AM",
+                  "to": "FWSN",
+                  "arrive": "8:29 AM"
+                },
+                {
+                  "run": "604*",
+                  "from": "FWSN",
+                  "depart": "8:29 AM",
+                  "to": "HUMB",
+                  "arrive": "9:21 AM"
+                },
+                {
+                  "run": "605*",
+                  "from": "HUMB",
+                  "depart": "9:21 AM",
+                  "to": "FWSN",
+                  "arrive": "10:11 AM"
+                },
+                {
+                  "run": "606*",
+                  "from": "FWSN",
+                  "depart": "10:11 AM",
+                  "to": "HUMB",
+                  "arrive": "11:02 AM"
+                },
+                {
+                  "run": "607*",
+                  "from": "HUMB",
+                  "depart": "11:02 AM",
+                  "to": "FWSN",
+                  "arrive": "11:51 AM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "11:51 AM"
+          }
+        },
+        "4": {
+          "title": "4 Crew",
+          "report": "5:37 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "512*",
+                  "from": "EMSF",
+                  "depart": "5:47 AM",
+                  "to": "KECT",
+                  "arrive": "6:49 AM"
+                },
+                {
+                  "run": "513*",
+                  "from": "KECT",
+                  "depart": "6:49 AM",
+                  "to": "MDCT",
+                  "arrive": "7:50 AM"
+                },
+                {
+                  "run": "514*",
+                  "from": "MDCT",
+                  "depart": "7:50 AM",
+                  "to": "KECT",
+                  "arrive": "8:53 AM"
+                },
+                {
+                  "run": "515*",
+                  "from": "KECT",
+                  "depart": "8:53 AM",
+                  "to": "MDCT",
+                  "arrive": "9:54 AM"
+                },
+                {
+                  "run": "501*",
+                  "from": "MDCT",
+                  "depart": "9:54 AM",
+                  "to": "KECT",
+                  "arrive": "10:56 AM"
+                },
+                {
+                  "run": "503*",
+                  "from": "KECT",
+                  "depart": "10:56 AM",
+                  "to": "MDCT",
+                  "arrive": "11:57 AM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "11:57 AM"
+          }
+        },
+        "5": {
+          "title": "5 Crew",
+          "report": "6:42 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "603*",
+                  "from": "FMSF",
+                  "depart": "6:52 AM",
+                  "to": "FWSN",
+                  "arrive": "7:06 AM"
+                },
+                {
+                  "run": "604*",
+                  "from": "FWSN",
+                  "depart": "7:06 AM",
+                  "to": "HUMB",
+                  "arrive": "7:57 AM"
+                },
+                {
+                  "run": "605*",
+                  "from": "HUMB",
+                  "depart": "7:57 AM",
+                  "to": "FWSN",
+                  "arrive": "8:47 AM"
+                },
+                {
+                  "run": "606*",
+                  "from": "FWSN",
+                  "depart": "8:47 AM",
+                  "to": "HUMB",
+                  "arrive": "9:38 AM"
+                },
+                {
+                  "run": "607*",
+                  "from": "HUMB",
+                  "depart": "9:38 AM",
+                  "to": "FWSN",
+                  "arrive": "10:27 AM"
+                },
+                {
+                  "run": "608*",
+                  "from": "FWSN",
+                  "depart": "10:27 AM",
+                  "to": "HUMB",
+                  "arrive": "11:19 AM"
+                },
+                {
+                  "run": "609*",
+                  "from": "HUMB",
+                  "depart": "11:19 AM",
+                  "to": "FWSN",
+                  "arrive": "12:08 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "12:08 PM"
+          }
+        },
+        "6": {
+          "title": "6 Crew",
+          "report": "6:03 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "515*",
+                  "from": "EMSF",
+                  "depart": "6:13 AM",
+                  "to": "KECT",
+                  "arrive": "7:16 AM"
+                },
+                {
+                  "run": "501*",
+                  "from": "KECT",
+                  "depart": "7:16 AM",
+                  "to": "MDCT",
+                  "arrive": "8:16 AM"
+                },
+                {
+                  "run": "503*",
+                  "from": "MDCT",
+                  "depart": "8:16 AM",
+                  "to": "KECT",
+                  "arrive": "9:19 AM"
+                },
+                {
+                  "run": "504*",
+                  "from": "KECT",
+                  "depart": "9:19 AM",
+                  "to": "MDCT",
+                  "arrive": "10:20 AM"
+                },
+                {
+                  "run": "505*",
+                  "from": "MDCT",
+                  "depart": "10:20 AM",
+                  "to": "KECT",
+                  "arrive": "11:23 AM"
+                },
+                {
+                  "run": "506*",
+                  "from": "KECT",
+                  "depart": "11:23 AM",
+                  "to": "MDCT",
+                  "arrive": "12:22 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "12:22 PM"
+          }
+        },
+        "7": {
+          "title": "7 Crew",
+          "report": "6:25 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "501*",
+                  "from": "MDCT",
+                  "depart": "6:35 AM",
+                  "to": "KECT",
+                  "arrive": "7:24 AM"
+                },
+                {
+                  "run": "503*",
+                  "from": "KECT",
+                  "depart": "7:24 AM",
+                  "to": "MDCT",
+                  "arrive": "8:25 AM"
+                },
+                {
+                  "run": "504*",
+                  "from": "MDCT",
+                  "depart": "8:25 AM",
+                  "to": "KECT",
+                  "arrive": "9:28 AM"
+                },
+                {
+                  "run": "505*",
+                  "from": "KECT",
+                  "depart": "9:28 AM",
+                  "to": "MDCT",
+                  "arrive": "10:29 AM"
+                },
+                {
+                  "run": "507*",
+                  "from": "MDCT",
+                  "depart": "10:29 AM",
+                  "to": "KECT",
+                  "arrive": "11:32 AM"
+                },
+                {
+                  "run": "508*",
+                  "from": "KECT",
+                  "depart": "11:32 AM",
+                  "to": "MDCT",
+                  "arrive": "12:36 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "12:36 PM"
+          }
+        },
+        "8": {
+          "title": "8 Crew",
+          "report": "5:45 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "513*",
+                  "from": "EMSF",
+                  "depart": "5:55 AM",
+                  "to": "KECT",
+                  "arrive": "6:58 AM"
+                },
+                {
+                  "run": "514*",
+                  "from": "KECT",
+                  "depart": "6:58 AM",
+                  "to": "MDCT",
+                  "arrive": "7:59 AM"
+                },
+                {
+                  "run": "515*",
+                  "from": "MDCT",
+                  "depart": "7:59 AM",
+                  "to": "KECT",
+                  "arrive": "9:02 AM"
+                },
+                {
+                  "run": "501*",
+                  "from": "KECT",
+                  "depart": "9:02 AM",
+                  "to": "MDCT",
+                  "arrive": "10:02 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "508*",
+                  "from": "MDCT",
+                  "depart": "10:52 AM",
+                  "to": "KECT",
+                  "arrive": "11:41 AM"
+                },
+                {
+                  "run": "509*",
+                  "from": "KECT",
+                  "depart": "11:41 AM",
+                  "to": "MDCT",
+                  "arrive": "12:43 PM"
+                },
+                {
+                  "run": "510*",
+                  "from": "MDCT",
+                  "depart": "12:43 PM",
+                  "to": "MDCT",
+                  "arrive": "12:54 PM"
+                }
+              ],
+              "breakStart": "10:02 AM",
+              "breakEnd": "10:52 AM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "12:54 PM"
+          }
+        },
+        "9": {
+          "title": "9 Crew",
+          "report": "6:18 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "607*",
+                  "from": "FMSF",
+                  "depart": "6:28 AM",
+                  "to": "HUMB",
+                  "arrive": "7:02 AM"
+                },
+                {
+                  "run": "609*",
+                  "from": "HUMB",
+                  "depart": "7:02 AM",
+                  "to": "FWSN",
+                  "arrive": "7:51 AM"
+                },
+                {
+                  "run": "610*",
+                  "from": "FWSN",
+                  "depart": "7:51 AM",
+                  "to": "HUMB",
+                  "arrive": "8:44 AM"
+                },
+                {
+                  "run": "601*",
+                  "from": "HUMB",
+                  "depart": "8:44 AM",
+                  "to": "FWSN",
+                  "arrive": "9:37 AM"
+                },
+                {
+                  "run": "602*",
+                  "from": "FWSN",
+                  "depart": "9:37 AM",
+                  "to": "HUMB",
+                  "arrive": "10:28 AM"
+                },
+                {
+                  "run": "603*",
+                  "from": "HUMB",
+                  "depart": "10:28 AM",
+                  "to": "FWSN",
+                  "arrive": "11:18 AM"
+                },
+                {
+                  "run": "604*",
+                  "from": "FWSN",
+                  "depart": "11:18 AM",
+                  "to": "HUMB",
+                  "arrive": "12:09 PM"
+                },
+                {
+                  "run": "605*",
+                  "from": "HUMB",
+                  "depart": "12:09 PM",
+                  "to": "FWSN",
+                  "arrive": "12:59 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "12:59 PM"
+          }
+        },
+        "10": {
+          "title": "10 Crew",
+          "report": "6:38 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "505*",
+                  "from": "EMSF",
+                  "depart": "6:48 AM",
+                  "to": "KECT",
+                  "arrive": "7:51 AM"
+                },
+                {
+                  "run": "507*",
+                  "from": "KECT",
+                  "depart": "7:51 AM",
+                  "to": "MDCT",
+                  "arrive": "8:52 AM"
+                },
+                {
+                  "run": "508*",
+                  "from": "MDCT",
+                  "depart": "8:52 AM",
+                  "to": "KECT",
+                  "arrive": "9:55 AM"
+                },
+                {
+                  "run": "509*",
+                  "from": "KECT",
+                  "depart": "9:55 AM",
+                  "to": "MDCT",
+                  "arrive": "10:55 AM"
+                }
+              ]
+            },
+            {
+              "label": "Second Piece",
+              "trips": [
+                {
+                  "run": "513*",
+                  "from": "MDCT",
+                  "depart": "11:13 AM",
+                  "to": "KECT",
+                  "arrive": "12:18 PM"
+                },
+                {
+                  "run": "514*",
+                  "from": "KECT",
+                  "depart": "12:18 PM",
+                  "to": "MDCT",
+                  "arrive": "1:18 PM"
+                },
+                {
+                  "run": "515*",
+                  "from": "MDCT",
+                  "depart": "1:18 PM",
+                  "to": "MDCT",
+                  "arrive": "1:29 PM"
+                }
+              ],
+              "breakStart": "10:55 AM",
+              "breakEnd": "11:13 AM"
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "1:29 PM"
+          }
+        },
+        "11": {
+          "title": "11 Crew",
+          "report": "10:15 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "506*",
+                  "from": "EMSF",
+                  "depart": "10:25 AM",
+                  "to": "KECT",
+                  "arrive": "11:27 AM"
+                },
+                {
+                  "run": "507*",
+                  "from": "KECT",
+                  "depart": "11:27 AM",
+                  "to": "MDCT",
+                  "arrive": "12:29 PM"
+                },
+                {
+                  "run": "508*",
+                  "from": "MDCT",
+                  "depart": "12:29 PM",
+                  "to": "KECT",
+                  "arrive": "1:29 PM"
+                },
+                {
+                  "run": "509*",
+                  "from": "KECT",
+                  "depart": "1:29 PM",
+                  "to": "MDCT",
+                  "arrive": "2:29 PM"
+                },
+                {
+                  "run": "510*",
+                  "from": "MDCT",
+                  "depart": "2:29 PM",
+                  "to": "KECT",
+                  "arrive": "3:29 PM"
+                },
+                {
+                  "run": "511*",
+                  "from": "KECT",
+                  "depart": "3:29 PM",
+                  "to": "MDCT",
+                  "arrive": "4:29 PM"
+                },
+                {
+                  "run": "512*",
+                  "from": "MDCT",
+                  "depart": "4:29 PM",
+                  "to": "MDCT",
+                  "arrive": "4:40 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "4:40 PM"
+          }
+        },
+        "12": {
+          "title": "12 Crew",
+          "report": "11:47 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "602*",
+                  "from": "FWSN",
+                  "depart": "12:25 PM",
+                  "to": "HUMB",
+                  "arrive": "1:16 PM"
+                },
+                {
+                  "run": "603*",
+                  "from": "HUMB",
+                  "depart": "1:16 PM",
+                  "to": "FWSN",
+                  "arrive": "2:06 PM"
+                },
+                {
+                  "run": "604*",
+                  "from": "FWSN",
+                  "depart": "2:06 PM",
+                  "to": "HUMB",
+                  "arrive": "2:57 PM"
+                },
+                {
+                  "run": "605*",
+                  "from": "HUMB",
+                  "depart": "2:57 PM",
+                  "to": "FWSN",
+                  "arrive": "3:47 PM"
+                },
+                {
+                  "run": "606*",
+                  "from": "FWSN",
+                  "depart": "3:47 PM",
+                  "to": "HUMB",
+                  "arrive": "4:38 PM"
+                },
+                {
+                  "run": "607*",
+                  "from": "HUMB",
+                  "depart": "4:38 PM",
+                  "to": "FWSN",
+                  "arrive": "5:27 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "5:27 PM"
+          }
+        },
+        "13": {
+          "title": "13 Crew",
+          "report": "11:34 AM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "502*",
+                  "from": "EMSF",
+                  "depart": "11:44 AM",
+                  "to": "KECT",
+                  "arrive": "12:46 PM"
+                },
+                {
+                  "run": "503*",
+                  "from": "KECT",
+                  "depart": "12:46 PM",
+                  "to": "MDCT",
+                  "arrive": "1:46 PM"
+                },
+                {
+                  "run": "504*",
+                  "from": "MDCT",
+                  "depart": "1:46 PM",
+                  "to": "KECT",
+                  "arrive": "2:47 PM"
+                },
+                {
+                  "run": "505*",
+                  "from": "KECT",
+                  "depart": "2:47 PM",
+                  "to": "MDCT",
+                  "arrive": "3:47 PM"
+                },
+                {
+                  "run": "506*",
+                  "from": "MDCT",
+                  "depart": "3:47 PM",
+                  "to": "KECT",
+                  "arrive": "4:47 PM"
+                },
+                {
+                  "run": "507*",
+                  "from": "KECT",
+                  "depart": "4:47 PM",
+                  "to": "MDCT",
+                  "arrive": "5:47 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "5:47 PM"
+          }
+        },
+        "14": {
+          "title": "14 Crew",
+          "report": "12:16 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "506*",
+                  "from": "MDCT",
+                  "depart": "12:26 PM",
+                  "to": "KECT",
+                  "arrive": "1:15 PM"
+                },
+                {
+                  "run": "507*",
+                  "from": "KECT",
+                  "depart": "1:15 PM",
+                  "to": "MDCT",
+                  "arrive": "2:15 PM"
+                },
+                {
+                  "run": "508*",
+                  "from": "MDCT",
+                  "depart": "2:15 PM",
+                  "to": "KECT",
+                  "arrive": "3:15 PM"
+                },
+                {
+                  "run": "509*",
+                  "from": "KECT",
+                  "depart": "3:15 PM",
+                  "to": "MDCT",
+                  "arrive": "4:15 PM"
+                },
+                {
+                  "run": "510*",
+                  "from": "MDCT",
+                  "depart": "4:15 PM",
+                  "to": "KECT",
+                  "arrive": "5:15 PM"
+                },
+                {
+                  "run": "511*",
+                  "from": "KECT",
+                  "depart": "5:15 PM",
+                  "to": "MDCT",
+                  "arrive": "6:15 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "6:15 PM"
+          }
+        },
+        "15": {
+          "title": "15 Crew",
+          "report": "12:44 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "510*",
+                  "from": "MDCT",
+                  "depart": "12:54 PM",
+                  "to": "KECT",
+                  "arrive": "1:43 PM"
+                },
+                {
+                  "run": "511*",
+                  "from": "KECT",
+                  "depart": "1:43 PM",
+                  "to": "MDCT",
+                  "arrive": "2:43 PM"
+                },
+                {
+                  "run": "512*",
+                  "from": "MDCT",
+                  "depart": "2:43 PM",
+                  "to": "KECT",
+                  "arrive": "3:43 PM"
+                },
+                {
+                  "run": "513*",
+                  "from": "KECT",
+                  "depart": "3:43 PM",
+                  "to": "MDCT",
+                  "arrive": "4:43 PM"
+                },
+                {
+                  "run": "514*",
+                  "from": "MDCT",
+                  "depart": "4:43 PM",
+                  "to": "KECT",
+                  "arrive": "5:43 PM"
+                },
+                {
+                  "run": "515*",
+                  "from": "KECT",
+                  "depart": "5:43 PM",
+                  "to": "MDCT",
+                  "arrive": "6:44 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "6:44 PM"
+          }
+        },
+        "16": {
+          "title": "16 Crew",
+          "report": "12:37 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "608*",
+                  "from": "FWSN",
+                  "depart": "1:15 PM",
+                  "to": "HUMB",
+                  "arrive": "2:07 PM"
+                },
+                {
+                  "run": "609*",
+                  "from": "HUMB",
+                  "depart": "2:07 PM",
+                  "to": "FWSN",
+                  "arrive": "2:56 PM"
+                },
+                {
+                  "run": "610*",
+                  "from": "FWSN",
+                  "depart": "2:56 PM",
+                  "to": "HUMB",
+                  "arrive": "3:48 PM"
+                },
+                {
+                  "run": "601*",
+                  "from": "HUMB",
+                  "depart": "3:48 PM",
+                  "to": "FWSN",
+                  "arrive": "4:37 PM"
+                },
+                {
+                  "run": "602*",
+                  "from": "FWSN",
+                  "depart": "4:37 PM",
+                  "to": "HUMB",
+                  "arrive": "5:28 PM"
+                },
+                {
+                  "run": "603*",
+                  "from": "HUMB",
+                  "depart": "5:28 PM",
+                  "to": "FWSN",
+                  "arrive": "6:18 PM"
+                },
+                {
+                  "run": "605*",
+                  "from": "FWSN",
+                  "depart": "6:18 PM",
+                  "to": "FMSF",
+                  "arrive": "6:50 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "6:50 PM"
+          }
+        },
+        "17": {
+          "title": "17 Crew",
+          "report": "12:51 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "511*",
+                  "from": "MDCT",
+                  "depart": "1:01 PM",
+                  "to": "KECT",
+                  "arrive": "1:50 PM"
+                },
+                {
+                  "run": "512*",
+                  "from": "KECT",
+                  "depart": "1:50 PM",
+                  "to": "MDCT",
+                  "arrive": "2:50 PM"
+                },
+                {
+                  "run": "513*",
+                  "from": "MDCT",
+                  "depart": "2:50 PM",
+                  "to": "KECT",
+                  "arrive": "3:50 PM"
+                },
+                {
+                  "run": "514*",
+                  "from": "KECT",
+                  "depart": "3:50 PM",
+                  "to": "MDCT",
+                  "arrive": "4:50 PM"
+                },
+                {
+                  "run": "515*",
+                  "from": "MDCT",
+                  "depart": "4:50 PM",
+                  "to": "KECT",
+                  "arrive": "5:50 PM"
+                },
+                {
+                  "run": "501*",
+                  "from": "KECT",
+                  "depart": "5:50 PM",
+                  "to": "MDCT",
+                  "arrive": "6:53 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "6:53 PM"
+          }
+        },
+        "18": {
+          "title": "18 Crew",
+          "report": "1:12 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "514*",
+                  "from": "MDCT",
+                  "depart": "1:22 PM",
+                  "to": "KECT",
+                  "arrive": "2:11 PM"
+                },
+                {
+                  "run": "515*",
+                  "from": "KECT",
+                  "depart": "2:11 PM",
+                  "to": "MDCT",
+                  "arrive": "3:11 PM"
+                },
+                {
+                  "run": "501*",
+                  "from": "MDCT",
+                  "depart": "3:11 PM",
+                  "to": "KECT",
+                  "arrive": "4:11 PM"
+                },
+                {
+                  "run": "502*",
+                  "from": "KECT",
+                  "depart": "4:11 PM",
+                  "to": "MDCT",
+                  "arrive": "5:11 PM"
+                },
+                {
+                  "run": "503*",
+                  "from": "MDCT",
+                  "depart": "5:11 PM",
+                  "to": "KECT",
+                  "arrive": "6:11 PM"
+                },
+                {
+                  "run": "504*",
+                  "from": "KECT",
+                  "depart": "6:11 PM",
+                  "to": "EMSF",
+                  "arrive": "7:24 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "7:24 PM"
+          }
+        },
+        "19": {
+          "title": "19 Crew",
+          "report": "1:33 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "502*",
+                  "from": "MDCT",
+                  "depart": "1:43 PM",
+                  "to": "KECT",
+                  "arrive": "2:32 PM"
+                },
+                {
+                  "run": "503*",
+                  "from": "KECT",
+                  "depart": "2:32 PM",
+                  "to": "MDCT",
+                  "arrive": "3:32 PM"
+                },
+                {
+                  "run": "504*",
+                  "from": "MDCT",
+                  "depart": "3:32 PM",
+                  "to": "KECT",
+                  "arrive": "4:33 PM"
+                },
+                {
+                  "run": "505*",
+                  "from": "KECT",
+                  "depart": "4:33 PM",
+                  "to": "MDCT",
+                  "arrive": "5:33 PM"
+                },
+                {
+                  "run": "506*",
+                  "from": "MDCT",
+                  "depart": "5:33 PM",
+                  "to": "KECT",
+                  "arrive": "6:33 PM"
+                },
+                {
+                  "run": "507*",
+                  "from": "KECT",
+                  "depart": "6:33 PM",
+                  "to": "EMSF",
+                  "arrive": "7:48 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "7:48 PM"
+          }
+        },
+        "20": {
+          "title": "20 Crew",
+          "report": "2:35 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "602*",
+                  "from": "FWSN",
+                  "depart": "3:13 PM",
+                  "to": "HUMB",
+                  "arrive": "4:04 PM"
+                },
+                {
+                  "run": "603*",
+                  "from": "HUMB",
+                  "depart": "4:04 PM",
+                  "to": "FWSN",
+                  "arrive": "4:54 PM"
+                },
+                {
+                  "run": "604*",
+                  "from": "FWSN",
+                  "depart": "4:54 PM",
+                  "to": "HUMB",
+                  "arrive": "5:45 PM"
+                },
+                {
+                  "run": "605*",
+                  "from": "HUMB",
+                  "depart": "5:45 PM",
+                  "to": "FWSN",
+                  "arrive": "6:34 PM"
+                },
+                {
+                  "run": "606*",
+                  "from": "FWSN",
+                  "depart": "6:34 PM",
+                  "to": "HUMB",
+                  "arrive": "7:25 PM"
+                },
+                {
+                  "run": "607*",
+                  "from": "HUMB",
+                  "depart": "7:25 PM",
+                  "to": "FWSN",
+                  "arrive": "8:15 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "8:15 PM"
+          }
+        },
+        "21": {
+          "title": "21 Crew",
+          "report": "1:55 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "505*",
+                  "from": "MDCT",
+                  "depart": "2:05 PM",
+                  "to": "KECT",
+                  "arrive": "2:54 PM"
+                },
+                {
+                  "run": "506*",
+                  "from": "KECT",
+                  "depart": "2:54 PM",
+                  "to": "MDCT",
+                  "arrive": "3:54 PM"
+                },
+                {
+                  "run": "507*",
+                  "from": "MDCT",
+                  "depart": "3:54 PM",
+                  "to": "KECT",
+                  "arrive": "4:54 PM"
+                },
+                {
+                  "run": "508*",
+                  "from": "KECT",
+                  "depart": "4:54 PM",
+                  "to": "MDCT",
+                  "arrive": "5:54 PM"
+                },
+                {
+                  "run": "510*",
+                  "from": "MDCT",
+                  "depart": "5:54 PM",
+                  "to": "KECT",
+                  "arrive": "6:59 PM"
+                },
+                {
+                  "run": "511*",
+                  "from": "KECT",
+                  "depart": "6:59 PM",
+                  "to": "MDCT",
+                  "arrive": "8:04 PM"
+                },
+                {
+                  "run": "513*",
+                  "from": "MDCT",
+                  "depart": "8:04 PM",
+                  "to": "MDCT",
+                  "arrive": "8:22 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "8:22 PM"
+          }
+        },
+        "22": {
+          "title": "22 Crew",
+          "report": "3:15 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "503*",
+                  "from": "MDCT",
+                  "depart": "3:25 PM",
+                  "to": "KECT",
+                  "arrive": "4:25 PM"
+                },
+                {
+                  "run": "504*",
+                  "from": "KECT",
+                  "depart": "4:25 PM",
+                  "to": "MDCT",
+                  "arrive": "5:26 PM"
+                },
+                {
+                  "run": "505*",
+                  "from": "MDCT",
+                  "depart": "5:26 PM",
+                  "to": "KECT",
+                  "arrive": "6:26 PM"
+                },
+                {
+                  "run": "506*",
+                  "from": "KECT",
+                  "depart": "6:26 PM",
+                  "to": "MDCT",
+                  "arrive": "7:28 PM"
+                },
+                {
+                  "run": "508*",
+                  "from": "MDCT",
+                  "depart": "7:28 PM",
+                  "to": "KECT",
+                  "arrive": "8:33 PM"
+                },
+                {
+                  "run": "510*",
+                  "from": "KECT",
+                  "depart": "8:33 PM",
+                  "to": "MDCT",
+                  "arrive": "9:38 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "MDCT",
+            "time": "9:38 PM"
+          }
+        },
+        "23": {
+          "title": "23 Crew",
+          "report": "2:27 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "601*",
+                  "from": "FWSN",
+                  "depart": "3:05 PM",
+                  "to": "HUMB",
+                  "arrive": "3:56 PM"
+                },
+                {
+                  "run": "602*",
+                  "from": "HUMB",
+                  "depart": "3:56 PM",
+                  "to": "FWSN",
+                  "arrive": "4:45 PM"
+                },
+                {
+                  "run": "603*",
+                  "from": "FWSN",
+                  "depart": "4:45 PM",
+                  "to": "HUMB",
+                  "arrive": "5:37 PM"
+                },
+                {
+                  "run": "604*",
+                  "from": "HUMB",
+                  "depart": "5:37 PM",
+                  "to": "HUMB",
+                  "arrive": "7:16 PM"
+                },
+                {
+                  "run": "606*",
+                  "from": "HUMB",
+                  "depart": "7:16 PM",
+                  "to": "FWSN",
+                  "arrive": "8:06 PM"
+                },
+                {
+                  "run": "607*",
+                  "from": "FWSN",
+                  "depart": "8:06 PM",
+                  "to": "HUMB",
+                  "arrive": "8:58 PM"
+                },
+                {
+                  "run": "608*",
+                  "from": "HUMB",
+                  "depart": "8:58 PM",
+                  "to": "FWSN",
+                  "arrive": "9:49 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "9:49 PM"
+          }
+        },
+        "24": {
+          "title": "24 Crew",
+          "report": "3:00 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "605*",
+                  "from": "FWSN",
+                  "depart": "3:38 PM",
+                  "to": "HUMB",
+                  "arrive": "4:30 PM"
+                },
+                {
+                  "run": "606*",
+                  "from": "HUMB",
+                  "depart": "4:30 PM",
+                  "to": "FWSN",
+                  "arrive": "5:19 PM"
+                },
+                {
+                  "run": "607*",
+                  "from": "FWSN",
+                  "depart": "5:19 PM",
+                  "to": "HUMB",
+                  "arrive": "6:10 PM"
+                },
+                {
+                  "run": "608*",
+                  "from": "HUMB",
+                  "depart": "6:10 PM",
+                  "to": "FWSN",
+                  "arrive": "7:01 PM"
+                },
+                {
+                  "run": "609*",
+                  "from": "FWSN",
+                  "depart": "7:01 PM",
+                  "to": "HUMB",
+                  "arrive": "7:53 PM"
+                },
+                {
+                  "run": "610*",
+                  "from": "HUMB",
+                  "depart": "7:53 PM",
+                  "to": "FWSN",
+                  "arrive": "8:43 PM"
+                },
+                {
+                  "run": "601*",
+                  "from": "FWSN",
+                  "depart": "8:43 PM",
+                  "to": "HUMB",
+                  "arrive": "9:36 PM"
+                },
+                {
+                  "run": "602*",
+                  "from": "HUMB",
+                  "depart": "9:36 PM",
+                  "to": "FWSN",
+                  "arrive": "10:26 PM"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FWSN",
+            "time": "10:26 PM"
+          }
+        },
+        "25": {
+          "title": "25 Crew",
+          "report": "7:13 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "505*",
+                  "from": "MDCT",
+                  "depart": "7:23 PM",
+                  "to": "KECT",
+                  "arrive": "8:10 PM"
+                },
+                {
+                  "run": "506*",
+                  "from": "KECT",
+                  "depart": "8:10 PM",
+                  "to": "MDCT",
+                  "arrive": "9:14 PM"
+                },
+                {
+                  "run": "508*",
+                  "from": "MDCT",
+                  "depart": "9:14 PM",
+                  "to": "KECT",
+                  "arrive": "10:19 PM"
+                },
+                {
+                  "run": "510*",
+                  "from": "KECT",
+                  "depart": "10:19 PM",
+                  "to": "MDCT",
+                  "arrive": "11:24 PM"
+                },
+                {
+                  "run": "511*",
+                  "from": "MDCT",
+                  "depart": "11:24 PM",
+                  "to": "KECT",
+                  "arrive": "12:29 AM (next day)"
+                },
+                {
+                  "run": "513*",
+                  "from": "KECT",
+                  "depart": "12:29 AM (next day)",
+                  "to": "EMSF",
+                  "arrive": "1:47 AM (next day)"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "1:47 AM (next day)"
+          }
+        },
+        "26": {
+          "title": "26 Crew",
+          "report": "8:06 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "515*",
+                  "from": "MDCT",
+                  "depart": "8:16 PM",
+                  "to": "KECT",
+                  "arrive": "9:20 PM"
+                },
+                {
+                  "run": "501*",
+                  "from": "KECT",
+                  "depart": "9:20 PM",
+                  "to": "MDCT",
+                  "arrive": "10:25 PM"
+                },
+                {
+                  "run": "503*",
+                  "from": "MDCT",
+                  "depart": "10:25 PM",
+                  "to": "KECT",
+                  "arrive": "11:30 PM"
+                },
+                {
+                  "run": "505*",
+                  "from": "KECT",
+                  "depart": "11:30 PM",
+                  "to": "MDCT",
+                  "arrive": "12:35 AM (next day)"
+                },
+                {
+                  "run": "506*",
+                  "from": "MDCT",
+                  "depart": "12:35 AM (next day)",
+                  "to": "XP",
+                  "arrive": "1:52 AM (next day)"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "XP",
+            "time": "1:52 AM (next day)"
+          }
+        },
+        "27": {
+          "title": "27 Crew",
+          "report": "8:24 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "603*",
+                  "from": "FWSN",
+                  "depart": "9:02 PM",
+                  "to": "HUMB",
+                  "arrive": "9:54 PM"
+                },
+                {
+                  "run": "604*",
+                  "from": "HUMB",
+                  "depart": "9:54 PM",
+                  "to": "FWSN",
+                  "arrive": "10:45 PM"
+                },
+                {
+                  "run": "606*",
+                  "from": "FWSN",
+                  "depart": "10:45 PM",
+                  "to": "HUMB",
+                  "arrive": "11:37 PM"
+                },
+                {
+                  "run": "607*",
+                  "from": "HUMB",
+                  "depart": "11:37 PM",
+                  "to": "FWSN",
+                  "arrive": "12:27 AM (next day)"
+                },
+                {
+                  "run": "608*",
+                  "from": "FWSN",
+                  "depart": "12:27 AM (next day)",
+                  "to": "HUMB",
+                  "arrive": "1:20 AM (next day)"
+                },
+                {
+                  "run": "609*",
+                  "from": "HUMB",
+                  "depart": "1:20 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "2:07 AM (next day)"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "2:07 AM (next day)"
+          }
+        },
+        "28": {
+          "title": "28 Crew",
+          "report": "8:17 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "501*",
+                  "from": "MDCT",
+                  "depart": "8:27 PM",
+                  "to": "KECT",
+                  "arrive": "9:32 PM"
+                },
+                {
+                  "run": "503*",
+                  "from": "KECT",
+                  "depart": "9:32 PM",
+                  "to": "MDCT",
+                  "arrive": "10:37 PM"
+                },
+                {
+                  "run": "505*",
+                  "from": "MDCT",
+                  "depart": "10:37 PM",
+                  "to": "KECT",
+                  "arrive": "11:42 PM"
+                },
+                {
+                  "run": "506*",
+                  "from": "KECT",
+                  "depart": "11:42 PM",
+                  "to": "MDCT",
+                  "arrive": "12:47 AM (next day)"
+                },
+                {
+                  "run": "510*",
+                  "from": "MDCT",
+                  "depart": "12:47 AM (next day)",
+                  "to": "XP",
+                  "arrive": "2:10 AM (next day)"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "XP",
+            "time": "2:10 AM (next day)"
+          }
+        },
+        "29": {
+          "title": "29 Crew",
+          "report": "7:56 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "610*",
+                  "from": "FWSN",
+                  "depart": "8:34 PM",
+                  "to": "HUMB",
+                  "arrive": "9:26 PM"
+                },
+                {
+                  "run": "601*",
+                  "from": "HUMB",
+                  "depart": "9:26 PM",
+                  "to": "FWSN",
+                  "arrive": "10:17 PM"
+                },
+                {
+                  "run": "602*",
+                  "from": "FWSN",
+                  "depart": "10:17 PM",
+                  "to": "HUMB",
+                  "arrive": "11:09 PM"
+                },
+                {
+                  "run": "603*",
+                  "from": "HUMB",
+                  "depart": "11:09 PM",
+                  "to": "FWSN",
+                  "arrive": "11:59 PM"
+                },
+                {
+                  "run": "604*",
+                  "from": "FWSN",
+                  "depart": "11:59 PM",
+                  "to": "HUMB",
+                  "arrive": "12:52 AM (next day)"
+                },
+                {
+                  "run": "606*",
+                  "from": "HUMB",
+                  "depart": "12:52 AM (next day)",
+                  "to": "FWSN",
+                  "arrive": "1:42 AM (next day)"
+                },
+                {
+                  "run": "607*",
+                  "from": "FWSN",
+                  "depart": "1:42 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "2:11 AM (next day)"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "2:11 AM (next day)"
+          }
+        },
+        "30": {
+          "title": "30 Crew",
+          "report": "6:51 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "602*",
+                  "from": "FWSN",
+                  "depart": "7:29 PM",
+                  "to": "HUMB",
+                  "arrive": "8:21 PM"
+                },
+                {
+                  "run": "603*",
+                  "from": "HUMB",
+                  "depart": "8:21 PM",
+                  "to": "FWSN",
+                  "arrive": "9:11 PM"
+                },
+                {
+                  "run": "604*",
+                  "from": "FWSN",
+                  "depart": "9:11 PM",
+                  "to": "HUMB",
+                  "arrive": "10:04 PM"
+                },
+                {
+                  "run": "606*",
+                  "from": "HUMB",
+                  "depart": "10:04 PM",
+                  "to": "FWSN",
+                  "arrive": "10:54 PM"
+                },
+                {
+                  "run": "607*",
+                  "from": "FWSN",
+                  "depart": "10:54 PM",
+                  "to": "HUMB",
+                  "arrive": "11:46 PM"
+                },
+                {
+                  "run": "608*",
+                  "from": "HUMB",
+                  "depart": "11:46 PM",
+                  "to": "FWSN",
+                  "arrive": "12:37 AM (next day)"
+                },
+                {
+                  "run": "609*",
+                  "from": "FWSN",
+                  "depart": "12:37 AM (next day)",
+                  "to": "HUMB",
+                  "arrive": "1:31 AM (next day)"
+                },
+                {
+                  "run": "610*",
+                  "from": "HUMB",
+                  "depart": "1:31 AM (next day)",
+                  "to": "FMSF",
+                  "arrive": "2:19 AM (next day)"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "FMSF",
+            "time": "2:19 AM (next day)"
+          }
+        },
+        "31": {
+          "title": "31 Crew",
+          "report": "7:48 PM",
+          "pay": "8:00",
+          "pieces": [
+            {
+              "label": "First Piece",
+              "trips": [
+                {
+                  "run": "510*",
+                  "from": "MDCT",
+                  "depart": "7:58 PM",
+                  "to": "KECT",
+                  "arrive": "8:45 PM"
+                },
+                {
+                  "run": "511*",
+                  "from": "KECT",
+                  "depart": "8:45 PM",
+                  "to": "MDCT",
+                  "arrive": "9:50 PM"
+                },
+                {
+                  "run": "513*",
+                  "from": "MDCT",
+                  "depart": "9:50 PM",
+                  "to": "KECT",
+                  "arrive": "10:55 PM"
+                },
+                {
+                  "run": "515*",
+                  "from": "KECT",
+                  "depart": "10:55 PM",
+                  "to": "MDCT",
+                  "arrive": "11:59 PM"
+                },
+                {
+                  "run": "501*",
+                  "from": "MDCT",
+                  "depart": "11:59 PM",
+                  "to": "KECT",
+                  "arrive": "1:04 AM (next day)"
+                },
+                {
+                  "run": "503*",
+                  "from": "KECT",
+                  "depart": "1:04 AM (next day)",
+                  "to": "EMSF",
+                  "arrive": "2:20 AM (next day)"
+                }
+              ]
+            }
+          ],
+          "finish": {
+            "location": "EMSF",
+            "time": "2:20 AM (next day)"
           }
         }
       }
