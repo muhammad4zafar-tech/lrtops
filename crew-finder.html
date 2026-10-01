@@ -224,15 +224,16 @@
 
         <div class="finder-form">
             <div class="form-row">
+                <label for="boardPeriodSelect">Select Your Board Period</label>
+                <select id="boardPeriodSelect">
+                    <option value="">Choose a board period</option>
+                </select>
+            </div>
+
+            <div class="form-row">
                 <label for="categorySelect">Select Your Day or Crew Category</label>
-                <select id="categorySelect">
+                <select id="categorySelect" disabled>
                     <option value="">Choose a day or crew category</option>
-                    <option value="sunday">Sundays</option>
-                    <option value="daily">Daily (Monday-Friday)</option>
-                    <option value="saturday">Saturdays</option>
-                    <option value="special">Special Crews</option>
-                    <option value="sac">SAC Crews</option>
-                    <option value="thanksgiving">Thanksgiving - Monday, October 12, 2026</option>
                 </select>
             </div>
 
@@ -261,6 +262,7 @@
 
 <script src="js/crew-data.js"></script>
 <script>
+    const boardPeriodSelect = document.getElementById("boardPeriodSelect");
     const categorySelect = document.getElementById("categorySelect");
     const lineRow = document.getElementById("lineRow");
     const lineSelect = document.getElementById("lineSelect");
@@ -268,7 +270,22 @@
     const findCrewButton = document.getElementById("findCrewButton");
     const crewResult = document.getElementById("crewResult");
 
-    const guideChoices = {
+    const boardPeriods = {
+        current: {
+            label: "September 6 - October 31, 2026",
+            expires: 20261031
+        },
+        nov1: {
+            label: "November 1 - December 19, 2026",
+            expires: 20261219
+        },
+        dec20: {
+            label: "December 20, 2026 - January 2, 2027",
+            expires: 20270102
+        }
+    };
+
+    const standardGuideChoices = {
         sunday: [
             { value: "line5-sunday", label: "Line 5" },
             { value: "line6-sunday", label: "Line 6" }
@@ -286,7 +303,10 @@
         ],
         sac: [
             { value: "sac", label: "SAC Crews" }
-        ],
+        ]
+    };
+
+    const thanksgivingGuideChoices = {
         thanksgiving: [
             { value: "thanksgiving-line5", label: "Line 5" },
             { value: "thanksgiving-line6", label: "Line 6" },
@@ -294,8 +314,82 @@
         ]
     };
 
+    function localDateNumber() {
+        const now = new Date();
+        return (now.getFullYear() * 10000) + ((now.getMonth() + 1) * 100) + now.getDate();
+    }
+
+    function loadBoardPeriods() {
+        const today = localDateNumber();
+        let activeBoard = "dec20";
+
+        if (today <= boardPeriods.current.expires) {
+            activeBoard = "current";
+        } else if (today <= boardPeriods.nov1.expires) {
+            activeBoard = "nov1";
+        }
+
+        Object.entries(boardPeriods).forEach(([key, period]) => {
+            if (today > period.expires) return;
+            const option = document.createElement("option");
+            option.value = key;
+            option.textContent = period.label;
+            boardPeriodSelect.appendChild(option);
+        });
+
+        if (boardPeriodSelect.querySelector(`option[value="${activeBoard}"]`)) {
+            boardPeriodSelect.value = activeBoard;
+        }
+        loadCategories();
+    }
+
+    function loadCategories() {
+        const boardKey = boardPeriodSelect.value;
+        const today = localDateNumber();
+        const categoryOptions = [
+            { value: "sunday", label: "Sundays" },
+            { value: "daily", label: "Daily (Monday-Friday)" },
+            { value: "saturday", label: "Saturdays" },
+            { value: "special", label: "Special Crews" },
+            { value: "sac", label: "SAC Crews" }
+        ];
+
+        if (boardKey === "current" && today <= 20261013) {
+            categoryOptions.push({
+                value: "thanksgiving",
+                label: "Thanksgiving - Monday, October 12, 2026"
+            });
+        }
+
+        categorySelect.innerHTML = '<option value="">Choose a day or crew category</option>';
+        categorySelect.disabled = !boardKey;
+        categoryOptions.forEach(category => {
+            const option = document.createElement("option");
+            option.value = category.value;
+            option.textContent = category.label;
+            categorySelect.appendChild(option);
+        });
+
+        loadLineChoices();
+    }
+
+    function getGuideChoices() {
+        const boardKey = boardPeriodSelect.value;
+        const categoryKey = categorySelect.value;
+
+        if (categoryKey === "thanksgiving") {
+            return thanksgivingGuideChoices.thanksgiving;
+        }
+
+        const choices = standardGuideChoices[categoryKey] || [];
+        return choices.map(choice => ({
+            label: choice.label,
+            value: boardKey === "current" ? choice.value : `${boardKey}-${choice.value}`
+        }));
+    }
+
     function loadLineChoices() {
-        const choices = guideChoices[categorySelect.value] || [];
+        const choices = getGuideChoices();
         lineSelect.innerHTML = '<option value="">Choose a line</option>';
         crewSelect.innerHTML = '<option value="">Choose a crew</option>';
         crewSelect.disabled = true;
@@ -483,10 +577,11 @@
         crewResult.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
+    boardPeriodSelect.addEventListener("change", loadCategories);
     categorySelect.addEventListener("change", loadLineChoices);
     lineSelect.addEventListener("change", loadCrewNumbers);
     findCrewButton.addEventListener("click", showCrew);
-    loadLineChoices();
+    loadBoardPeriods();
 </script>
 <script src="js/include.js"></script>
 
