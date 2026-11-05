@@ -306,11 +306,31 @@
         ]
     };
 
-    const thanksgivingGuideChoices = {
+    const holidayGuideChoices = {
         thanksgiving: [
             { value: "thanksgiving-line5", label: "Line 5" },
             { value: "thanksgiving-line6", label: "Line 6" },
             { value: "thanksgiving-special", label: "Special Crews" }
+        ],
+        christmas: [
+            { value: "christmas-line5", label: "Line 5" },
+            { value: "christmas-line6", label: "Line 6" },
+            { value: "christmas-special", label: "Special Crews" }
+        ],
+        boxing: [
+            { value: "boxing-line5", label: "Line 5" },
+            { value: "boxing-line6", label: "Line 6" },
+            { value: "boxing-special", label: "Special Crews" }
+        ],
+        "new-years-eve": [
+            { value: "new-years-eve-line5", label: "Line 5" },
+            { value: "new-years-eve-line6", label: "Line 6" },
+            { value: "new-years-eve-special", label: "Special Crews" }
+        ],
+        "new-years-day": [
+            { value: "new-years-day-line5", label: "Line 5" },
+            { value: "new-years-day-line6", label: "Line 6" },
+            { value: "new-years-day-special", label: "Special Crews" }
         ]
     };
 
@@ -361,6 +381,19 @@
             });
         }
 
+        if (boardKey === "dec20") {
+            const holidayOptions = [
+                { value: "christmas", label: "Christmas Day - Friday, December 25, 2026", expires: 20261226 },
+                { value: "boxing", label: "Boxing Day - Saturday, December 26, 2026", expires: 20261227 },
+                { value: "new-years-eve", label: "New Year's Eve - Thursday, December 31, 2026", expires: 20270101 },
+                { value: "new-years-day", label: "New Year's Day - Friday, January 1, 2027", expires: 20270102 }
+            ];
+
+            holidayOptions.forEach(holiday => {
+                if (today <= holiday.expires) categoryOptions.push(holiday);
+            });
+        }
+
         categorySelect.innerHTML = '<option value="">Choose a day or crew category</option>';
         categorySelect.disabled = !boardKey;
         categoryOptions.forEach(category => {
@@ -377,8 +410,8 @@
         const boardKey = boardPeriodSelect.value;
         const categoryKey = categorySelect.value;
 
-        if (categoryKey === "thanksgiving") {
-            return thanksgivingGuideChoices.thanksgiving;
+        if (holidayGuideChoices[categoryKey]) {
+            return holidayGuideChoices[categoryKey];
         }
 
         const choices = standardGuideChoices[categoryKey] || [];
