@@ -285,6 +285,25 @@
         }
     };
 
+    const holidayBoardPeriods = {
+        christmas: {
+            label: "Christmas Day - Friday, December 25, 2026",
+            expires: 20261226
+        },
+        boxing: {
+            label: "Boxing Day - Saturday, December 26, 2026",
+            expires: 20261227
+        },
+        "new-years-eve": {
+            label: "New Year's Eve - Thursday, December 31, 2026",
+            expires: 20270101
+        },
+        "new-years-day": {
+            label: "New Year's Day - Friday, January 1, 2027",
+            expires: 20270102
+        }
+    };
+
     const standardGuideChoices = {
         sunday: [
             { value: "line5-sunday", label: "Line 5" },
@@ -357,6 +376,14 @@
             boardPeriodSelect.appendChild(option);
         });
 
+        Object.entries(holidayBoardPeriods).forEach(([key, period]) => {
+            if (today > period.expires) return;
+            const option = document.createElement("option");
+            option.value = key;
+            option.textContent = period.label;
+            boardPeriodSelect.appendChild(option);
+        });
+
         if (boardPeriodSelect.querySelector(`option[value="${activeBoard}"]`)) {
             boardPeriodSelect.value = activeBoard;
         }
@@ -366,6 +393,17 @@
     function loadCategories() {
         const boardKey = boardPeriodSelect.value;
         const today = localDateNumber();
+
+        if (holidayGuideChoices[boardKey]) {
+            categorySelect.closest(".form-row").style.display = "none";
+            categorySelect.innerHTML = `<option value="${boardKey}">${holidayBoardPeriods[boardKey].label}</option>`;
+            categorySelect.value = boardKey;
+            categorySelect.disabled = false;
+            loadLineChoices();
+            return;
+        }
+
+        categorySelect.closest(".form-row").style.display = "block";
         const categoryOptions = [
             { value: "sunday", label: "Sundays" },
             { value: "daily", label: "Daily (Monday-Friday)" },
@@ -380,17 +418,6 @@
                 label: "Thanksgiving - Monday, October 12, 2026"
             });
         }
-
-        const holidayOptions = [
-            { value: "christmas", label: "Christmas Day - Friday, December 25, 2026", expires: 20261226 },
-            { value: "boxing", label: "Boxing Day - Saturday, December 26, 2026", expires: 20261227 },
-            { value: "new-years-eve", label: "New Year's Eve - Thursday, December 31, 2026", expires: 20270101 },
-            { value: "new-years-day", label: "New Year's Day - Friday, January 1, 2027", expires: 20270102 }
-        ];
-
-        holidayOptions.forEach(holiday => {
-            if (today <= holiday.expires) categoryOptions.push(holiday);
-        });
 
         categorySelect.innerHTML = '<option value="">Choose a day or crew category</option>';
         categorySelect.disabled = !boardKey;
