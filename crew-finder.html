@@ -381,18 +381,16 @@
             });
         }
 
-        if (boardKey === "dec20") {
-            const holidayOptions = [
-                { value: "christmas", label: "Christmas Day - Friday, December 25, 2026", expires: 20261226 },
-                { value: "boxing", label: "Boxing Day - Saturday, December 26, 2026", expires: 20261227 },
-                { value: "new-years-eve", label: "New Year's Eve - Thursday, December 31, 2026", expires: 20270101 },
-                { value: "new-years-day", label: "New Year's Day - Friday, January 1, 2027", expires: 20270102 }
-            ];
+        const holidayOptions = [
+            { value: "christmas", label: "Christmas Day - Friday, December 25, 2026", expires: 20261226 },
+            { value: "boxing", label: "Boxing Day - Saturday, December 26, 2026", expires: 20261227 },
+            { value: "new-years-eve", label: "New Year's Eve - Thursday, December 31, 2026", expires: 20270101 },
+            { value: "new-years-day", label: "New Year's Day - Friday, January 1, 2027", expires: 20270102 }
+        ];
 
-            holidayOptions.forEach(holiday => {
-                if (today <= holiday.expires) categoryOptions.push(holiday);
-            });
-        }
+        holidayOptions.forEach(holiday => {
+            if (today <= holiday.expires) categoryOptions.push(holiday);
+        });
 
         categorySelect.innerHTML = '<option value="">Choose a day or crew category</option>';
         categorySelect.disabled = !boardKey;
