@@ -33364,34 +33364,6 @@ const crewFinderData = {
                   "depart": "5:02 PM",
                   "to": "MDCT",
                   "arrive": "5:10 PM"
-                },
-                {
-                  "run": "530",
-                  "from": "EMSF",
-                  "depart": "7:12 AM",
-                  "to": "KECT",
-                  "arrive": "8:12 AM"
-                },
-                {
-                  "run": "501",
-                  "from": "EMSF",
-                  "depart": "7:38 AM",
-                  "to": "KECT",
-                  "arrive": "8:37 AM"
-                },
-                {
-                  "run": "531",
-                  "from": "KECT",
-                  "depart": "8:12 AM",
-                  "to": "MDCT",
-                  "arrive": "9:06 AM"
-                },
-                {
-                  "run": "502",
-                  "from": "KECT",
-                  "depart": "8:37 AM",
-                  "to": "MDCT",
-                  "arrive": "9:32 AM"
                 }
               ]
             },
@@ -33441,7 +33413,7 @@ const crewFinderData = {
                   "arrive": "2:18 AM (next day)"
                 }
               ],
-              "breakStart": "9:32 AM",
+              "breakStart": "5:10 PM",
               "breakEnd": "8:21 PM"
             }
           ],
