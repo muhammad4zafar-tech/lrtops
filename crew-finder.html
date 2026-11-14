@@ -60,7 +60,8 @@
 
         .find-button,
         .pdf-button,
-        .copy-button {
+        .copy-button,
+        .calendar-button {
             display: inline-block;
             margin-top: 20px;
             padding: 11px 18px;
@@ -76,13 +77,26 @@
 
         .find-button:hover,
         .pdf-button:hover,
-        .copy-button:hover {
+        .copy-button:hover,
+        .calendar-button:hover {
             filter: brightness(0.9);
         }
 
         .copy-button {
-            margin: 0 0 18px;
+            margin: 0;
             background: #0055cc;
+        }
+
+        .result-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .calendar-button {
+            margin: 0;
+            background: #16803a;
         }
 
         .crew-result {
@@ -198,7 +212,8 @@
 
             .find-button,
             .pdf-button,
-            .copy-button {
+            .copy-button,
+            .calendar-button {
                 width: 100%;
                 box-sizing: border-box;
                 text-align: center;
@@ -580,6 +595,123 @@
         }
     }
 
+    function parseDateText(dateText) {
+        if (/^\d{4}-\d{2}-\d{2}$/.test(dateText)) {
+            const [year, month, day] = dateText.split("-").map(Number);
+            return new Date(year, month - 1, day, 12, 0, 0);
+        }
+
+        const parsed = new Date(`${dateText} 12:00:00`);
+        return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+
+    function getCalendarWorkDate(guide) {
+        const period = guide.boardPeriod || crewFinderData.boardPeriod;
+        if (period.start === period.end) return period.start;
+
+        const enteredDate = window.prompt(
+            `Enter the work date between ${period.start} and ${period.end} (YYYY-MM-DD):`
+        );
+        if (!enteredDate) return null;
+
+        const selected = parseDateText(enteredDate.trim());
+        const start = parseDateText(period.start);
+        const end = parseDateText(period.end);
+
+        if (!selected || selected < start || selected > end) {
+            window.alert("Please enter a valid date within the selected board period.");
+            return null;
+        }
+
+        return enteredDate.trim();
+    }
+
+    function crewDateTime(dateText, timeText) {
+        const date = parseDateText(dateText);
+        const nextDay = /\(next day\)/i.test(timeText);
+        const cleanTime = timeText.replace(/\s*\(next day\)\s*/i, "").trim();
+        const match = cleanTime.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+        if (!date || !match) return null;
+
+        let hour = Number(match[1]) % 12;
+        if (match[3].toUpperCase() === "PM") hour += 12;
+        date.setHours(hour, Number(match[2]), 0, 0);
+        if (nextDay) date.setDate(date.getDate() + 1);
+        return date;
+    }
+
+    function formatIcsDate(date, utc = false) {
+        const value = utc ? new Date(date.getTime()) : date;
+        const get = name => value[`${utc ? "getUTC" : "get"}${name}`]();
+        const pad = number => String(number).padStart(2, "0");
+        return `${get("FullYear")}${pad(get("Month") + 1)}${pad(get("Date"))}` +
+            `T${pad(get("Hours"))}${pad(get("Minutes"))}${pad(get("Seconds"))}${utc ? "Z" : ""}`;
+    }
+
+    function escapeIcsText(value) {
+        return String(value)
+            .replace(/\\/g, "\\\\")
+            .replace(/\r?\n/g, "\\n")
+            .replace(/,/g, "\\,")
+            .replace(/;/g, "\\;");
+    }
+
+    function foldIcsLine(line) {
+        const parts = [];
+        let remaining = line;
+        while (remaining.length > 70) {
+            parts.push(remaining.slice(0, 70));
+            remaining = remaining.slice(70);
+        }
+        parts.push(remaining);
+        return parts.join("\r\n ");
+    }
+
+    function addCrewToCalendar(guide, crew) {
+        const workDate = getCalendarWorkDate(guide);
+        if (!workDate) return;
+
+        const start = crewDateTime(workDate, crew.report);
+        let end = crewDateTime(workDate, crew.finish.time);
+        if (!start || !end) {
+            window.alert("This crew's calendar times could not be prepared.");
+            return;
+        }
+        if (end <= start) end.setDate(end.getDate() + 1);
+
+        const description = [
+            `Work date: ${start.toLocaleDateString()}`,
+            "",
+            buildCrewText(guide, crew)
+        ].join("\n");
+        const uid = `lrtops-${Date.now()}-${Math.random().toString(36).slice(2)}@lrtops.ca`;
+        const lines = [
+            "BEGIN:VCALENDAR",
+            "VERSION:2.0",
+            "PRODID:-//LRTOps.ca//Find My Crew//EN",
+            "CALSCALE:GREGORIAN",
+            "METHOD:PUBLISH",
+            "BEGIN:VEVENT",
+            `UID:${uid}`,
+            `DTSTAMP:${formatIcsDate(new Date(), true)}`,
+            `DTSTART:${formatIcsDate(start)}`,
+            `DTEND:${formatIcsDate(end)}`,
+            `SUMMARY:${escapeIcsText(`${crew.title} - ${guide.label}`)}`,
+            `DESCRIPTION:${escapeIcsText(description)}`,
+            "END:VEVENT",
+            "END:VCALENDAR"
+        ].map(foldIcsLine).join("\r\n");
+
+        const blob = new Blob([lines], { type: "text/calendar;charset=utf-8" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `${guide.label}-${crew.title}.ics`.replace(/[^a-z0-9.-]+/gi, "-");
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+    }
+
     function showCrew() {
         const guide = crewFinderData.guides[lineSelect.value];
         const crew = guide && guide.crews[crewSelect.value];
@@ -603,7 +735,10 @@
         }).join("");
 
         crewResult.innerHTML = `
-            <button id="copyCrewButton" class="copy-button" type="button">Copy My Crew</button>
+            <div class="result-actions">
+                <button id="copyCrewButton" class="copy-button" type="button">Copy My Crew</button>
+                <button id="calendarCrewButton" class="calendar-button" type="button">Add to My Calendar</button>
+            </div>
 
             <h2 class="result-heading">${crew.title}</h2>
             <p class="board-period">
@@ -629,6 +764,10 @@
 
         document.getElementById("copyCrewButton").addEventListener("click", () => {
             copyCrew(guide, crew);
+        });
+
+        document.getElementById("calendarCrewButton").addEventListener("click", () => {
+            addCrewToCalendar(guide, crew);
         });
 
         crewResult.style.display = "block";
