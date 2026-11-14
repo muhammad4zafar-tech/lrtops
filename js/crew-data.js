@@ -53800,34 +53800,6 @@ const crewFinderData = {
                   "depart": "5:02 PM",
                   "to": "MDCT",
                   "arrive": "5:10 PM"
-                },
-                {
-                  "run": "530",
-                  "from": "EMSF",
-                  "depart": "7:12 AM",
-                  "to": "KECT",
-                  "arrive": "8:12 AM"
-                },
-                {
-                  "run": "501",
-                  "from": "EMSF",
-                  "depart": "7:38 AM",
-                  "to": "KECT",
-                  "arrive": "8:37 AM"
-                },
-                {
-                  "run": "531",
-                  "from": "KECT",
-                  "depart": "8:12 AM",
-                  "to": "MDCT",
-                  "arrive": "9:06 AM"
-                },
-                {
-                  "run": "502",
-                  "from": "KECT",
-                  "depart": "8:37 AM",
-                  "to": "MDCT",
-                  "arrive": "9:32 AM"
                 }
               ]
             },
@@ -53877,7 +53849,7 @@ const crewFinderData = {
                   "arrive": "2:18 AM (next day)"
                 }
               ],
-              "breakStart": "9:32 AM",
+              "breakStart": "5:10 PM",
               "breakEnd": "8:21 PM"
             }
           ],
@@ -68878,160 +68850,6 @@ const crewFinderData = {
                   "depart": "8:48 PM",
                   "to": "MDCT",
                   "arrive": "9:45 PM"
-                },
-                {
-                  "run": "505",
-                  "from": "EMSF",
-                  "depart": "7:31 AM",
-                  "to": "KECT",
-                  "arrive": "8:29 AM"
-                },
-                {
-                  "run": "507",
-                  "from": "EMSF",
-                  "depart": "7:44 AM",
-                  "to": "KECT",
-                  "arrive": "8:42 AM"
-                },
-                {
-                  "run": "509",
-                  "from": "EMSF",
-                  "depart": "7:57 AM",
-                  "to": "KECT",
-                  "arrive": "8:56 AM"
-                },
-                {
-                  "run": "512",
-                  "from": "EMSF",
-                  "depart": "8:17 AM",
-                  "to": "KECT",
-                  "arrive": "9:15 AM"
-                },
-                {
-                  "run": "506",
-                  "from": "KECT",
-                  "depart": "8:29 AM",
-                  "to": "MDCT",
-                  "arrive": "9:26 AM"
-                },
-                {
-                  "run": "508",
-                  "from": "KECT",
-                  "depart": "8:42 AM",
-                  "to": "MDCT",
-                  "arrive": "9:39 AM"
-                },
-                {
-                  "run": "501",
-                  "from": "EMSF",
-                  "depart": "8:43 AM",
-                  "to": "KECT",
-                  "arrive": "9:42 AM"
-                },
-                {
-                  "run": "510",
-                  "from": "KECT",
-                  "depart": "8:56 AM",
-                  "to": "MDCT",
-                  "arrive": "9:52 AM"
-                },
-                {
-                  "run": "513",
-                  "from": "KECT",
-                  "depart": "9:15 AM",
-                  "to": "MDCT",
-                  "arrive": "10:12 AM"
-                },
-                {
-                  "run": "507",
-                  "from": "MDCT",
-                  "depart": "9:26 AM",
-                  "to": "KECT",
-                  "arrive": "10:21 AM"
-                },
-                {
-                  "run": "509",
-                  "from": "MDCT",
-                  "depart": "9:39 AM",
-                  "to": "KECT",
-                  "arrive": "10:35 AM"
-                },
-                {
-                  "run": "502",
-                  "from": "KECT",
-                  "depart": "9:42 AM",
-                  "to": "MDCT",
-                  "arrive": "10:38 AM"
-                },
-                {
-                  "run": "511",
-                  "from": "MDCT",
-                  "depart": "9:52 AM",
-                  "to": "KECT",
-                  "arrive": "10:48 AM"
-                },
-                {
-                  "run": "514",
-                  "from": "MDCT",
-                  "depart": "10:12 AM",
-                  "to": "KECT",
-                  "arrive": "11:08 AM"
-                },
-                {
-                  "run": "508",
-                  "from": "KECT",
-                  "depart": "10:21 AM",
-                  "to": "MDCT",
-                  "arrive": "11:18 AM"
-                },
-                {
-                  "run": "510",
-                  "from": "KECT",
-                  "depart": "10:35 AM",
-                  "to": "MDCT",
-                  "arrive": "11:31 AM"
-                },
-                {
-                  "run": "503",
-                  "from": "MDCT",
-                  "depart": "10:38 AM",
-                  "to": "KECT",
-                  "arrive": "11:34 AM"
-                },
-                {
-                  "run": "512",
-                  "from": "KECT",
-                  "depart": "10:48 AM",
-                  "to": "MDCT",
-                  "arrive": "11:44 AM"
-                },
-                {
-                  "run": "515",
-                  "from": "KECT",
-                  "depart": "11:08 AM",
-                  "to": "MDCT",
-                  "arrive": "12:04 PM"
-                },
-                {
-                  "run": "509",
-                  "from": "MDCT",
-                  "depart": "11:18 AM",
-                  "to": "KECT",
-                  "arrive": "12:14 PM"
-                },
-                {
-                  "run": "511",
-                  "from": "MDCT",
-                  "depart": "11:31 AM",
-                  "to": "KECT",
-                  "arrive": "12:27 PM"
-                },
-                {
-                  "run": "504",
-                  "from": "KECT",
-                  "depart": "11:34 AM",
-                  "to": "MDCT",
-                  "arrive": "12:31 PM"
                 }
               ]
             },
@@ -69067,7 +68885,7 @@ const crewFinderData = {
                   "arrive": "2:19 AM (next day)"
                 }
               ],
-              "breakStart": "12:31 PM",
+              "breakStart": "9:45 PM",
               "breakEnd": "10:05 PM"
             }
           ],
@@ -71110,146 +70928,6 @@ const crewFinderData = {
                   "depart": "9:05 PM",
                   "to": "FWSN",
                   "arrive": "9:55 PM"
-                },
-                {
-                  "run": "602",
-                  "from": "FMSF",
-                  "depart": "7:49 AM",
-                  "to": "FWSN",
-                  "arrive": "8:03 AM"
-                },
-                {
-                  "run": "603",
-                  "from": "FWSN",
-                  "depart": "8:03 AM",
-                  "to": "HUMB",
-                  "arrive": "8:53 AM"
-                },
-                {
-                  "run": "604",
-                  "from": "FMSF",
-                  "depart": "8:06 AM",
-                  "to": "FWSN",
-                  "arrive": "8:20 AM"
-                },
-                {
-                  "run": "607",
-                  "from": "HUMB",
-                  "depart": "8:08 AM",
-                  "to": "FWSN",
-                  "arrive": "8:44 AM"
-                },
-                {
-                  "run": "605",
-                  "from": "FWSN",
-                  "depart": "8:20 AM",
-                  "to": "HUMB",
-                  "arrive": "9:10 AM"
-                },
-                {
-                  "run": "608",
-                  "from": "FWSN",
-                  "depart": "8:44 AM",
-                  "to": "HUMB",
-                  "arrive": "9:35 AM"
-                },
-                {
-                  "run": "604",
-                  "from": "HUMB",
-                  "depart": "8:53 AM",
-                  "to": "FWSN",
-                  "arrive": "9:43 AM"
-                },
-                {
-                  "run": "606",
-                  "from": "HUMB",
-                  "depart": "9:10 AM",
-                  "to": "FWSN",
-                  "arrive": "10:00 AM"
-                },
-                {
-                  "run": "609",
-                  "from": "HUMB",
-                  "depart": "9:35 AM",
-                  "to": "FWSN",
-                  "arrive": "10:25 AM"
-                },
-                {
-                  "run": "605",
-                  "from": "FWSN",
-                  "depart": "9:43 AM",
-                  "to": "HUMB",
-                  "arrive": "10:34 AM"
-                },
-                {
-                  "run": "607",
-                  "from": "FWSN",
-                  "depart": "10:00 AM",
-                  "to": "HUMB",
-                  "arrive": "10:51 AM"
-                },
-                {
-                  "run": "610",
-                  "from": "FWSN",
-                  "depart": "10:25 AM",
-                  "to": "HUMB",
-                  "arrive": "11:16 AM"
-                },
-                {
-                  "run": "606",
-                  "from": "HUMB",
-                  "depart": "10:34 AM",
-                  "to": "FWSN",
-                  "arrive": "11:24 AM"
-                },
-                {
-                  "run": "608",
-                  "from": "HUMB",
-                  "depart": "10:51 AM",
-                  "to": "FWSN",
-                  "arrive": "11:40 AM"
-                },
-                {
-                  "run": "601",
-                  "from": "HUMB",
-                  "depart": "11:16 AM",
-                  "to": "FWSN",
-                  "arrive": "12:06 PM"
-                },
-                {
-                  "run": "607",
-                  "from": "FWSN",
-                  "depart": "11:24 AM",
-                  "to": "HUMB",
-                  "arrive": "12:15 PM"
-                },
-                {
-                  "run": "609",
-                  "from": "FWSN",
-                  "depart": "11:40 AM",
-                  "to": "HUMB",
-                  "arrive": "12:32 PM"
-                },
-                {
-                  "run": "601",
-                  "from": "FWSN",
-                  "depart": "11:57 AM",
-                  "to": "HUMB",
-                  "arrive": "12:49 PM"
-                },
-                {
-                  "run": "602",
-                  "from": "FWSN",
-                  "depart": "12:06 PM",
-                  "to": "HUMB",
-                  "arrive": "12:57 PM"
-                },
-                {
-                  "run": "608",
-                  "from": "HUMB",
-                  "depart": "12:15 PM",
-                  "to": "FWSN",
-                  "arrive": "1:04 PM"
                 }
               ]
             },
@@ -71292,7 +70970,7 @@ const crewFinderData = {
                   "arrive": "2:24 AM (next day)"
                 }
               ],
-              "breakStart": "1:04 PM",
+              "breakStart": "9:55 PM",
               "breakEnd": "10:32 PM"
             }
           ],
@@ -73762,146 +73440,6 @@ const crewFinderData = {
                   "depart": "7:48 PM",
                   "to": "MDCT",
                   "arrive": "8:02 PM"
-                },
-                {
-                  "run": "502",
-                  "from": "EMSF",
-                  "depart": "5:25 AM",
-                  "to": "KECT",
-                  "arrive": "6:22 AM"
-                },
-                {
-                  "run": "504",
-                  "from": "EMSF",
-                  "depart": "5:47 AM",
-                  "to": "KECT",
-                  "arrive": "6:45 AM"
-                },
-                {
-                  "run": "507",
-                  "from": "EMSF",
-                  "depart": "6:03 AM",
-                  "to": "KECT",
-                  "arrive": "7:02 AM"
-                },
-                {
-                  "run": "508",
-                  "from": "EMSF",
-                  "depart": "6:11 AM",
-                  "to": "KECT",
-                  "arrive": "7:10 AM"
-                },
-                {
-                  "run": "503",
-                  "from": "KECT",
-                  "depart": "6:22 AM",
-                  "to": "MDCT",
-                  "arrive": "7:27 AM"
-                },
-                {
-                  "run": "511",
-                  "from": "EMSF",
-                  "depart": "6:28 AM",
-                  "to": "KECT",
-                  "arrive": "7:26 AM"
-                },
-                {
-                  "run": "509",
-                  "from": "MDCT",
-                  "depart": "6:33 AM",
-                  "to": "KECT",
-                  "arrive": "7:18 AM"
-                },
-                {
-                  "run": "513",
-                  "from": "EMSF",
-                  "depart": "6:44 AM",
-                  "to": "KECT",
-                  "arrive": "7:43 AM"
-                },
-                {
-                  "run": "506",
-                  "from": "KECT",
-                  "depart": "6:45 AM",
-                  "to": "MDCT",
-                  "arrive": "7:43 AM"
-                },
-                {
-                  "run": "514",
-                  "from": "EMSF",
-                  "depart": "6:53 AM",
-                  "to": "KECT",
-                  "arrive": "7:51 AM"
-                },
-                {
-                  "run": "508",
-                  "from": "KECT",
-                  "depart": "7:02 AM",
-                  "to": "MDCT",
-                  "arrive": "8:00 AM"
-                },
-                {
-                  "run": "509",
-                  "from": "KECT",
-                  "depart": "7:10 AM",
-                  "to": "MDCT",
-                  "arrive": "8:08 AM"
-                },
-                {
-                  "run": "511",
-                  "from": "KECT",
-                  "depart": "7:18 AM",
-                  "to": "MDCT",
-                  "arrive": "8:16 AM"
-                },
-                {
-                  "run": "512",
-                  "from": "KECT",
-                  "depart": "7:26 AM",
-                  "to": "MDCT",
-                  "arrive": "8:25 AM"
-                },
-                {
-                  "run": "504",
-                  "from": "MDCT",
-                  "depart": "7:27 AM",
-                  "to": "KECT",
-                  "arrive": "8:24 AM"
-                },
-                {
-                  "run": "507",
-                  "from": "MDCT",
-                  "depart": "7:43 AM",
-                  "to": "KECT",
-                  "arrive": "8:41 AM"
-                },
-                {
-                  "run": "514",
-                  "from": "KECT",
-                  "depart": "7:43 AM",
-                  "to": "MDCT",
-                  "arrive": "8:41 AM"
-                },
-                {
-                  "run": "501",
-                  "from": "KECT",
-                  "depart": "7:51 AM",
-                  "to": "MDCT",
-                  "arrive": "8:49 AM"
-                },
-                {
-                  "run": "509",
-                  "from": "MDCT",
-                  "depart": "8:00 AM",
-                  "to": "KECT",
-                  "arrive": "8:57 AM"
-                },
-                {
-                  "run": "511",
-                  "from": "MDCT",
-                  "depart": "8:08 AM",
-                  "to": "KECT",
-                  "arrive": "9:05 AM"
                 }
               ]
             },
@@ -73951,7 +73489,7 @@ const crewFinderData = {
                   "arrive": "2:19 AM (next day)"
                 }
               ],
-              "breakStart": "9:05 AM",
+              "breakStart": "8:02 PM",
               "breakEnd": "8:21 PM"
             }
           ],
@@ -75701,111 +75239,6 @@ const crewFinderData = {
                   "depart": "9:17 PM",
                   "to": "FWSN",
                   "arrive": "10:07 PM"
-                },
-                {
-                  "run": "607",
-                  "from": "FMSF",
-                  "depart": "6:28 AM",
-                  "to": "HUMB",
-                  "arrive": "7:02 AM"
-                },
-                {
-                  "run": "601",
-                  "from": "FMSF",
-                  "depart": "6:33 AM",
-                  "to": "FWSN",
-                  "arrive": "6:47 AM"
-                },
-                {
-                  "run": "602",
-                  "from": "FWSN",
-                  "depart": "6:47 AM",
-                  "to": "HUMB",
-                  "arrive": "7:38 AM"
-                },
-                {
-                  "run": "603",
-                  "from": "FMSF",
-                  "depart": "6:52 AM",
-                  "to": "FWSN",
-                  "arrive": "7:06 AM"
-                },
-                {
-                  "run": "609",
-                  "from": "HUMB",
-                  "depart": "7:02 AM",
-                  "to": "FWSN",
-                  "arrive": "7:51 AM"
-                },
-                {
-                  "run": "604",
-                  "from": "FWSN",
-                  "depart": "7:06 AM",
-                  "to": "HUMB",
-                  "arrive": "7:57 AM"
-                },
-                {
-                  "run": "603",
-                  "from": "HUMB",
-                  "depart": "7:38 AM",
-                  "to": "FWSN",
-                  "arrive": "8:29 AM"
-                },
-                {
-                  "run": "610",
-                  "from": "FWSN",
-                  "depart": "7:51 AM",
-                  "to": "HUMB",
-                  "arrive": "8:44 AM"
-                },
-                {
-                  "run": "605",
-                  "from": "HUMB",
-                  "depart": "7:57 AM",
-                  "to": "FWSN",
-                  "arrive": "8:47 AM"
-                },
-                {
-                  "run": "604",
-                  "from": "FWSN",
-                  "depart": "8:29 AM",
-                  "to": "HUMB",
-                  "arrive": "9:21 AM"
-                },
-                {
-                  "run": "601",
-                  "from": "HUMB",
-                  "depart": "8:44 AM",
-                  "to": "FWSN",
-                  "arrive": "9:37 AM"
-                },
-                {
-                  "run": "606",
-                  "from": "FWSN",
-                  "depart": "8:47 AM",
-                  "to": "HUMB",
-                  "arrive": "9:38 AM"
-                },
-                {
-                  "run": "605",
-                  "from": "HUMB",
-                  "depart": "9:21 AM",
-                  "to": "FWSN",
-                  "arrive": "10:11 AM"
-                },
-                {
-                  "run": "602",
-                  "from": "FWSN",
-                  "depart": "9:37 AM",
-                  "to": "HUMB",
-                  "arrive": "10:28 AM"
-                },
-                {
-                  "run": "607",
-                  "from": "HUMB",
-                  "depart": "9:38 AM",
-                  "to": "FWSN",
-                  "arrive": "10:27 AM"
                 }
               ]
             },
@@ -75848,7 +75281,7 @@ const crewFinderData = {
                   "arrive": "2:24 AM (next day)"
                 }
               ],
-              "breakStart": "10:27 AM",
+              "breakStart": "10:07 PM",
               "breakEnd": "10:26 PM"
             }
           ],
@@ -82235,181 +81668,6 @@ const crewFinderData = {
                   "depart": "8:59 PM",
                   "to": "MDCT",
                   "arrive": "9:56 PM"
-                },
-                {
-                  "run": "503",
-                  "from": "MDCT",
-                  "depart": "1:30 PM",
-                  "to": "KECT",
-                  "arrive": "2:17 PM"
-                },
-                {
-                  "run": "505",
-                  "from": "MDCT",
-                  "depart": "1:31 PM",
-                  "to": "KECT",
-                  "arrive": "2:28 PM"
-                },
-                {
-                  "run": "507",
-                  "from": "MDCT",
-                  "depart": "1:43 PM",
-                  "to": "KECT",
-                  "arrive": "2:39 PM"
-                },
-                {
-                  "run": "508",
-                  "from": "MDCT",
-                  "depart": "1:48 PM",
-                  "to": "KECT",
-                  "arrive": "2:45 PM"
-                },
-                {
-                  "run": "504",
-                  "from": "KECT",
-                  "depart": "2:17 PM",
-                  "to": "MDCT",
-                  "arrive": "3:13 PM"
-                },
-                {
-                  "run": "506",
-                  "from": "KECT",
-                  "depart": "2:28 PM",
-                  "to": "MDCT",
-                  "arrive": "3:25 PM"
-                },
-                {
-                  "run": "508",
-                  "from": "KECT",
-                  "depart": "2:39 PM",
-                  "to": "MDCT",
-                  "arrive": "3:36 PM"
-                },
-                {
-                  "run": "509",
-                  "from": "KECT",
-                  "depart": "2:45 PM",
-                  "to": "MDCT",
-                  "arrive": "3:42 PM"
-                },
-                {
-                  "run": "505",
-                  "from": "MDCT",
-                  "depart": "3:13 PM",
-                  "to": "KECT",
-                  "arrive": "4:10 PM"
-                },
-                {
-                  "run": "507",
-                  "from": "MDCT",
-                  "depart": "3:25 PM",
-                  "to": "KECT",
-                  "arrive": "4:21 PM"
-                },
-                {
-                  "run": "509",
-                  "from": "MDCT",
-                  "depart": "3:36 PM",
-                  "to": "KECT",
-                  "arrive": "4:33 PM"
-                },
-                {
-                  "run": "510",
-                  "from": "MDCT",
-                  "depart": "3:42 PM",
-                  "to": "KECT",
-                  "arrive": "4:38 PM"
-                },
-                {
-                  "run": "506",
-                  "from": "KECT",
-                  "depart": "4:10 PM",
-                  "to": "MDCT",
-                  "arrive": "5:07 PM"
-                },
-                {
-                  "run": "508",
-                  "from": "KECT",
-                  "depart": "4:21 PM",
-                  "to": "MDCT",
-                  "arrive": "5:18 PM"
-                },
-                {
-                  "run": "510",
-                  "from": "KECT",
-                  "depart": "4:33 PM",
-                  "to": "MDCT",
-                  "arrive": "5:29 PM"
-                },
-                {
-                  "run": "511",
-                  "from": "KECT",
-                  "depart": "4:38 PM",
-                  "to": "MDCT",
-                  "arrive": "5:35 PM"
-                },
-                {
-                  "run": "507",
-                  "from": "MDCT",
-                  "depart": "5:07 PM",
-                  "to": "KECT",
-                  "arrive": "6:03 PM"
-                },
-                {
-                  "run": "509",
-                  "from": "MDCT",
-                  "depart": "5:18 PM",
-                  "to": "KECT",
-                  "arrive": "6:15 PM"
-                },
-                {
-                  "run": "511",
-                  "from": "MDCT",
-                  "depart": "5:29 PM",
-                  "to": "KECT",
-                  "arrive": "6:26 PM"
-                },
-                {
-                  "run": "512",
-                  "from": "MDCT",
-                  "depart": "5:35 PM",
-                  "to": "KECT",
-                  "arrive": "6:32 PM"
-                },
-                {
-                  "run": "508",
-                  "from": "KECT",
-                  "depart": "6:03 PM",
-                  "to": "MDCT",
-                  "arrive": "7:00 PM"
-                },
-                {
-                  "run": "510",
-                  "from": "KECT",
-                  "depart": "6:15 PM",
-                  "to": "MDCT",
-                  "arrive": "7:11 PM"
-                },
-                {
-                  "run": "512",
-                  "from": "KECT",
-                  "depart": "6:26 PM",
-                  "to": "MDCT",
-                  "arrive": "7:23 PM"
-                },
-                {
-                  "run": "513",
-                  "from": "KECT",
-                  "depart": "6:32 PM",
-                  "to": "MDCT",
-                  "arrive": "7:28 PM"
-                },
-                {
-                  "run": "511",
-                  "from": "MDCT",
-                  "depart": "7:11 PM",
-                  "to": "MDCT",
-                  "arrive": "7:21 PM"
                 }
               ]
             },
@@ -82459,7 +81717,7 @@ const crewFinderData = {
                   "arrive": "4:04 AM (next day)"
                 }
               ],
-              "breakStart": "7:21 PM",
+              "breakStart": "9:56 PM",
               "breakEnd": "10:13 PM"
             }
           ],
@@ -85418,125 +84676,6 @@ const crewFinderData = {
                   "depart": "10:06 PM",
                   "to": "FWSN",
                   "arrive": "10:56 PM"
-                },
-                {
-                  "run": "607",
-                  "from": "FWSN",
-                  "depart": "1:16 PM",
-                  "to": "HUMB",
-                  "arrive": "2:09 PM"
-                },
-                {
-                  "run": "608",
-                  "from": "FWSN",
-                  "depart": "1:25 PM",
-                  "to": "HUMB",
-                  "arrive": "2:18 PM"
-                },
-                {
-                  "run": "608",
-                  "from": "HUMB",
-                  "depart": "2:09 PM",
-                  "to": "FWSN",
-                  "arrive": "3:02 PM"
-                },
-                {
-                  "run": "609",
-                  "from": "HUMB",
-                  "depart": "2:18 PM",
-                  "to": "FWSN",
-                  "arrive": "3:10 PM"
-                },
-                {
-                  "run": "609",
-                  "from": "FWSN",
-                  "depart": "3:02 PM",
-                  "to": "HUMB",
-                  "arrive": "3:55 PM"
-                },
-                {
-                  "run": "610",
-                  "from": "FWSN",
-                  "depart": "3:10 PM",
-                  "to": "HUMB",
-                  "arrive": "4:03 PM"
-                },
-                {
-                  "run": "610",
-                  "from": "HUMB",
-                  "depart": "3:55 PM",
-                  "to": "FWSN",
-                  "arrive": "4:47 PM"
-                },
-                {
-                  "run": "611",
-                  "from": "HUMB",
-                  "depart": "4:03 PM",
-                  "to": "FWSN",
-                  "arrive": "4:55 PM"
-                },
-                {
-                  "run": "611",
-                  "from": "FWSN",
-                  "depart": "4:47 PM",
-                  "to": "HUMB",
-                  "arrive": "5:40 PM"
-                },
-                {
-                  "run": "601",
-                  "from": "FWSN",
-                  "depart": "4:55 PM",
-                  "to": "HUMB",
-                  "arrive": "5:48 PM"
-                },
-                {
-                  "run": "603",
-                  "from": "FWSN",
-                  "depart": "5:11 PM",
-                  "to": "HUMB",
-                  "arrive": "6:04 PM"
-                },
-                {
-                  "run": "601",
-                  "from": "HUMB",
-                  "depart": "5:40 PM",
-                  "to": "FWSN",
-                  "arrive": "6:32 PM"
-                },
-                {
-                  "run": "602",
-                  "from": "HUMB",
-                  "depart": "5:48 PM",
-                  "to": "FWSN",
-                  "arrive": "6:40 PM"
-                },
-                {
-                  "run": "604",
-                  "from": "HUMB",
-                  "depart": "6:04 PM",
-                  "to": "FWSN",
-                  "arrive": "6:56 PM"
-                },
-                {
-                  "run": "605",
-                  "from": "FWSN",
-                  "depart": "6:56 PM",
-                  "to": "HUMB",
-                  "arrive": "7:49 PM"
-                },
-                {
-                  "run": "606",
-                  "from": "HUMB",
-                  "depart": "7:49 PM",
-                  "to": "FWSN",
-                  "arrive": "8:41 PM"
-                },
-                {
-                  "run": "607",
-                  "from": "FWSN",
-                  "depart": "8:41 PM",
-                  "to": "HUMB",
-                  "arrive": "9:34 PM"
                 }
               ]
             },
@@ -85593,7 +84732,7 @@ const crewFinderData = {
                   "arrive": "4:42 AM (next day)"
                 }
               ],
-              "breakStart": "9:34 PM",
+              "breakStart": "10:56 PM",
               "breakEnd": "11:13 PM"
             }
           ],
@@ -88638,160 +87777,6 @@ const crewFinderData = {
                   "depart": "8:48 PM",
                   "to": "MDCT",
                   "arrive": "9:45 PM"
-                },
-                {
-                  "run": "505",
-                  "from": "EMSF",
-                  "depart": "7:31 AM",
-                  "to": "KECT",
-                  "arrive": "8:29 AM"
-                },
-                {
-                  "run": "507",
-                  "from": "EMSF",
-                  "depart": "7:44 AM",
-                  "to": "KECT",
-                  "arrive": "8:42 AM"
-                },
-                {
-                  "run": "509",
-                  "from": "EMSF",
-                  "depart": "7:57 AM",
-                  "to": "KECT",
-                  "arrive": "8:56 AM"
-                },
-                {
-                  "run": "512",
-                  "from": "EMSF",
-                  "depart": "8:17 AM",
-                  "to": "KECT",
-                  "arrive": "9:15 AM"
-                },
-                {
-                  "run": "506",
-                  "from": "KECT",
-                  "depart": "8:29 AM",
-                  "to": "MDCT",
-                  "arrive": "9:26 AM"
-                },
-                {
-                  "run": "508",
-                  "from": "KECT",
-                  "depart": "8:42 AM",
-                  "to": "MDCT",
-                  "arrive": "9:39 AM"
-                },
-                {
-                  "run": "501",
-                  "from": "EMSF",
-                  "depart": "8:43 AM",
-                  "to": "KECT",
-                  "arrive": "9:42 AM"
-                },
-                {
-                  "run": "510",
-                  "from": "KECT",
-                  "depart": "8:56 AM",
-                  "to": "MDCT",
-                  "arrive": "9:52 AM"
-                },
-                {
-                  "run": "513",
-                  "from": "KECT",
-                  "depart": "9:15 AM",
-                  "to": "MDCT",
-                  "arrive": "10:12 AM"
-                },
-                {
-                  "run": "507",
-                  "from": "MDCT",
-                  "depart": "9:26 AM",
-                  "to": "KECT",
-                  "arrive": "10:21 AM"
-                },
-                {
-                  "run": "509",
-                  "from": "MDCT",
-                  "depart": "9:39 AM",
-                  "to": "KECT",
-                  "arrive": "10:35 AM"
-                },
-                {
-                  "run": "502",
-                  "from": "KECT",
-                  "depart": "9:42 AM",
-                  "to": "MDCT",
-                  "arrive": "10:38 AM"
-                },
-                {
-                  "run": "511",
-                  "from": "MDCT",
-                  "depart": "9:52 AM",
-                  "to": "KECT",
-                  "arrive": "10:48 AM"
-                },
-                {
-                  "run": "514",
-                  "from": "MDCT",
-                  "depart": "10:12 AM",
-                  "to": "KECT",
-                  "arrive": "11:08 AM"
-                },
-                {
-                  "run": "508",
-                  "from": "KECT",
-                  "depart": "10:21 AM",
-                  "to": "MDCT",
-                  "arrive": "11:18 AM"
-                },
-                {
-                  "run": "510",
-                  "from": "KECT",
-                  "depart": "10:35 AM",
-                  "to": "MDCT",
-                  "arrive": "11:31 AM"
-                },
-                {
-                  "run": "503",
-                  "from": "MDCT",
-                  "depart": "10:38 AM",
-                  "to": "KECT",
-                  "arrive": "11:34 AM"
-                },
-                {
-                  "run": "512",
-                  "from": "KECT",
-                  "depart": "10:48 AM",
-                  "to": "MDCT",
-                  "arrive": "11:44 AM"
-                },
-                {
-                  "run": "515",
-                  "from": "KECT",
-                  "depart": "11:08 AM",
-                  "to": "MDCT",
-                  "arrive": "12:04 PM"
-                },
-                {
-                  "run": "509",
-                  "from": "MDCT",
-                  "depart": "11:18 AM",
-                  "to": "KECT",
-                  "arrive": "12:14 PM"
-                },
-                {
-                  "run": "511",
-                  "from": "MDCT",
-                  "depart": "11:31 AM",
-                  "to": "KECT",
-                  "arrive": "12:27 PM"
-                },
-                {
-                  "run": "504",
-                  "from": "KECT",
-                  "depart": "11:34 AM",
-                  "to": "MDCT",
-                  "arrive": "12:31 PM"
                 }
               ]
             },
@@ -88827,7 +87812,7 @@ const crewFinderData = {
                   "arrive": "2:19 AM (next day)"
                 }
               ],
-              "breakStart": "12:31 PM",
+              "breakStart": "9:45 PM",
               "breakEnd": "10:05 PM"
             }
           ],
@@ -90870,146 +89855,6 @@ const crewFinderData = {
                   "depart": "9:05 PM",
                   "to": "FWSN",
                   "arrive": "9:55 PM"
-                },
-                {
-                  "run": "602",
-                  "from": "FMSF",
-                  "depart": "7:49 AM",
-                  "to": "FWSN",
-                  "arrive": "8:03 AM"
-                },
-                {
-                  "run": "603",
-                  "from": "FWSN",
-                  "depart": "8:03 AM",
-                  "to": "HUMB",
-                  "arrive": "8:53 AM"
-                },
-                {
-                  "run": "604",
-                  "from": "FMSF",
-                  "depart": "8:06 AM",
-                  "to": "FWSN",
-                  "arrive": "8:20 AM"
-                },
-                {
-                  "run": "607",
-                  "from": "HUMB",
-                  "depart": "8:08 AM",
-                  "to": "FWSN",
-                  "arrive": "8:44 AM"
-                },
-                {
-                  "run": "605",
-                  "from": "FWSN",
-                  "depart": "8:20 AM",
-                  "to": "HUMB",
-                  "arrive": "9:10 AM"
-                },
-                {
-                  "run": "608",
-                  "from": "FWSN",
-                  "depart": "8:44 AM",
-                  "to": "HUMB",
-                  "arrive": "9:35 AM"
-                },
-                {
-                  "run": "604",
-                  "from": "HUMB",
-                  "depart": "8:53 AM",
-                  "to": "FWSN",
-                  "arrive": "9:43 AM"
-                },
-                {
-                  "run": "606",
-                  "from": "HUMB",
-                  "depart": "9:10 AM",
-                  "to": "FWSN",
-                  "arrive": "10:00 AM"
-                },
-                {
-                  "run": "609",
-                  "from": "HUMB",
-                  "depart": "9:35 AM",
-                  "to": "FWSN",
-                  "arrive": "10:25 AM"
-                },
-                {
-                  "run": "605",
-                  "from": "FWSN",
-                  "depart": "9:43 AM",
-                  "to": "HUMB",
-                  "arrive": "10:34 AM"
-                },
-                {
-                  "run": "607",
-                  "from": "FWSN",
-                  "depart": "10:00 AM",
-                  "to": "HUMB",
-                  "arrive": "10:51 AM"
-                },
-                {
-                  "run": "610",
-                  "from": "FWSN",
-                  "depart": "10:25 AM",
-                  "to": "HUMB",
-                  "arrive": "11:16 AM"
-                },
-                {
-                  "run": "606",
-                  "from": "HUMB",
-                  "depart": "10:34 AM",
-                  "to": "FWSN",
-                  "arrive": "11:24 AM"
-                },
-                {
-                  "run": "608",
-                  "from": "HUMB",
-                  "depart": "10:51 AM",
-                  "to": "FWSN",
-                  "arrive": "11:40 AM"
-                },
-                {
-                  "run": "601",
-                  "from": "HUMB",
-                  "depart": "11:16 AM",
-                  "to": "FWSN",
-                  "arrive": "12:06 PM"
-                },
-                {
-                  "run": "607",
-                  "from": "FWSN",
-                  "depart": "11:24 AM",
-                  "to": "HUMB",
-                  "arrive": "12:15 PM"
-                },
-                {
-                  "run": "609",
-                  "from": "FWSN",
-                  "depart": "11:40 AM",
-                  "to": "HUMB",
-                  "arrive": "12:32 PM"
-                },
-                {
-                  "run": "601",
-                  "from": "FWSN",
-                  "depart": "11:57 AM",
-                  "to": "HUMB",
-                  "arrive": "12:49 PM"
-                },
-                {
-                  "run": "602",
-                  "from": "FWSN",
-                  "depart": "12:06 PM",
-                  "to": "HUMB",
-                  "arrive": "12:57 PM"
-                },
-                {
-                  "run": "608",
-                  "from": "HUMB",
-                  "depart": "12:15 PM",
-                  "to": "FWSN",
-                  "arrive": "1:04 PM"
                 }
               ]
             },
@@ -91052,7 +89897,7 @@ const crewFinderData = {
                   "arrive": "2:24 AM (next day)"
                 }
               ],
-              "breakStart": "1:04 PM",
+              "breakStart": "9:55 PM",
               "breakEnd": "10:32 PM"
             }
           ],
