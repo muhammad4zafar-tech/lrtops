@@ -61,7 +61,8 @@
         .find-button,
         .pdf-button,
         .copy-button,
-        .calendar-button {
+        .calendar-button,
+        .google-calendar-button {
             display: inline-block;
             margin-top: 20px;
             padding: 11px 18px;
@@ -78,7 +79,8 @@
         .find-button:hover,
         .pdf-button:hover,
         .copy-button:hover,
-        .calendar-button:hover {
+        .calendar-button:hover,
+        .google-calendar-button:hover {
             filter: brightness(0.9);
         }
 
@@ -97,6 +99,11 @@
         .calendar-button {
             margin: 0;
             background: #16803a;
+        }
+
+        .google-calendar-button {
+            margin: 0;
+            background: #1769e0;
         }
 
         .crew-result {
@@ -712,6 +719,34 @@
         setTimeout(() => URL.revokeObjectURL(link.href), 1000);
     }
 
+    function addCrewToGoogleCalendar(guide, crew) {
+        const workDate = getCalendarWorkDate(guide);
+        if (!workDate) return;
+
+        const start = crewDateTime(workDate, crew.report);
+        let end = crewDateTime(workDate, crew.finish.time);
+        if (!start || !end) {
+            window.alert("This crew's calendar times could not be prepared.");
+            return;
+        }
+        if (end <= start) end.setDate(end.getDate() + 1);
+
+        const details = [
+            `Work date: ${start.toLocaleDateString()}`,
+            "",
+            buildCrewText(guide, crew)
+        ].join("\n");
+        const params = new URLSearchParams({
+            action: "TEMPLATE",
+            text: `${crew.title} - ${guide.label}`,
+            dates: `${formatIcsDate(start)}/${formatIcsDate(end)}`,
+            details,
+            ctz: "America/Toronto"
+        });
+
+        window.open(`https://calendar.google.com/calendar/render?${params.toString()}`, "_blank", "noopener");
+    }
+
     function showCrew() {
         const guide = crewFinderData.guides[lineSelect.value];
         const crew = guide && guide.crews[crewSelect.value];
@@ -737,7 +772,8 @@
         crewResult.innerHTML = `
             <div class="result-actions">
                 <button id="copyCrewButton" class="copy-button" type="button">Copy My Crew</button>
-                <button id="calendarCrewButton" class="calendar-button" type="button">Add to My Calendar</button>
+                <button id="googleCalendarButton" class="google-calendar-button" type="button">Add to Google Calendar</button>
+                <button id="calendarCrewButton" class="calendar-button" type="button">iPhone / Outlook Calendar</button>
             </div>
 
             <h2 class="result-heading">${crew.title}</h2>
@@ -768,6 +804,10 @@
 
         document.getElementById("calendarCrewButton").addEventListener("click", () => {
             addCrewToCalendar(guide, crew);
+        });
+
+        document.getElementById("googleCalendarButton").addEventListener("click", () => {
+            addCrewToGoogleCalendar(guide, crew);
         });
 
         crewResult.style.display = "block";
