@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find My Crew - LRTOps.ca</title>
+    <title>Create My Waybill - LRTOps.ca</title>
     <link rel="stylesheet" href="css/main.css">
 
     <style>
@@ -86,7 +86,7 @@
 
         .copy-button {
             margin: 0;
-            background: #0055cc;
+            background: var(--ttc-red);
         }
 
         .result-actions {
@@ -96,14 +96,72 @@
             margin-bottom: 18px;
         }
 
+        .result-actions .action-button {
+            flex: 1 1 0;
+            min-width: 205px;
+            min-height: 62px;
+            margin: 0;
+            padding: 11px 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            line-height: 1.25;
+            text-align: center;
+        }
+
+        .button-icon {
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px;
+        }
+
+        .google-icon {
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-weight: 800;
+            line-height: 1;
+            background: conic-gradient(from -45deg, #4285f4 0 25%, #34a853 0 45%, #fbbc05 0 70%, #ea4335 0 85%, #4285f4 0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .work-date-box {
+            margin-bottom: 16px;
+            padding: 14px;
+            background: #fff;
+            border-left: 5px solid #6f42c1;
+            border-radius: 6px;
+        }
+
+        .work-date-box label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .work-date-box select {
+            width: 100%;
+            min-height: 46px;
+            padding: 9px 12px;
+            border: 1px solid #888;
+            border-radius: 6px;
+            background: #fff;
+            color: #111;
+            font: inherit;
+        }
+
         .calendar-button {
             margin: 0;
-            background: #16803a;
+            background: #6f42c1;
         }
 
         .google-calendar-button {
             margin: 0;
-            background: #1769e0;
+            background: #fff;
+            color: #174ea6;
+            border: 2px solid #4285f4;
         }
 
         .crew-result {
@@ -190,6 +248,8 @@
         }
 
         body.dark .form-row select,
+        body.dark .work-date-box,
+        body.dark .work-date-box select,
         body.dark .report-line,
         body.dark .trip-list li,
         body.dark .finish-line {
@@ -220,10 +280,16 @@
             .find-button,
             .pdf-button,
             .copy-button,
-            .calendar-button {
+            .calendar-button,
+            .google-calendar-button {
                 width: 100%;
                 box-sizing: border-box;
                 text-align: center;
+            }
+
+            .result-actions .action-button {
+                flex-basis: 100%;
+                min-width: 0;
             }
         }
     </style>
@@ -235,11 +301,11 @@
 
 <main class="content">
     <div class="finder-wrap">
-        <h1>Find My Crew</h1>
+        <h1>Create My Waybill</h1>
 
         <div class="alpha-notice">
             <strong>Alpha Version - Important Notice</strong>
-            This new crew-display tool is being tested and may contain errors or missing information.
+            This new waybill tool is being tested and may contain errors or missing information.
             Always confirm your report time, trips, breaks, pay and finishing time using the TTC PDF Crew Guide.
             The PDF crew guide remains the authoritative source.
         </div>
@@ -273,7 +339,7 @@
                 </select>
             </div>
 
-            <button id="findCrewButton" class="find-button" type="button">View My Crew</button>
+            <button id="findCrewButton" class="find-button" type="button">Create My Waybill</button>
         </div>
 
         <section id="crewResult" class="crew-result" aria-live="polite"></section>
@@ -537,15 +603,18 @@
         `).join("");
     }
 
-    function buildCrewText(guide, crew) {
+    function buildCrewText(guide, crew, workDate = "") {
         const lines = [
             crew.title,
             guide.label,
             getBoardPeriodText(guide),
-            "",
-            `Report: ${crew.report}`,
-            `Pay: ${crew.pay}`
         ];
+
+        if (workDate) {
+            lines.push(`Work Date: ${formatWorkDate(parseDateText(workDate))}`);
+        }
+
+        lines.push("", `Report: ${crew.report}`, `Pay: ${crew.pay}`);
 
         crew.pieces.forEach(piece => {
             lines.push("");
@@ -573,7 +642,7 @@
 
     async function copyCrew(guide, crew) {
         const button = document.getElementById("copyCrewButton");
-        const crewText = buildCrewText(guide, crew);
+        const crewText = buildCrewText(guide, crew, getCalendarWorkDate(guide));
 
         try {
             if (navigator.clipboard && window.isSecureContext) {
@@ -590,14 +659,14 @@
                 textArea.remove();
             }
 
-            button.textContent = "Copied!";
+            button.querySelector(".button-label").textContent = "Copied!";
             setTimeout(() => {
-                button.textContent = "Copy My Crew";
+                button.querySelector(".button-label").textContent = "Copy My Waybill";
             }, 2000);
         } catch (error) {
-            button.textContent = "Copy Failed - Try Again";
+            button.querySelector(".button-label").textContent = "Copy Failed - Try Again";
             setTimeout(() => {
-                button.textContent = "Copy My Crew";
+                button.querySelector(".button-label").textContent = "Copy My Waybill";
             }, 2500);
         }
     }
@@ -612,25 +681,98 @@
         return Number.isNaN(parsed.getTime()) ? null : parsed;
     }
 
-    function getCalendarWorkDate(guide) {
+    function dateToValue(date) {
+        const pad = number => String(number).padStart(2, "0");
+        return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+    }
+
+    function ordinal(number) {
+        const remainder100 = number % 100;
+        if (remainder100 >= 11 && remainder100 <= 13) return `${number}th`;
+        if (number % 10 === 1) return `${number}st`;
+        if (number % 10 === 2) return `${number}nd`;
+        if (number % 10 === 3) return `${number}rd`;
+        return `${number}th`;
+    }
+
+    function formatWorkDate(date) {
+        if (!date) return "";
+        const weekday = date.toLocaleDateString("en-CA", { weekday: "long" });
+        const month = date.toLocaleDateString("en-CA", { month: "long" });
+        return `${weekday}, ${month} ${ordinal(date.getDate())}, ${date.getFullYear()}`;
+    }
+
+    function getDateCategory() {
+        const category = categorySelect.value;
+        if (category === "sunday") return 0;
+        if (category === "saturday") return 6;
+        if (["daily", "special", "sac"].includes(category)) return "weekday";
+        return "fixed";
+    }
+
+    function getWorkDateChoices(guide) {
         const period = guide.boardPeriod || crewFinderData.boardPeriod;
-        if (period.start === period.end) return period.start;
-
-        const enteredDate = window.prompt(
-            `Enter the work date between ${period.start} and ${period.end} (YYYY-MM-DD):`
-        );
-        if (!enteredDate) return null;
-
-        const selected = parseDateText(enteredDate.trim());
         const start = parseDateText(period.start);
         const end = parseDateText(period.end);
-
-        if (!selected || selected < start || selected > end) {
-            window.alert("Please enter a valid date within the selected board period.");
-            return null;
+        if (!start || !end) return [];
+        if (period.start === period.end || getDateCategory() === "fixed") {
+            return [{ value: dateToValue(start), label: formatWorkDate(start) }];
         }
 
-        return enteredDate.trim();
+        const today = new Date();
+        today.setHours(12, 0, 0, 0);
+        const firstDate = today > start ? today : start;
+        const requiredDay = getDateCategory();
+        const holidayDates = new Set([
+            "2026-12-25",
+            "2026-12-26",
+            "2026-12-31",
+            "2027-01-01"
+        ]);
+        const choices = [];
+
+        for (const date = new Date(firstDate); date <= end; date.setDate(date.getDate() + 1)) {
+            const day = date.getDay();
+            const matches = requiredDay === "weekday"
+                ? day >= 1 && day <= 5
+                : day === requiredDay;
+            const value = dateToValue(date);
+            if (matches && !holidayDates.has(value)) {
+                choices.push({ value, label: formatWorkDate(date) });
+            }
+        }
+
+        return choices;
+    }
+
+    function renderWorkDateSelector(guide) {
+        const choices = getWorkDateChoices(guide);
+        if (!choices.length) {
+            return `
+                <div class="work-date-box">
+                    <strong>No remaining valid work dates are available in this board period.</strong>
+                </div>
+            `;
+        }
+
+        const fixed = choices.length === 1;
+        const options = choices.map(choice =>
+            `<option value="${choice.value}">${choice.label}</option>`
+        ).join("");
+        return `
+            <div class="work-date-box">
+                <label for="workDateSelect">${fixed ? "Work Date" : "Select Your Work Date"}</label>
+                <select id="workDateSelect"${fixed ? " disabled" : ""}>${options}</select>
+            </div>
+        `;
+    }
+
+    function getCalendarWorkDate(guide) {
+        const selector = document.getElementById("workDateSelect");
+        if (selector && selector.value) return selector.value;
+
+        const choices = getWorkDateChoices(guide);
+        return choices.length ? choices[0].value : null;
     }
 
     function crewDateTime(dateText, timeText) {
@@ -689,13 +831,13 @@
         const description = [
             `Work date: ${start.toLocaleDateString()}`,
             "",
-            buildCrewText(guide, crew)
+            buildCrewText(guide, crew, workDate)
         ].join("\n");
         const uid = `lrtops-${Date.now()}-${Math.random().toString(36).slice(2)}@lrtops.ca`;
         const lines = [
             "BEGIN:VCALENDAR",
             "VERSION:2.0",
-            "PRODID:-//LRTOps.ca//Find My Crew//EN",
+            "PRODID:-//LRTOps.ca//Create My Waybill//EN",
             "CALSCALE:GREGORIAN",
             "METHOD:PUBLISH",
             "BEGIN:VEVENT",
@@ -734,7 +876,7 @@
         const details = [
             `Work date: ${start.toLocaleDateString()}`,
             "",
-            buildCrewText(guide, crew)
+            buildCrewText(guide, crew, workDate)
         ].join("\n");
         const params = new URLSearchParams({
             action: "TEMPLATE",
@@ -770,10 +912,26 @@
         }).join("");
 
         crewResult.innerHTML = `
+            ${renderWorkDateSelector(guide)}
+
             <div class="result-actions">
-                <button id="copyCrewButton" class="copy-button" type="button">Copy My Crew</button>
-                <button id="googleCalendarButton" class="google-calendar-button" type="button">Add to Google Calendar</button>
-                <button id="calendarCrewButton" class="calendar-button" type="button">iPhone / Outlook Calendar</button>
+                <button id="copyCrewButton" class="copy-button action-button" type="button">
+                    <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor" d="M8 7V3h11v13h-4v5H4V7h4zm2 0h5v7h2V5h-7v2zm3 2H6v10h7V9z"/>
+                    </svg>
+                    <span class="button-label">Copy My Waybill</span>
+                </button>
+                <button id="googleCalendarButton" class="google-calendar-button action-button" type="button">
+                    <span class="button-icon google-icon" aria-hidden="true">G</span>
+                    <span class="button-label">Add to Google Calendar</span>
+                </button>
+                <button id="calendarCrewButton" class="calendar-button action-button" type="button">
+                    <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor" d="M3 4h8v16H3V4zm10 3h8v10h-8V7zm1.5 2v6h5V9h-5z"/>
+                        <path fill="#fff" d="M5.2 9.1c.6-1 1.4-1.5 2.4-1.5 1.1 0 1.9.5 2.4 1.5.5.8.7 1.8.7 2.9s-.2 2.1-.7 2.9c-.5 1-1.4 1.5-2.4 1.5s-1.9-.5-2.4-1.5c-.5-.8-.7-1.8-.7-2.9s.2-2.1.7-2.9zm1.4 4.8c.2.5.6.8 1 .8s.8-.3 1-.8c.2-.5.3-1.1.3-1.9s-.1-1.4-.3-1.9c-.2-.5-.6-.8-1-.8s-.8.3-1 .8c-.2.5-.3 1.1-.3 1.9s.1 1.4.3 1.9z"/>
+                    </svg>
+                    <span class="button-label">iPhone / Outlook Calendar</span>
+                </button>
             </div>
 
             <h2 class="result-heading">${crew.title}</h2>
